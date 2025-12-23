@@ -47,7 +47,9 @@ export function PageNonKnowledge({ tipeDokumen, dokumenByTipe }: PageNonKnowledg
             <HeaderRoute title={mapTipeDokumen.title} description={mapTipeDokumen.description}
                 actionButton={
                     <div className="flex items-center gap-4">
-                        <Button variant={"link"} onClick={() => navigate(-1)}>
+                        <Button variant={"link"} onClick={() => navigate(`/app/dokumen`, {
+                            viewTransition: true
+                        })}>
                             <ChevronLeftIcon />
                             Kembali
                         </Button>
