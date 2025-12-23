@@ -2,3 +2,11 @@
 build
 node_modules
 README.md
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+.env
+dbdata
+database/seed
