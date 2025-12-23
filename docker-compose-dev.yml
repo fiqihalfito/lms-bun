@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  lms-dev-db:
+    image: postgres:17.7
+    container_name: lms-dev-db-container
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: lmsdev
+      POSTGRES_PASSWORD: lmsdev
+      POSTGRES_DB: lmsdevdb
+      TZ: Asia/Jakarta
+
+    ports:
+      - "6767:5432"
+
+    volumes:
+      - lms-bun-dev-dbdata:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lmsdev -d lmsdevdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    
+  minio:
+      image: minio/minio:latest
+      container_name: LMS_minio
+      ports:
+          - "9001:9000" # S3 API
+          - "9091:9090" # Console (UI)
+      environment:
+          MINIO_ROOT_USER: lms_minio_dev # Ganti dengan user aman
+          MINIO_ROOT_PASSWORD: lms_minio_dev # Ganti dengan password aman
+      command: server /data --console-address ":9090"
+      volumes:
+          # Path disesuaikan ke lokasi yang kamu minta
+          - F:/CODING/minio_storage/lms-minio:/data
+      # - ./storage/minio_data:/data
+      # - ./storage/pdfs:/data/pdfs # opsional: mount folder host untuk PDF
+      restart: unless-stopped
+  
+
+volumes:
+  lms-bun-dev-dbdata:

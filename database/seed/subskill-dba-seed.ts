@@ -1,0 +1,302 @@
+import type { mSubSkill } from "database/schema"
+
+export function seedDBASubskill(idSkill: string, pic: string) {
+    return [
+        // JUNIOR = 1
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Instalasi dan Konfigurasi Dasar",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 1,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Memahami Fundamental Database",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 2,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Memahami Query SQL Dasar",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 3,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Basic Administration",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 4,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Backup Restore Dasar",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 5,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Basic Performance Monitoring",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 6,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Indexing Dasar",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 7,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Basic Maintenance",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 8,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Memahami Query SQL Lanjutan",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 9,
+        },
+
+        // MIDDLE = 2
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Query Tuning",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 1,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Indexing Lanjutan",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 2,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Backup & Restore Lanjutan",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 3,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Konfigurasi Lanjutan",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 4,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Replication Dasar",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 5,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Monitoring Lanjutan",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 6,
+        },
+
+        // SENIOR = 3
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Menerapkan High Availability",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 1,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Disaster Recovery",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 2,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Performance Tuning",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 3,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Menerapkan Security",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 4,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Skalabilitas Arsitektur",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 5,
+        }
+    ] satisfies typeof mSubSkill.$inferInsert[]
+}
+
+export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
+    return [
+        // JUNIOR (1)
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan Instalasi",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 1,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Memahami sistem dasar",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 2,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Memahami Proses dan Resource",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 3,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Package dan Service",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 4,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Keamanan Dasar (permission, firewall, ssh)",
+            idSkill: idSkill,
+            level: 1,
+            idUser: pic,
+            urutan: 5,
+        },
+
+        // MIDDLE (2)
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Sistem dan Kernel Tuning",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 1,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Storage dan Filesystem management",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 2,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Logging dan Monitoring",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 3,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Security dan Network (hardening)",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 4,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Script Automation",
+            idSkill: idSkill,
+            level: 2,
+            idUser: pic,
+            urutan: 5,
+        },
+
+        // SENIOR (3)
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Melakukan High Availability",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 1,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Troubleshooting",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 2,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Perencanaan Kapasitas Infrastruktur",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 3,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Disaster Recovery",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 4,
+        },
+        {
+            idSubSkill: Bun.randomUUIDv7(),
+            namaSubSkill: "Configuration Management",
+            idSkill: idSkill,
+            level: 3,
+            idUser: pic,
+            urutan: 5,
+        }
+    ]
+
+}
