@@ -12,15 +12,26 @@ export default [
         ])
     ]),
 
-    route("app", "routes/app.tsx", [
+    route("app", "routes/app.tsx", { id: "app" }, [
 
         layout("layout/sidebar-main-layout.tsx", [
             route("dashboard", "routes/dashboard.tsx"),
 
             ...prefix("dokumen", [
-                index("routes/dokumen.tsx"),
-                route("tipe/:tipeDokumen", "routes/dokumen-list/dokumen-list.tsx"),
-                route("baca/:idDokumen", "routes/dokumen-viewer.tsx"),
+                // route dokumen
+                index("routes/dokumen/dokumen.tsx"),
+                ...prefix("tipe/:tipeDokumen", [
+                    index("routes/dokumen/dokumen-list.tsx"),
+                    route("add", "routes/dokumen/dokumen-add.tsx"),
+                ]),
+                route("baca/:idDokumen", "routes/dokumen/dokumen-viewer.tsx"),
+
+                // action dokumen
+                ...prefix("action", [
+                    ...prefix("tipe/:tipeDokumen", [
+                        route("add", "features/dokumen/action/action-add-dokumen.tsx"),
+                    ])
+                ]),
             ]),
             // route("knowledge", "routes/dokumen-list/knowledge.tsx"),
 

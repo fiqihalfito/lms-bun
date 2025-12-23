@@ -27,18 +27,13 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { useLogout } from "@/features/auth/hooks/use-logout"
+import { useRouteLoaderData } from "react-router"
+import type { UserContextForAuthType } from "@/lib/context"
 
-export function NavUser({
-  user,
-}: {
-  user: {
-    name: string
-    email: string
-    avatar: string
-  }
-}) {
+export function NavUser() {
   const { isMobile } = useSidebar()
   const { logout } = useLogout()
+  const { userData } = useRouteLoaderData("app") as { userData: UserContextForAuthType }
 
   return (
     <SidebarMenu>
@@ -54,9 +49,9 @@ export function NavUser({
                 <AvatarFallback className="rounded-lg">CN</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">{user.name}</span>
+                <span className="truncate font-medium">{userData.namaUser}</span>
                 <span className="text-muted-foreground truncate text-xs">
-                  {user.email}
+                  {userData.email}
                 </span>
               </div>
               <IconDotsVertical className="ml-auto size-4" />
@@ -71,13 +66,13 @@ export function NavUser({
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage src={user.avatar} alt={user.name} />
+                  {/* <AvatarImage src={user.avatar} alt={userData.namaUser} /> */}
                   <AvatarFallback className="rounded-lg">CN</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">{user.name}</span>
+                  <span className="truncate font-medium">{userData.namaUser}</span>
                   <span className="text-muted-foreground truncate text-xs">
-                    {user.email}
+                    {userData.email}
                   </span>
                 </div>
               </div>

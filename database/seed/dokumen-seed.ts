@@ -8,7 +8,7 @@ export const dokumenSeed: typeof tDokumen.$inferInsert[] = [
     // SOP
     {
         judul: "SOP Korporat 1",
-        filename: "test-pdf.pdf",
+        filename: "dokumen/test-pdf.pdf",
         tipe: "sop",
         idSubBidang: "s1",
         idLayanan: null,
@@ -18,7 +18,7 @@ export const dokumenSeed: typeof tDokumen.$inferInsert[] = [
     // IK
     {
         judul: "IK Database AMS",
-        filename: "test-pdf.pdf",
+        filename: "dokumen/test-pdf.pdf",
         tipe: "ik",
         idSubBidang: "s1",
         idLayanan: mapLayananS1["AMS"],

@@ -1,5 +1,4 @@
 import { HeaderRoute } from "@/components/header-route";
-import type { Route } from "./+types/dokumen-viewer";
 import { minio } from "@/lib/minio.server";
 import { getDokumenFilenameById } from "@/features/dokumen/services/getDokumenFilenameById";
 import { Button } from "@/components/ui/button";
@@ -9,6 +8,7 @@ import { DokumenViewer } from "@/features/dokumen/components/DokumenViewer";
 import { DokumenViewerEmpty } from "@/features/dokumen/components/DokumenViewerEmpty";
 import { markAsRead } from "@/features/dokumen/services/markAsRead";
 import { userContext } from "@/lib/context";
+import type { Route } from "./+types/dokumen-viewer";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 

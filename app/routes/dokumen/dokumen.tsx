@@ -1,7 +1,7 @@
 import { HeaderRoute } from "@/components/header-route";
-import type { Route } from "./+types/dokumen";
 import { BookCheckIcon, BookKeyIcon, PyramidIcon } from "lucide-react";
 import { ItemDokumenLinkLobby } from "@/features/dokumen/components/ItemDokumenLinkLobby";
+import type { Route } from "./+types/dokumen";
 
 
 export default function DokumenRoute({ }: Route.ComponentProps) {
