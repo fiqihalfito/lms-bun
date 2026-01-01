@@ -2,8 +2,10 @@ import { HeaderRoute } from "@/components/header-route";
 import type { Route } from "./+types/dokumen-add";
 import { FormSOP } from "@/features/dokumen/components/form-sop";
 import { getToast } from "remix-toast";
-import { data } from "react-router";
+import { data, useNavigate } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { ChevronLeftIcon } from "lucide-react";
 
 
 export async function loader({ request, params }: Route.LoaderArgs) {
@@ -35,9 +37,18 @@ export default function AddDokumenRoute({ loaderData, params }: Route.ComponentP
         },
     }[params.tipeDokumen as "ik" | "sop"];
 
+    const navigate = useNavigate();
+
     return (
         <div>
-            <HeaderRoute title={mapTipeDokumen.title} description={mapTipeDokumen.description} />
+            <HeaderRoute title={mapTipeDokumen.title} description={mapTipeDokumen.description}
+                actionButton={
+                    <Button variant={"link"} size={"lg"} onClick={() => navigate(-1)}>
+                        <ChevronLeftIcon />
+                        Kembali
+                    </Button>
+                }
+            />
             <FormSOP />
         </div>
     )

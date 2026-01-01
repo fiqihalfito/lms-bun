@@ -19,6 +19,7 @@ export function ItemDokumenLinkLobby({
     return (
         <NavLink
             to={to}
+            viewTransition
         >
             <div className="group flex flex-col items-center justify-center rounded-xl border-2 p-10 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-primary hover:shadow-xl">
                 <Icon className="size-16 transition-all duration-300 group-hover:scale-110 group-hover:text-primary-foreground" />

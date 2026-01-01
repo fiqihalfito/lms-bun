@@ -23,14 +23,19 @@ export default [
                 ...prefix("tipe/:tipeDokumen", [
                     index("routes/dokumen/dokumen-list.tsx"),
                     route("add", "routes/dokumen/dokumen-add.tsx"),
+                    ...prefix(":idDokumen", [
+                        route("edit", "routes/dokumen/dokumen-edit.tsx"),
+                    ])
                 ]),
                 route("baca/:idDokumen", "routes/dokumen/dokumen-viewer.tsx"),
 
                 // action dokumen
                 ...prefix("action", [
                     ...prefix("tipe/:tipeDokumen", [
-                        route("add", "features/dokumen/action/action-add-dokumen.tsx"),
-                    ])
+                        route("submit", "features/dokumen/action/submit-dokumen-sop.tsx"), // untuk insert dan update
+                    ]),
+                    route("upload", "features/dokumen/action/upload-dokumen.tsx"),
+                    route("getuploadurl", "features/dokumen/action/get-prefetch-url-upload-minio.tsx"),
                 ]),
             ]),
             // route("knowledge", "routes/dokumen-list/knowledge.tsx"),

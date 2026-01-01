@@ -22,6 +22,11 @@ export function useToastEffect(toast?: ToastMessage) {
                 id: toast.type,
                 position: "top-center"
             });
+        } else if (toast.type === "info") {
+            notify.info(toast.message, {
+                id: toast.type,
+                position: "top-center"
+            });
         }
     }, [toast]);
 }

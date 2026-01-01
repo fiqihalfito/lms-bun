@@ -3,7 +3,7 @@ import type { getDokumenByTipe } from "../../services";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router";
-import { EyeIcon } from "lucide-react";
+import { EyeIcon, PencilIcon } from "lucide-react";
 
 export const sopColumns: ColumnDef<Awaited<ReturnType<typeof getDokumenByTipe>>[number]>[] = [
     {
@@ -49,11 +49,17 @@ export const sopColumns: ColumnDef<Awaited<ReturnType<typeof getDokumenByTipe>>[
         id: "action",
         header: () => <div className="text-right">Aksi</div>,
         cell: ({ row }) => (
-            <div className="flex justify-end">
+            <div className="flex justify-end gap-x-1">
                 <Button asChild size="sm">
                     <NavLink to={`/app/dokumen/baca/${row.original.idDokumen}`}>
                         <EyeIcon />
                         Baca
+                    </NavLink>
+                </Button>
+                <Button variant="secondary" asChild size="sm">
+                    <NavLink to={`${row.original.idDokumen}/edit`}>
+                        <PencilIcon />
+                        Edit
                     </NavLink>
                 </Button>
             </div>
