@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react"
-import { NavLink } from "react-router"
+import { NavLink, type NavLinkProps } from "react-router"
 
 type ItemDokumenLinkLobbyProps = {
     title: string

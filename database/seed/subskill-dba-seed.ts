@@ -8,7 +8,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Instalasi dan Konfigurasi Dasar",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 1,
         },
         {
@@ -16,7 +16,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Memahami Fundamental Database",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 2,
         },
         {
@@ -24,7 +24,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Memahami Query SQL Dasar",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 3,
         },
         {
@@ -32,7 +32,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Basic Administration",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 4,
         },
         {
@@ -40,7 +40,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Backup Restore Dasar",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 5,
         },
         {
@@ -48,7 +48,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Basic Performance Monitoring",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 6,
         },
         {
@@ -56,7 +56,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Indexing Dasar",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 7,
         },
         {
@@ -64,7 +64,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Basic Maintenance",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 8,
         },
         {
@@ -72,7 +72,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Memahami Query SQL Lanjutan",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 9,
         },
 
@@ -82,7 +82,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Query Tuning",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 1,
         },
         {
@@ -90,7 +90,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Indexing Lanjutan",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 2,
         },
         {
@@ -98,7 +98,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Backup & Restore Lanjutan",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 3,
         },
         {
@@ -106,7 +106,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Konfigurasi Lanjutan",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 4,
         },
         {
@@ -114,7 +114,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Replication Dasar",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 5,
         },
         {
@@ -122,7 +122,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Monitoring Lanjutan",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 6,
         },
 
@@ -132,7 +132,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Menerapkan High Availability",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 1,
         },
         {
@@ -140,7 +140,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Disaster Recovery",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 2,
         },
         {
@@ -148,7 +148,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Performance Tuning",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 3,
         },
         {
@@ -156,7 +156,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Menerapkan Security",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 4,
         },
         {
@@ -164,7 +164,7 @@ export function seedDBASubskill(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Skalabilitas Arsitektur",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 5,
         }
     ] satisfies typeof mSubSkill.$inferInsert[]
@@ -178,7 +178,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan Instalasi",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 1,
         },
         {
@@ -186,7 +186,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Memahami sistem dasar",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 2,
         },
         {
@@ -194,7 +194,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Memahami Proses dan Resource",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 3,
         },
         {
@@ -202,7 +202,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Package dan Service",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 4,
         },
         {
@@ -210,7 +210,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Keamanan Dasar (permission, firewall, ssh)",
             idSkill: idSkill,
             level: 1,
-            idUser: pic,
+            idPic: pic,
             urutan: 5,
         },
 
@@ -220,7 +220,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Sistem dan Kernel Tuning",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 1,
         },
         {
@@ -228,7 +228,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Storage dan Filesystem management",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 2,
         },
         {
@@ -236,7 +236,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Logging dan Monitoring",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 3,
         },
         {
@@ -244,7 +244,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Security dan Network (hardening)",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 4,
         },
         {
@@ -252,7 +252,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Script Automation",
             idSkill: idSkill,
             level: 2,
-            idUser: pic,
+            idPic: pic,
             urutan: 5,
         },
 
@@ -262,7 +262,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Melakukan High Availability",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 1,
         },
         {
@@ -270,7 +270,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Troubleshooting",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 2,
         },
         {
@@ -278,7 +278,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Perencanaan Kapasitas Infrastruktur",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 3,
         },
         {
@@ -286,7 +286,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Disaster Recovery",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 4,
         },
         {
@@ -294,7 +294,7 @@ export function seedSubskillAdministrasiOS(idSkill: string, pic: string) {
             namaSubSkill: "Configuration Management",
             idSkill: idSkill,
             level: 3,
-            idUser: pic,
+            idPic: pic,
             urutan: 5,
         }
     ]

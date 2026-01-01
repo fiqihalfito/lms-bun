@@ -16,7 +16,7 @@ export default function DokumenRoute({ }: Route.ComponentProps) {
                     <ItemDokumenLinkLobby title="SOP" description="Standard Operating Procedure" icon={BookKeyIcon} to="tipe/sop" />
                     <ItemDokumenLinkLobby title="IK" description="Instruksi Kerja" icon={BookCheckIcon} to="tipe/ik" />
                 </div>
-                <ItemDokumenLinkLobby title="Knowledge" description="Dokumen Pembelajaran dan Skill" icon={PyramidIcon} to="tipe/knowledge" />
+                <ItemDokumenLinkLobby title="Knowledge" description="Dokumen Pembelajaran dan Skill" icon={PyramidIcon} to="/app/knowledge/team" />
             </div>
         </div>
     )
