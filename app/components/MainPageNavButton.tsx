@@ -1,6 +1,5 @@
 
 import * as React from "react"
-import { type Icon } from "@tabler/icons-react"
 
 import {
   SidebarGroup,
@@ -9,29 +8,31 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import type { LucideIcon } from "lucide-react"
+import { ArrowBigLeftDashIcon, DatabaseZapIcon, type LucideIcon } from "lucide-react"
+import { NavLink } from "react-router"
 
-export function NavSecondary({
-  items,
+const route = [
+  {
+    title: "Kembali ke Dashboard",
+    url: "/app/dashboard",
+    icon: ArrowBigLeftDashIcon,
+  }
+]
+
+export function MainPageNavButton({
   ...props
-}: {
-  items: {
-    title: string
-    url: string
-    icon: LucideIcon
-  }[]
-} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+}: React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
-          {items.map((item) => (
+          {route.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild>
-                <a href={item.url}>
+                <NavLink to={item.url} >
                   <item.icon />
                   <span>{item.title}</span>
-                </a>
+                </NavLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}

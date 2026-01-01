@@ -42,6 +42,24 @@ export default [
             ]),
             // route("knowledge", "routes/dokumen-list/knowledge.tsx"),
 
+
+            // ===== Route Master =====
+            ...prefix("master", [
+                index("routes/master/home.tsx"),
+                ...prefix("user", [
+                    index("routes/master/user/user.tsx"),
+                    route("add", "routes/master/user/user-add.tsx"),
+                    ...prefix(":idUser", [
+                        route("edit", "routes/master/user/user-edit.tsx"),
+                    ]),
+
+                    // action user
+                    ...prefix("action", [
+                        route("submit-user", "features/user/action/submit-user.tsx"),
+                    ])
+                ])
+            ])
+
         ]),
 
         // resources
@@ -51,6 +69,9 @@ export default [
             ]),
             ...prefix("team", [
                 route("get-team-all", "features/team/loaders/get-team-all.tsx"),
+            ]),
+            ...prefix("role", [
+                route("get-role-all", "features/role/loaders/get-role-all.tsx"),
             ])
         ])
     ])

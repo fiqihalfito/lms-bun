@@ -19,7 +19,7 @@ import {
 
 // import { NavDocuments } from "@/components/nav-documents"
 import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
+import { MasterPageNavButton } from "@/components/MasterPageNavButton"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -30,9 +30,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { NavPICSkills } from "./nav-documents"
-import { Link } from "react-router"
+import { NavPICSkills } from "./nav-PIC-SKILL"
+import { Link, matchPath, useLocation, useMatch } from "react-router"
 import { DatabaseZap, FilesIcon, GaugeIcon, PyramidIcon } from "lucide-react"
+import { NavMaster } from "./nav-master"
+import { MainPageNavButton } from "./MainPageNavButton"
 
 const data = {
   user: {
@@ -100,10 +102,10 @@ const data = {
       ],
     },
   ],
-  navSecondary: [
+  navMaster: [
     {
       title: "Data Master",
-      url: "#",
+      url: "/app/master",
       icon: DatabaseZap,
     },
   ],
@@ -117,6 +119,12 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+
+  const location = useLocation()
+  const isMaster = location.pathname.includes("/app/master")
+
+
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -135,9 +143,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavPICSkills items={data.picSkills} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        {isMaster ? (
+          <>
+            <NavMaster />
+            <MainPageNavButton className="mt-auto" />
+          </>
+        ) : (
+          <>
+            <NavMain items={data.navMain} />
+            <NavPICSkills items={data.picSkills} />
+            <MasterPageNavButton className="mt-auto" />
+          </>
+        )}
       </SidebarContent>
       <SidebarFooter>
         <NavUser />
