@@ -1,7 +1,7 @@
 import type { ColumnDef } from "@tanstack/react-table";
 import type { getDokumenByTipe } from "../../services";
 import { Button } from "@/components/ui/button";
-import { EyeIcon } from "lucide-react";
+import { EyeIcon, PencilIcon } from "lucide-react";
 import { NavLink } from "react-router";
 import { Badge } from "@/components/ui/badge";
 
@@ -14,24 +14,6 @@ export const ikColumns: ColumnDef<Awaited<ReturnType<typeof getDokumenByTipe>>[n
     {
         accessorKey: "judul",
         header: "Judul Dokumen",
-    },
-    {
-        id: "layanan",
-        header: "Layanan",
-        accessorFn: (row) => row.layanan?.namaLayanan,
-        cell: ({ getValue }) => getValue<string>() ?? "-",
-    },
-    {
-        id: "uploader",
-        header: "Uploader",
-        accessorFn: (row) => row.uploader?.namaUser,
-        cell: ({ getValue }) => getValue<string>() ?? "-",
-    },
-    {
-        id: "team",
-        header: "Team",
-        accessorFn: (row) => row.team?.namaTeam,
-        cell: ({ getValue }) => getValue<string>() ?? "-",
     },
     {
         id: "status-baca",
@@ -64,14 +46,38 @@ export const ikColumns: ColumnDef<Awaited<ReturnType<typeof getDokumenByTipe>>[n
         },
     },
     {
+        id: "layanan",
+        header: "Layanan",
+        accessorFn: (row) => row.layanan?.namaLayanan,
+        cell: ({ getValue }) => getValue<string>() ?? "-",
+    },
+    {
+        id: "uploader",
+        header: "Uploader",
+        accessorFn: (row) => row.uploader?.namaUser,
+        cell: ({ getValue }) => getValue<string>() ?? "-",
+    },
+    {
+        id: "team",
+        header: "Team",
+        accessorFn: (row) => row.team?.namaTeam,
+        cell: ({ getValue }) => getValue<string>() ?? "-",
+    },
+    {
         id: "action",
         header: () => <div className="text-right">Aksi</div>,
         cell: ({ row }) => (
-            <div className="flex justify-end">
+            <div className="flex justify-end gap-x-1">
                 <Button asChild size="sm">
                     <NavLink to={`/app/dokumen/baca/${row.original.idDokumen}`}>
                         <EyeIcon />
                         Baca
+                    </NavLink>
+                </Button>
+                <Button variant="secondary" asChild size="sm">
+                    <NavLink to={`${row.original.idDokumen}/edit`}>
+                        <PencilIcon />
+                        Edit
                     </NavLink>
                 </Button>
             </div>

@@ -1,6 +1,5 @@
 import { parseWithZod } from "@conform-to/zod/v4";
 import { useFetcher, type Form } from "react-router";
-import { sopSchema } from "../schema/sop-schema";
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -13,7 +12,7 @@ import {
     FieldSet,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
-import { getFormProps, getInputProps, useForm } from "@conform-to/react"
+import { getFormProps, getInputProps, getSelectProps, useForm } from "@conform-to/react"
 // import {
 //     FileUpload,
 //     FileUploadDropzone,
@@ -31,23 +30,29 @@ import { FileUploadField } from "./file-uploader";
 import { Spinner } from "@/components/ui/spinner";
 import type { getDokumenById } from "../services/getDokumenById";
 import { getFilenameFromMinio } from "../helpers/getFilenameFromMinio";
+import { ikSchema } from "../schema/ik-schema";
+import type { loader as loaderLayanan } from "../../layanan/loaders/get-layanan-all";
+import type { loader as loaderTeam } from "../../team/loaders/get-team-all";
+import { Select } from "@/components/select-custom";
 // import { usePresignedUploader } from "../hooks/use-presignedUploader";
 
-type FormSOPprop = {
+type FormIKprop = {
     // mode: "insert" | "update",
     dv?: Awaited<ReturnType<typeof getDokumenById>>[number]
 } & React.ComponentProps<typeof Form>
 
-export function FormSOP({
+export function FormIK({
     dv,
     className,
     ...props
-}: FormSOPprop) {
+}: FormIKprop) {
 
 
     const file = useFiles();
 
-    const fetcher = useFetcher({ key: "form-sop" });
+    const fetcher = useFetcher({ key: "form-ik" });
+    const fetcherSelectLayanan = useFetcher<typeof loaderLayanan>({ key: "select-layanan" });
+    const fetcherSelectTeam = useFetcher<typeof loaderTeam>({ key: "select-team" });
     // const { uploadHandler, isUploading, keyFile } = usePresignedUploader();
 
 
@@ -57,12 +62,12 @@ export function FormSOP({
 
         // Reuse the validation logic on the client
         onValidate({ formData }) {
-            return parseWithZod(formData, { schema: sopSchema });
+            return parseWithZod(formData, { schema: ikSchema });
         },
         // constraint: getZodConstraint(sopSchema),
 
         defaultValue: dv,
-        onSubmit(event, { formData, submission }) {
+        onSubmit(event, { formData, submission, action, encType, method }) {
             event.preventDefault();
 
             if (file.files.length === 0 && !dv?.filename) {
@@ -78,10 +83,11 @@ export function FormSOP({
                 formData.append("idDokumen", dv.idDokumen);
             }
 
+
             fetcher.submit(formData, {
-                method: "post",
-                action: `/app/dokumen/action/tipe/${tipeDokumen}/submit-sop`,
-                encType: "multipart/form-data",
+                method: method,
+                action: action,
+                encType: encType,
             })
 
         },
@@ -95,12 +101,12 @@ export function FormSOP({
     let submitting = fetcher.state !== "idle"
 
 
-    const tipeDokumen = "sop"
+    const tipeDokumen = "ik"
     return (
         <fetcher.Form
             {...getFormProps(form)}
             method="post"
-            action={`/app/dokumen/action/tipe/${tipeDokumen}/submit-sop`}
+            action={`/app/dokumen/action/tipe/${tipeDokumen}/submit-ik`}
             encType="multipart/form-data"
             className={cn("flex flex-col gap-6 border shadow rounded-md p-6 w-1/3 mx-auto", className)}
             {...props}
@@ -120,30 +126,67 @@ export function FormSOP({
                         <FieldError id={fields.judul.errorId}>{fields.judul.errors}</FieldError>
                     </Field>
                     <Field>
-                        <FieldLabel htmlFor={"upload-dokumen"}>upload dokumen</FieldLabel>
-                        {/* <Input
-                            {...getInputProps(fields.file, { type: "file", accept: "application/pdf" })}
-                            placeholder="Upload file"
-                        /> */}
-                        {/* <Uploader /> */}
+                        <FieldLabel htmlFor={fields.idLayanan.id}>Layanan</FieldLabel>
+                        <Select
+                            id={fields.idLayanan.id}
+                            name={fields.idLayanan.name}
+                            defaultValue={fields.idLayanan.defaultValue}
+                            placeholder="Pilih Layanan"
+                            label="Layanan"
+                            items={fetcherSelectLayanan.data?.layanan.map((layanan) => ({
+                                value: layanan.idLayanan,
+                                name: layanan.namaLayanan,
+                            })) ?? []}
+                            fetcherState={fetcherSelectLayanan.state}
+                            loadItems={() => fetcherSelectLayanan.load("/app/resources/layanan/get-layanan-all")}
+                        />
+                        {fetcherSelectLayanan.state === "loading" && (
+                            <FieldDescription className="flex items-center gap-2">
+                                <Spinner /> <span>Memuat Layanan...</span>
+                            </FieldDescription>
+                        )}
+                        <FieldError id={fields.idLayanan.errorId}>{fields.idLayanan.errors}</FieldError>
+                    </Field>
+                    <Field>
+                        <FieldLabel htmlFor={fields.idTeam.id}>Team</FieldLabel>
+                        <Select
+                            id={fields.idTeam.id}
+                            name={fields.idTeam.name}
+                            defaultValue={fields.idTeam.defaultValue}
+                            placeholder="Pilih Team"
+                            label="Team"
+                            items={fetcherSelectTeam.data?.teams.map((team) => ({
+                                value: team.idTeam,
+                                name: team.namaTeam,
+                            })) ?? []}
+                            fetcherState={fetcherSelectTeam.state}
+                            loadItems={() => fetcherSelectTeam.load("/app/resources/team/get-team-all")}
+                        />
+                        {fetcherSelectTeam.state === "loading" && (
+                            <FieldDescription className="flex items-center gap-2">
+                                <Spinner /> <span>Memuat Team...</span>
+                            </FieldDescription>
+                        )}
+                        <FieldError id={fields.idTeam.errorId}>{fields.idTeam.errors}</FieldError>
+                    </Field>
+                    <Field>
+                        <FieldLabel htmlFor={"upload-dokumen-ik"}>upload dokumen</FieldLabel>
+
                         <FileUploadField
                             value={file.files}
                             onChange={file.onChangeFile}
                             onReject={file.onRejectFile}
-                            // onUpload={uploadHandler}
                             accept=".pdf"
                             maxFiles={1}
                             maxSize={30 * 1024 * 1024}
                             required
-                        // keyFile={keyFile}
                         />
                         {dv?.filename && (
                             <FieldDescription>
                                 filename: {getFilenameFromMinio(dv?.filename)}
                             </FieldDescription>
                         )}
-                        {/* <FieldError id={fields.file.errorId}>{fields.file.errors}</FieldError> */}
-                        <FieldError id={"fileError"}>{file.fileError}</FieldError>
+                        <FieldError id={"fileErrorIk"}>{file.fileError}</FieldError>
                     </Field>
                 </FieldGroup>
 

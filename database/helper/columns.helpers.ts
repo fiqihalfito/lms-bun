@@ -2,7 +2,7 @@ import { timestamp } from "drizzle-orm/pg-core";
 
 // columns.helpers.ts
 export const timestamps = {
-    updated_at: timestamp(),
-    created_at: timestamp().defaultNow().notNull(),
-    deleted_at: timestamp(),
+    updated_at: timestamp({ mode: "string" }),
+    created_at: timestamp({ mode: "string" }).defaultNow().notNull(),
+    deleted_at: timestamp({ mode: "string" }),
 }

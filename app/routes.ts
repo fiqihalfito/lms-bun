@@ -32,14 +32,26 @@ export default [
                 // action dokumen
                 ...prefix("action", [
                     ...prefix("tipe/:tipeDokumen", [
-                        route("submit", "features/dokumen/action/submit-dokumen-sop.tsx"), // untuk insert dan update
+                        route("submit-sop", "features/dokumen/action/submit-dokumen-sop.tsx"), // untuk insert dan update
+                        route("submit-ik", "features/dokumen/action/submit-dokumen-ik.tsx"), // untuk insert dan update
                     ]),
                     route("upload", "features/dokumen/action/upload-dokumen.tsx"),
                     route("getuploadurl", "features/dokumen/action/get-prefetch-url-upload-minio.tsx"),
                 ]),
+
             ]),
             // route("knowledge", "routes/dokumen-list/knowledge.tsx"),
 
+        ]),
+
+        // resources
+        ...prefix("resources", [
+            ...prefix("layanan", [
+                route("get-layanan-all", "features/layanan/loaders/get-layanan-all.tsx"),
+            ]),
+            ...prefix("team", [
+                route("get-team-all", "features/team/loaders/get-team-all.tsx"),
+            ])
         ])
     ])
 ] satisfies RouteConfig;

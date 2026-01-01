@@ -6,6 +6,7 @@ import { data, useNavigate } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon } from "lucide-react";
+import { FormIK } from "@/features/dokumen/components/form-ik";
 
 
 export async function loader({ request, params }: Route.LoaderArgs) {
@@ -49,7 +50,7 @@ export default function AddDokumenRoute({ loaderData, params }: Route.ComponentP
                     </Button>
                 }
             />
-            <FormSOP />
+            {params.tipeDokumen === "ik" ? <FormIK /> : <FormSOP />}
         </div>
     )
 }
