@@ -30,7 +30,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { NavPICSkills } from "./nav-PIC-SKILL"
+import { NavPICSubSkills } from "./nav-PIC-SKILL"
 import { Link, matchPath, useLocation, useMatch } from "react-router"
 import { DatabaseZap, FilesIcon, GaugeIcon, PyramidIcon } from "lucide-react"
 import { NavMaster } from "./nav-master"
@@ -109,10 +109,10 @@ const data = {
       icon: DatabaseZap,
     },
   ],
-  picSkills: [
+  picSubSkills: [
     {
-      name: "Skill Set",
-      url: "#",
+      name: "PIC SubSkill",
+      url: "/app/pic-subskill",
       icon: PyramidIcon,
     },
   ],
@@ -151,7 +151,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         ) : (
           <>
             <NavMain items={data.navMain} />
-            <NavPICSkills items={data.picSkills} />
+            <NavPICSubSkills items={data.picSubSkills} />
             <MasterPageNavButton className="mt-auto" />
           </>
         )}

@@ -12,12 +12,12 @@ type UploadDropzoneProgressProps = {
   accept?: string;
   metadata?: Record<string, unknown>;
   description?:
-    | {
-        fileTypes?: string;
-        maxFileSize?: string;
-        maxFiles?: number;
-      }
-    | string;
+  | {
+    fileTypes?: string;
+    maxFileSize?: string;
+    maxFiles?: number;
+  }
+  | string;
   uploadOverride?: (
     ...args: Parameters<UploadHookControl<true>['upload']>
   ) => void;

@@ -54,6 +54,10 @@ export default [
                     ]),
                 ]),
             ]),
+            ...prefix("pic-subskill", [
+                index("routes/pic-subskill/skill.tsx"),
+                route(":idSkill", "routes/pic-subskill/picsubskill.tsx"),
+            ]),
             // route("knowledge", "routes/dokumen-list/knowledge.tsx"),
 
 

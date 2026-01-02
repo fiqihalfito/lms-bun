@@ -24,8 +24,9 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import type { LucideIcon } from "lucide-react"
+import { NavLink } from "react-router"
 
-export function NavPICSkills({
+export function NavPICSubSkills({
   items,
 }: {
   items: {
@@ -38,15 +39,15 @@ export function NavPICSkills({
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>PIC Skill</SidebarGroupLabel>
+      <SidebarGroupLabel>PIC SubSkill</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
-              <a href={item.url}>
+              <NavLink to={item.url}>
                 <item.icon />
                 <span>{item.name}</span>
-              </a>
+              </NavLink>
             </SidebarMenuButton>
             {/* <DropdownMenu>
               <DropdownMenuTrigger asChild>
