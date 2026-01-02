@@ -1,10 +1,7 @@
-import type { Route } from "./+types/upload-dokumen";
 import { handleRequest, route, type Router } from '@better-upload/server';
 import { minio } from '@better-upload/server/clients';
 import "dotenv/config"
-import { saveDokumenWithReturn } from "../services/saveDokumenWithReturn";
-import { userContext } from "@/lib/context";
-import { getTeamDataFromTeamMember } from "@/features/team/services/getIdTeamFromTeamMember";
+import type { Route } from './+types/upload';
 
 const router: Router = {
     client: minio({
@@ -16,11 +13,11 @@ const router: Router = {
     bucketName: process.env.MINIO_BUCKET!,
     routes: {
         dokumen: route({
-            multipleFiles: true,
-            maxFiles: 1,
+            // multipleFiles: true,
+            // maxFiles: 1,
             fileTypes: ['application/pdf'],
             maxFileSize: 1024 * 1024 * 20,
-            onBeforeUpload: async ({ req, files, clientMetadata }) => {
+            onBeforeUpload: async ({ req, file, clientMetadata }) => {
 
                 const filename = Bun.randomUUIDv7() + ".pdf"
                 const key = `dokumen/${filename}`
@@ -41,9 +38,12 @@ const router: Router = {
                 // await 
 
                 return {
-                    generateObjectInfo: ({ file }) => ({
+                    // generateObjectInfo: ({ file }) => ({
+                    //     key: key,
+                    // }),
+                    objectInfo: {
                         key: key,
-                    }),
+                    }
                 };
             },
         }),

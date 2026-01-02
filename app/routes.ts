@@ -35,7 +35,6 @@ export default [
                         route("submit-sop", "features/dokumen/action/submit-dokumen-sop.tsx"), // untuk insert dan update
                         route("submit-ik", "features/dokumen/action/submit-dokumen-ik.tsx"), // untuk insert dan update
                     ]),
-                    route("upload", "features/dokumen/action/upload-dokumen.tsx"),
                     route("getuploadurl", "features/dokumen/action/get-prefetch-url-upload-minio.tsx"),
                 ]),
 
@@ -91,6 +90,11 @@ export default [
             ...prefix("role", [
                 route("get-role-all", "features/role/loaders/get-role-all.tsx"),
             ])
+        ]),
+
+        // ===== api =====
+        ...prefix("api", [
+            route("upload", "routes/upload.tsx"),
         ])
     ])
 ] satisfies RouteConfig;

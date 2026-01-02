@@ -22,14 +22,9 @@ type UploadFileButtonProp = {
 
 export function UploadFileButton({ addtionalData }: UploadFileButtonProp) {
 
-    const { control } = useUploadFiles({
+    const { control, error } = useUploadFiles({
         route: 'dokumen',
-        api: "/app/dokumen/action/upload",
-        onUploadBegin: ({ files, metadata }) => {
-            console.log(files, metadata)
-        },
-
-
+        api: "/app/api/upload",
     });
 
     return (
@@ -48,7 +43,12 @@ export function UploadFileButton({ addtionalData }: UploadFileButtonProp) {
                             Upload dokumen PDF
                         </DialogDescription>
                     </DialogHeader>
-                    <UploadDropzoneProgress control={control} accept="application/pdf" />
+                    <UploadDropzoneProgress control={control} accept="application/pdf" description={{
+                        maxFiles: 1,
+                        maxFileSize: '30MB',
+                        fileTypes: 'PDF',
+                    }} />
+                    {error && <pre className="text-red-500">{error.message}</pre>}
                     <DialogFooter>
                         <DialogClose asChild>
                             <Button variant="outline">Cancel</Button>
