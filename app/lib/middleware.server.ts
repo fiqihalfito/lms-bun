@@ -5,7 +5,7 @@ import { userContext, type UserContextForAuthType } from "./context";
 import { getUserProfilesByIdUser } from "@/features/user/services/repo/getUserProfilesByIdUser";
 import { getRoleNameByIdRole } from "@/features/role/services/getRoleNameByIdRole";
 import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
-import { getTeamDataFromTeamMember } from "@/features/team/services/getIdTeamFromTeamMember";
+import { getTeamDataFromTeamMember } from "@/features/team/services/getTeamDataFromTeamMember";
 
 // Server-side Authentication Middleware
 export async function authMiddleware({ request, context }: any) {

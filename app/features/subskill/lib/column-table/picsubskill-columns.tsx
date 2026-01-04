@@ -4,7 +4,7 @@ import { BanIcon, EyeIcon, FileUpIcon, PencilIcon } from "lucide-react";
 import { NavLink } from "react-router";
 import { Badge } from "@/components/ui/badge";
 import type { getSubSkillByIdPIC } from "../../services/getSubSkillByIdPIC";
-import { UploadFileButton } from "@/components/upload-file-button";
+import { UploadDokumenDirectButton } from "@/features/dokumen/components/subskill/upload-dokumen-button";
 
 export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkillByIdPIC>>[number]["subskills"][number]>[] = [
     {
@@ -73,7 +73,7 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
             // );
             const idDokumen = getValue<string | Date | null>();
             return idDokumen ? (
-                <Badge variant={"secondary"}>
+                <Badge variant={"default"}>
                     Done
                 </Badge>
             ) : (
@@ -97,7 +97,7 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
             // );
             const idKuis = getValue<string | Date | null>();
             return idKuis ? (
-                <Badge variant={"secondary"}>
+                <Badge variant={"default"}>
                     Done
                 </Badge>
             ) : (
@@ -117,10 +117,10 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
                         Upload
                     </NavLink>
                 </Button> */}
-                <UploadFileButton addtionalData={{ idSubSkill: row.original.idSubSkill }} />
+                <UploadDokumenDirectButton idSubSkill={row.original.idSubSkill} idDokumen={row.original.idDokumen} />
                 {row.original.idDokumen ? (
                     <Button variant="secondary" asChild size="sm">
-                        <NavLink to={`/app/subskill/buat-kuis/${row.original.idSubSkill}`}>
+                        <NavLink to={`${row.original.idSubSkill}/make-kuis`}>
                             <PencilIcon />
                             Buat Kuis
                         </NavLink>

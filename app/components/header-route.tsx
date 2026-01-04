@@ -3,7 +3,7 @@ import { Separator } from "./ui/separator";
 
 
 interface HeaderRouteProps {
-    title: string;
+    title: string | React.ReactNode;
     description: string;
     actionButton?: React.ReactNode;
 }

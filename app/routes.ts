@@ -55,7 +55,30 @@ export default [
             ]),
             ...prefix("pic-subskill", [
                 index("routes/pic-subskill/skill.tsx"),
-                route(":idSkill", "routes/pic-subskill/picsubskill.tsx"),
+                ...prefix("skill/:idSkill/subskill", [
+                    index("routes/pic-subskill/picsubskill.tsx"),
+
+                    ...prefix(":idSubSkill", [
+                        ...prefix("make-kuis", [
+                            index("routes/pic-subskill/make-kuis.tsx"),
+                            ...prefix("kuis/:idKuis", [
+                                route("add-question", "routes/pic-subskill/add-question.tsx"),
+                                route("submit", "features/kuis/action/submit-form-make-kuis.tsx"),
+                            ])
+                        ]),
+                    ]),
+
+
+                ]),
+
+
+
+                ...prefix("action", [
+                    ...prefix(":idSubSkill", [
+                        route("update-subskill", "features/subskill/action/update-subskill.tsx"),
+                    ]),
+                    // route("skill/:idSkill/subskill/:idSubSkill/make-kuis/submit", "features/kuis/action/submit-form-make-kuis.tsx"),
+                ])
             ]),
             // route("knowledge", "routes/dokumen-list/knowledge.tsx"),
 

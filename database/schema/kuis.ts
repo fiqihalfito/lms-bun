@@ -10,11 +10,12 @@ export const tKuisQuestion = pgTable('t_kuis_question', (t) => ({
     idKuisQuestion: t.uuid("id_kuis_question").defaultRandom().primaryKey(),
     idKuis: t.uuid("id_kuis").references(() => tKuis.idKuis),
     question: t.text("question").notNull(),
-    answer: t.char("answer", { length: 1 }).notNull(),
+    answerOption: t.char("answer_option", { length: 1 }).notNull(),
 }))
 
 export const tKuisQuestionOption = pgTable('t_kuis_question_option', (t) => ({
     idKuisQuestionOption: t.uuid("id_kuis_question_option").defaultRandom().primaryKey(),
     idKuisQuestion: t.uuid("id_kuis_question").references(() => tKuisQuestion.idKuisQuestion),
-    answerOption: t.char("answer_option", { length: 1 }).notNull(),
+    option: t.char("option", { length: 1 }).notNull(),
+    optionDesc: t.text("option_desc").notNull(),
 }))

@@ -7,7 +7,9 @@ import { HeaderRoute } from "@/components/header-route";
 import { getNamaSkillByIdSkill } from "@/features/skill/services/getNamaSkillByIdSkill";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon } from "lucide-react";
-import { useNavigate } from "react-router";
+import { data, useNavigate } from "react-router";
+import { getToast } from "remix-toast";
+import { useToastEffect } from "@/hooks/use-toast";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -15,13 +17,19 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     const mappedsubSkills = await getSubSkillByIdPIC(user.idUser, params.idSkill)
     const namaSkill = await getNamaSkillByIdSkill(params.idSkill)
 
-    return { mappedsubSkills, namaSkill }
+    // toast
+    const { headers, toast } = await getToast(request)
+
+    return data({ mappedsubSkills, namaSkill, toast }, { headers })
+    // return { mappedsubSkills, namaSkill }
 }
 
 export default function PicSubSkillRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { mappedsubSkills, namaSkill } = loaderData
+    const { mappedsubSkills, namaSkill, toast } = loaderData
     const navigate = useNavigate();
+
+    useToastEffect(toast)
 
     return (
         <div>

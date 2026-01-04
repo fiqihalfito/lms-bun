@@ -24,7 +24,7 @@ export default function SkillPicSubSkillRoute({ loaderData, params }: Route.Comp
             <ItemGroup className="gap-y-3">
                 {skills.map((skill, i) => (
                     <Item key={skill?.idSkill} variant="outline" asChild>
-                        <Link to={`${skill?.idSkill}`}>
+                        <Link to={`skill/${skill?.idSkill}/subskill`}>
                             <ItemMedia variant="icon">
                                 {i + 1}
                             </ItemMedia>
