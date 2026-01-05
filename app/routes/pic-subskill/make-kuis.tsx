@@ -6,11 +6,13 @@ import { getQuestionsByIdKuis } from "@/features/kuis/services/getQuestionsByIdK
 import { HeaderRoute } from "@/components/header-route";
 import { updateSubskill } from "@/features/subskill/services/updateSubskill";
 import { Badge } from "@/components/ui/badge";
-import { ChevronRightIcon, CircleOffIcon, PlusIcon } from "lucide-react";
+import { ChevronLeftIcon, PencilIcon, PlusIcon, TrashIcon } from "lucide-react";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
 import { Button } from "@/components/ui/button";
-import { NavLink, Outlet } from "react-router";
+import { data, Link, NavLink, Outlet, useFetcher } from "react-router";
 import { BelumAdaSoal } from "@/features/kuis/components/make-kuis/BelumAdaSoal";
+import { getToast } from "remix-toast";
+import { useToastEffect } from "@/hooks/use-toast";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -31,15 +33,23 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     // lalu return semua question berdasarkan idkuis yang didapat
     const questions = await getQuestionsByIdKuis(idKuis)
 
-    return { questions, subskill, idKuis }
+    // toast
+    const { headers, toast } = await getToast(request)
+
+    return data({ questions, subskill, idKuis, toast }, { headers })
 }
 
 export default function MakeKuisRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { questions, subskill, idKuis } = loaderData
+    const { questions, subskill, idKuis, toast } = loaderData
+
+    useToastEffect(toast)
+
+    const fetcherHapusPertanyaan = useFetcher({ key: "hapus-pertanyaan" })
+
 
     return (
-        <div>
+        <div className="flex-1 flex flex-col">
             <HeaderRoute title={(
                 <div className="flex items-center gap-2">
                     <Badge className="tracking-wider text-sm">Kuis</Badge>
@@ -47,7 +57,14 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
                     <span>{subskill?.namaSubSkill}</span>
                 </div>
             )} description={`Buat kuis untuk subskill ini`}
-
+                actionButton={
+                    <Button variant={"link"} asChild>
+                        <Link to="../.." relative="path">
+                            <ChevronLeftIcon />
+                            Kembali
+                        </Link>
+                    </Button>
+                }
             />
 
             <div className="mb-6">
@@ -60,7 +77,7 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
             </div>
 
             {/* ambil list questions di github */}
-            <div className="grid grid-cols-2 gap-x-4 h-full">
+            <div className="grid grid-cols-2 gap-x-4 flex-1">
                 <div className="border-4 rounded-lg border-dashed flex flex-col p-4">
                     {questions.length === 0 ? (
                         <BelumAdaSoal />
@@ -75,31 +92,37 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
                                         <ItemTitle>{q.question}</ItemTitle>
                                         <ItemDescription>
                                             {/* Jawaban : {q.answer?.toUpperCase()} . {q?.pilihan ? JSON.parse(q.pilihan)[q.answer!] : null} */}
-                                            Jawaban :
+                                            Jawaban : {q.answerOption.toUpperCase()} . {q.correctOption?.optionDesc}
                                         </ItemDescription>
                                     </ItemContent>
                                     <ItemActions>
+
                                         <Button
                                             size="sm"
                                             variant="outline"
                                             className="cursor-pointer"
                                             // disabled={`/app/pic-subskill/make-kuis/review/${q.idKuisQuestion}` === currentPathname}
                                             type="button"
+                                            asChild
                                         >
-                                            <NavLink to={`review/${q.idKuisQuestion}`} viewTransition>
-                                                {({ isPending, isActive }) => (
-                                                    <span className="flex items-center">
-                                                        {isActive ? (
-                                                            <>
-                                                                Sedang direview
-                                                                <ChevronRightIcon />
-                                                            </>
-                                                        ) : (
-                                                            "Review"
-                                                        )}
-                                                    </span>
-                                                )}
+                                            <NavLink to={`kuis/${idKuis}/question/${q.idKuisQuestion}/edit`} viewTransition>
+                                                <PencilIcon />
+                                                Edit
                                             </NavLink>
+                                        </Button>
+                                        <Button
+                                            size="sm"
+                                            variant="destructive"
+                                            className="cursor-pointer"
+                                            // disabled={`/app/pic-subskill/make-kuis/review/${q.idKuisQuestion}` === currentPathname}
+                                            type="button"
+                                            onClick={() => fetcherHapusPertanyaan.submit(null, {
+                                                method: "delete",
+                                                action: `kuis/${idKuis}/question/${q.idKuisQuestion}/delete`
+                                            })}
+                                        >
+                                            <TrashIcon />
+                                            Hapus
                                         </Button>
                                     </ItemActions>
                                 </Item>

@@ -107,6 +107,30 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
         },
     },
     {
+        id: "jumlah-soal",
+        header: "Jumlah Soal",
+        accessorFn: (row) => row.idKuis,
+        cell: ({ getValue }) => {
+            // const date = getValue<string | Date | null>();
+            // return date ? (
+            //     <Badge variant={"secondary"}>
+            //         {new Date(date).toLocaleString("id-ID")}
+            //     </Badge>
+            // ) : (
+            //     <Badge variant="destructive">Not yet</Badge>
+            // );
+            const idKuis = getValue<string | Date | null>();
+            return idKuis ? (
+                <Badge variant={"default"}>
+                    Done
+                </Badge>
+            ) : (
+                <Badge variant="destructive">Not yet</Badge>
+            );
+
+        },
+    },
+    {
         id: "action",
         header: () => <div className="text-right">Aksi</div>,
         cell: ({ row }) => (

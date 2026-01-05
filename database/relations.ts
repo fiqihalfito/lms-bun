@@ -49,6 +49,16 @@ export const relations = defineRelations(schema, (r) => ({
             from: r.mSubSkill.idSkill,
             to: r.mSkill.idSkill
         })
+    },
+    tKuisQuestion: {
+        options: r.many.tKuisQuestionOption({
+            from: r.tKuisQuestion.idKuisQuestion,
+            to: r.tKuisQuestionOption.idKuisQuestion
+        }),
+        correctOption: r.one.tKuisQuestionOption({
+            from: [r.tKuisQuestion.idKuisQuestion, r.tKuisQuestion.answerOption],
+            to: [r.tKuisQuestionOption.idKuisQuestion, r.tKuisQuestionOption.option],
+        })
     }
 
 }));

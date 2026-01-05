@@ -1,7 +1,12 @@
 import { parseWithZod } from "@conform-to/zod/v4";
 import type { Route } from "./+types/submit-form-make-kuis";
 import { makeKuisSchema } from "../schema/makeKuisSchema";
-import { dataWithError } from "remix-toast";
+import { dataWithError, redirectWithSuccess } from "remix-toast";
+import { updateQuestion } from "../services/updateQuestion";
+import { updateOption } from "../services/updateOptions";
+import { insertQuestion } from "../services/insertQuestion";
+import { insertOptions } from "../services/insertOption";
+import type { tKuisQuestionOption } from "database/schema";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
 
@@ -16,15 +21,44 @@ export async function action({ request, params, context }: Route.ActionArgs) {
     const idKuisQuestion = formData.get("idKuisQuestion")
 
     if (idKuisQuestion) {
+        // edit mode
         console.log("ada idQuestion")
 
+        // update question first
+        await updateQuestion(idKuisQuestion as string, {
+            question: submission.value.question,
+            answerOption: submission.value.answerOption,
+            idKuis: params.idKuis
+        })
+
+        // update option
+        for (const [key, value] of Object.entries(submission.value.options)) {
+            await updateOption(idKuisQuestion as string, {
+                option: key,
+                optionDesc: value
+            })
+        }
+
+        return redirectWithSuccess(`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`, "Soal berhasil diupdate")
+
     } else {
+        // insert mode
         console.log("tidak ada idQuestion")
+        const newQuestion = await insertQuestion({
+            question: submission.value.question,
+            answerOption: submission.value.answerOption,
+            idKuis: params.idKuis
+        })
+
+        // insert option
+        const newOptions = Object.entries(submission.value.options).map(([key, value]) => ({
+            option: key,
+            optionDesc: value,
+            idKuisQuestion: newQuestion[0].idKuisQuestion,
+        })) satisfies typeof tKuisQuestionOption.$inferInsert[]
+        await insertOptions(newOptions)
+
+        return redirectWithSuccess(`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`, "Soal berhasil ditambahkan")
     }
 
-
-
-
-
-    return {}
 }

@@ -36,7 +36,7 @@ export function UploadDokumenDirectButton({ idSubSkill, idDokumen }: UploadDokum
                 tipe: "knowledge",
             } satisfies DokumenInsertSchemaProp, {
                 method: "POST",
-                action: `/app/pic-subskill/action/${idSubSkill}/update-subskill`,
+                action: `/app/pic-subskill/action/${idSubSkill}/update-subskill-iddokumen`,
             })
         }
     });

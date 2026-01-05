@@ -7,7 +7,7 @@ import { HeaderRoute } from "@/components/header-route";
 import { getNamaSkillByIdSkill } from "@/features/skill/services/getNamaSkillByIdSkill";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon } from "lucide-react";
-import { data, useNavigate } from "react-router";
+import { data, Link, useNavigate } from "react-router";
 import { getToast } from "remix-toast";
 import { useToastEffect } from "@/hooks/use-toast";
 
@@ -35,9 +35,11 @@ export default function PicSubSkillRoute({ loaderData, params }: Route.Component
         <div>
             <HeaderRoute title="PIC SubSkill" description={`Skill ${namaSkill}`}
                 actionButton={
-                    <Button variant={"default"} size={"lg"} onClick={() => navigate(-1)}>
-                        <ChevronLeftIcon />
-                        Kembali
+                    <Button variant={"default"} asChild>
+                        <Link to="../../.." relative="path">
+                            <ChevronLeftIcon />
+                            Kembali
+                        </Link>
                     </Button>
                 }
             />

@@ -2,7 +2,7 @@ import { db } from "database/connect";
 import { tKuisQuestion } from "database/schema";
 import { eq } from "drizzle-orm";
 
-export async function getQuestionByIdQuestion(idKuisQuestion: string) {
+export async function getQuestionByIdKuisQuestion(idKuisQuestion: string) {
     const question = await db.select().from(tKuisQuestion).where(eq(tKuisQuestion.idKuisQuestion, idKuisQuestion))
     return question
 }

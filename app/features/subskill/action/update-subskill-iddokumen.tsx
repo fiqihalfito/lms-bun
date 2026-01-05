@@ -1,5 +1,5 @@
 import { parseWithZod } from "@conform-to/zod/v4";
-import type { Route } from "./+types/update-subskill";
+import type { Route } from "./+types/update-subskill-iddokumen";
 import { dataWithError, dataWithSuccess } from "remix-toast";
 import { dokumenInsertSchema } from "@/features/dokumen/schema/dokumenInsertSchema";
 import { userContext } from "@/lib/context";

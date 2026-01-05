@@ -11,15 +11,16 @@ import { InputGroup, InputGroupInput } from "@/components/ui/input-group";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
-import type { getQuestionByIdQuestion } from "../../services/getQuestionByIdQuestion";
+import type { getQuestionByIdKuisQuestion } from "../../services/getQuestionByIdQuestion";
 import type z from "zod";
 import React from "react";
 
 type FormMakeKuisProp = {
     defaultValues?: z.infer<typeof makeKuisSchema> & { idKuisQuestion: string };
+    actionUrl: string
 }
 
-export function FormMakeKuis({ defaultValues }: FormMakeKuisProp) {
+export function FormMakeKuis({ defaultValues, actionUrl }: FormMakeKuisProp) {
 
     const fetcher = useFetcher()
 
@@ -52,8 +53,8 @@ export function FormMakeKuis({ defaultValues }: FormMakeKuisProp) {
 
 
         // Validate the form on blur event triggered
-        // shouldValidate: 'onBlur',
-        // shouldRevalidate: 'onInput',
+        shouldValidate: 'onBlur',
+        shouldRevalidate: 'onInput',
     });
 
     const optionChar = ["a", "b", "c", "d"] as const
@@ -65,14 +66,11 @@ export function FormMakeKuis({ defaultValues }: FormMakeKuisProp) {
         <fetcher.Form
             {...getFormProps(form)}
             method="post"
-            action={`../submit`}
+            action={actionUrl}
             relative="path"
             className="flex flex-col gap-6 border shadow rounded-md p-6 w-1/3 mx-auto"
         >
             <FieldSet>
-                {/* <Input
-                    {...getInputProps(fields.idKuis, { type: "hidden" })}
-                /> */}
                 <Field>
                     <FieldLabel htmlFor="soal">
                         Soal
@@ -80,6 +78,7 @@ export function FormMakeKuis({ defaultValues }: FormMakeKuisProp) {
 
                     <Textarea
                         {...getTextareaProps(fields.question)}
+                        placeholder="Masukkan soal"
                     />
                     <FieldError id={fields.question.id}>{fields.question.errors}</FieldError>
                 </Field>
@@ -99,6 +98,7 @@ export function FormMakeKuis({ defaultValues }: FormMakeKuisProp) {
                                     <InputGroup>
                                         <InputGroupInput
                                             {...getInputProps(options[o], { type: "text" })}
+                                            placeholder={`Pilihan ${o.toUpperCase()}`}
                                         />
                                     </InputGroup>
                                 </ButtonGroup>
