@@ -110,7 +110,7 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
         id: "jumlah-soal",
         header: "Jumlah Soal",
         accessorFn: (row) => row.idKuis,
-        cell: ({ getValue }) => {
+        cell: ({ getValue, row }) => {
             // const date = getValue<string | Date | null>();
             // return date ? (
             //     <Badge variant={"secondary"}>
@@ -121,9 +121,7 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
             // );
             const idKuis = getValue<string | Date | null>();
             return idKuis ? (
-                <Badge variant={"default"}>
-                    Done
-                </Badge>
+                <span>{row.original?.kuis?.questions?.length}</span>
             ) : (
                 <Badge variant="destructive">Not yet</Badge>
             );

@@ -15,7 +15,17 @@ export async function getSubSkillByIdPIC(idPIC: string, idSkill: string) {
                 columns: {
                     namaUser: true
                 }
+            },
+            kuis: {
+                with: {
+                    questions: {
+                        columns: {
+                            idKuisQuestion: true
+                        }
+                    }
+                }
             }
+
         }
     })
 

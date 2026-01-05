@@ -48,6 +48,10 @@ export const relations = defineRelations(schema, (r) => ({
         skill: r.one.mSkill({
             from: r.mSubSkill.idSkill,
             to: r.mSkill.idSkill
+        }),
+        kuis: r.one.tKuis({
+            from: r.mSubSkill.idKuis,
+            to: r.tKuis.idKuis
         })
     },
     tKuisQuestion: {
@@ -58,6 +62,12 @@ export const relations = defineRelations(schema, (r) => ({
         correctOption: r.one.tKuisQuestionOption({
             from: [r.tKuisQuestion.idKuisQuestion, r.tKuisQuestion.answerOption],
             to: [r.tKuisQuestionOption.idKuisQuestion, r.tKuisQuestionOption.option],
+        })
+    },
+    tKuis: {
+        questions: r.many.tKuisQuestion({
+            from: r.tKuis.idKuis,
+            to: r.tKuisQuestion.idKuisQuestion
         })
     }
 
