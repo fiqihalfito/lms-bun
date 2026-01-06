@@ -67,7 +67,7 @@ export const relations = defineRelations(schema, (r) => ({
     tKuis: {
         questions: r.many.tKuisQuestion({
             from: r.tKuis.idKuis,
-            to: r.tKuisQuestion.idKuisQuestion
+            to: r.tKuisQuestion.idKuis
         })
     }
 
