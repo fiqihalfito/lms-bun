@@ -139,7 +139,7 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
                         Upload
                     </NavLink>
                 </Button> */}
-                <UploadDokumenDirectButton idSubSkill={row.original.idSubSkill} idDokumen={row.original.idDokumen} />
+                <UploadDokumenDirectButton idSubSkill={row.original.idSubSkill} namaSubSkill={row.original.namaSubSkill} idDokumen={row.original.idDokumen} />
                 {row.original.idDokumen ? (
                     <Button variant="secondary" asChild size="sm">
                         <NavLink to={`${row.original.idSubSkill}/make-kuis`}>

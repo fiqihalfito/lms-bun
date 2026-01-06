@@ -18,10 +18,11 @@ import { useEffect, useState } from "react"
 
 type UploadDokumenDirectButtonProp = {
     idSubSkill: string,
+    namaSubSkill: string,
     idDokumen?: string | null
 }
 
-export function UploadDokumenDirectButton({ idSubSkill, idDokumen }: UploadDokumenDirectButtonProp) {
+export function UploadDokumenDirectButton({ idSubSkill, namaSubSkill, idDokumen }: UploadDokumenDirectButtonProp) {
 
     const fetcher = useFetcher()
     const [open, setOpen] = useState(false)
@@ -32,7 +33,7 @@ export function UploadDokumenDirectButton({ idSubSkill, idDokumen }: UploadDokum
         onUploadComplete: ({ files, failedFiles, metadata }) => {
             fetcher.submit({
                 filename: files[0].objectInfo.key,
-                judul: files[0].name,
+                judul: namaSubSkill,
                 tipe: "knowledge",
             } satisfies DokumenInsertSchemaProp, {
                 method: "POST",
