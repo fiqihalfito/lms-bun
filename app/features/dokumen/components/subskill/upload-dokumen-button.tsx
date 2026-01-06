@@ -26,7 +26,7 @@ export function UploadDokumenDirectButton({ idSubSkill, idDokumen }: UploadDokum
     const fetcher = useFetcher()
     const [open, setOpen] = useState(false)
 
-    const { control, error, isPending, } = useUploadFiles({
+    const { control, error, } = useUploadFiles({
         route: "dokumen",
         api: "/app/api/upload",
         onUploadComplete: ({ files, failedFiles, metadata }) => {

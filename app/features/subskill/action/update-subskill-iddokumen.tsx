@@ -6,6 +6,9 @@ import { userContext } from "@/lib/context";
 import { getIdTeamByIdUser } from "@/features/team/services/getIdTeamByIdUser";
 import { saveDokumenWithReturn } from "@/features/dokumen/services/saveDokumenWithReturn";
 import { updateSubskill } from "../services/updateSubskill";
+import { getIdDokumenByIdSubSkill } from "../services/getIdDokumenByIdSubSkill";
+import { getDokumenFilenameById } from "@/features/dokumen/services/getDokumenFilenameById";
+import { minio } from "@/lib/minio.server";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
 
@@ -15,6 +18,16 @@ export async function action({ request, params, context }: Route.ActionArgs) {
 
     if (submissionDokumen.status !== 'success') {
         return dataWithError(submissionDokumen.reply(), "Data yang disubmit error");
+    }
+
+    // ========== Success Section ============
+    // delete old dokumen if exists
+    const oldIdDokumen = await getIdDokumenByIdSubSkill(params.idSubSkill)
+    if (oldIdDokumen) {
+        const filename = await getDokumenFilenameById(oldIdDokumen)
+        if (filename) {
+            await minio.deleteFile(filename)
+        }
     }
 
     const idTeam = await getIdTeamByIdUser(user.idUser)
