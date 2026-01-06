@@ -19,7 +19,7 @@ export default function KnowledgeRoute({ loaderData, params }: Route.ComponentPr
     return (
         <div>
             <HeaderRoute title="Knowledge" description="Dokumen Pembelajaran dan Skill" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 {teams.map((team) => (
                     <NavLink
                         key={team.idTeam}
