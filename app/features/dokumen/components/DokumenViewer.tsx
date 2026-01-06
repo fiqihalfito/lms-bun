@@ -19,12 +19,14 @@ export function DokumenViewer({ presignedUrl }: DokumenViewerProps) {
         return () => cancelAnimationFrame(id);
     }, []);
 
+    if (loading) {
+        return <DokumenViewerLoading />
+    }
+
     return (
         <div className="flex-1 flex flex-col">
 
-            {loading && (
-                <DokumenViewerLoading />
-            )}
+
 
             <embed
                 key={presignedUrl}
