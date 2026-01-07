@@ -7,6 +7,7 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Link } from "react-router";
+import { Button } from "./ui/button";
 
 export type BreadCrumbItem = {
     label: string;
@@ -30,7 +31,7 @@ export function BreadCrumb({ routeBreadCrumb }: BreadCrumbProps) {
                             ) : (
                                 <>
                                     <BreadcrumbLink asChild>
-                                        <Link to={item.to}>{item.label}</Link>
+                                        <Link className="hover:underline" to={item.to}>{item.label}</Link>
                                     </BreadcrumbLink>
                                     <BreadcrumbSeparator />
                                 </>
