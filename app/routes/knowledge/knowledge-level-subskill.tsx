@@ -30,7 +30,7 @@ export default function KnowledgeLevelSubskillRoute({ loaderData, params }: Rout
             <HeaderRoute title="Level Subskill" description="tingkatan pembelajaran tiap subskill" />
             <ItemGroup className="gap-y-3">
                 {subskillLevel.map((item, i) => (
-                    <Item variant="outline" asChild>
+                    <Item key={i} variant="outline" asChild>
                         <Link to={`${item.level}/subskill`}>
                             {/* <ItemMedia variant="icon">
                                 {i + 1}
