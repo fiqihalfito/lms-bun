@@ -31,7 +31,7 @@ export default function KnowledgeSubskillRoute({ loaderData, params, matches }: 
     return (
         <div>
             <BreadCrumb routeBreadCrumb={breadcrumb} />
-            <HeaderRoute title="Subskill" description="Subskill" />
+            <HeaderRoute title="Subskill" description="list subskill berisi dokumen dan kuis yang harus dilengkapi" />
             <ItemGroup className="gap-y-3">
                 {subskills.map((subskill, i) => (
                     <Item variant="outline" key={i}>
