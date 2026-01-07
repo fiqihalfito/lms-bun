@@ -1,26 +1,34 @@
 import { getSkillAll } from "@/features/skill/services/getSkillAll";
 import type { Route } from "./+types/knowledge-skill";
 import { HeaderRoute } from "@/components/header-route";
-import { Link, NavLink } from "react-router";
-import { cn } from "@/lib/utils";
-import { Item, ItemActions, ItemContent, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
-import { BadgeCheckIcon, ChevronRightIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
+import { Item, ItemContent, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
+import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
+import { BreadCrumb } from "@/components/breadcrumb";
+import { getTeamById } from "@/features/team/services/getTeamById";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const skills = await getSkillAll(params.idTeam)
+    const team = await getTeamById(params.idTeam)
 
-    return { skills }
+    return { skills, team }
 }
 
 export default function KnowledgeSkillRoute({ loaderData, params, matches }: Route.ComponentProps) {
 
-    const { skills } = loaderData
+    const { skills, team } = loaderData
+
+    const breadcrumb = useBreadcrumbs([
+        { label: "Kategori", to: `/app/dokumen` },
+        { label: "Team", to: `/app/knowledge/team` },
+        { label: "Skill", to: `/app/knowledge/team/${params.idTeam}/skill` },
+    ])
 
     return (
         <div>
-            <HeaderRoute title="Skill" description="Skill" />
+            <BreadCrumb routeBreadCrumb={breadcrumb} />
+            <HeaderRoute title="Skill" description={`Daftar skill ${team[0].namaTeam}`} />
             <ItemGroup className="gap-y-3">
                 {skills.map((skill, i) => (
                     <Item variant="outline" asChild>

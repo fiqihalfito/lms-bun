@@ -5,6 +5,9 @@ import { Item, ItemActions, ItemContent, ItemGroup, ItemMedia, ItemTitle } from 
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import { BanIcon, EyeIcon } from "lucide-react";
+import { BreadCrumb } from "@/components/breadcrumb";
+import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
+
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -13,12 +16,21 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     return { subskills }
 }
 
-export default function KnowledgeSubskillRoute({ loaderData, params }: Route.ComponentProps) {
+export default function KnowledgeSubskillRoute({ loaderData, params, matches }: Route.ComponentProps) {
 
     const { subskills } = loaderData
 
+    const breadcrumb = useBreadcrumbs([
+        { label: "Kategori", to: `/app/dokumen` },
+        { label: "Team", to: `/app/knowledge/team` },
+        { label: "Skill", to: `/app/knowledge/team/${params.idTeam}/skill` },
+        { label: "Level", to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level` },
+        { label: "Subskill", to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level/${params.level}/subskill` },
+    ])
+
     return (
         <div>
+            <BreadCrumb routeBreadCrumb={breadcrumb} />
             <HeaderRoute title="Subskill" description="Subskill" />
             <ItemGroup className="gap-y-3">
                 {subskills.map((subskill, i) => (

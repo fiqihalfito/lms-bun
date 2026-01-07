@@ -1,8 +1,10 @@
 import { HeaderRoute } from "@/components/header-route";
 import type { Route } from "./+types/knowledge-level-subskill";
 import { getSubskillLevelByIdSkill } from "@/features/subskill/services/getSubskillLevelByIdSkill";
-import { Item, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
+import { Item, ItemContent, ItemDescription, ItemGroup, ItemTitle } from "@/components/ui/item";
 import { Link } from "react-router";
+import { BreadCrumb } from "@/components/breadcrumb";
+import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -15,9 +17,17 @@ export default function KnowledgeLevelSubskillRoute({ loaderData, params }: Rout
 
     const { subskillLevel } = loaderData
 
+    const breadcrumb = useBreadcrumbs([
+        { label: "Kategori", to: `/app/dokumen` },
+        { label: "Team", to: `/app/knowledge/team` },
+        { label: "Skill", to: `/app/knowledge/team/${params.idTeam}/skill` },
+        { label: "Level", to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level` },
+    ])
+
     return (
         <div>
-            <HeaderRoute title="Skill" description="Skill" />
+            <BreadCrumb routeBreadCrumb={breadcrumb} />
+            <HeaderRoute title="Level Subskill" description="tingkatan pembelajaran tiap subskill" />
             <ItemGroup className="gap-y-3">
                 {subskillLevel.map((item, i) => (
                     <Item variant="outline" asChild>
