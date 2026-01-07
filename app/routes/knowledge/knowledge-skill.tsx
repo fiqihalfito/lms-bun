@@ -15,7 +15,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     return { skills, team }
 }
 
-export default function KnowledgeSkillRoute({ loaderData, params, matches }: Route.ComponentProps) {
+export default function KnowledgeSkillRoute({ loaderData, params }: Route.ComponentProps) {
 
     const { skills, team } = loaderData
 

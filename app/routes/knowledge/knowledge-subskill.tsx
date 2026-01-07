@@ -8,7 +8,6 @@ import { BanIcon, EyeIcon } from "lucide-react";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 
-
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const subskills = await getSubskillByIdSkillAndLevel(params.idSkill, Number(params.level))
@@ -16,7 +15,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     return { subskills }
 }
 
-export default function KnowledgeSubskillRoute({ loaderData, params, matches }: Route.ComponentProps) {
+export default function KnowledgeSubskillRoute({ loaderData, params }: Route.ComponentProps) {
 
     const { subskills } = loaderData
 
