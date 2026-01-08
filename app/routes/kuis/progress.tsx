@@ -55,7 +55,6 @@ export default function KuisRoute({ loaderData, params }: Route.ComponentProps) 
         })
 
         const nextQuestionNumber = Number(params.questionNumber) + 1
-
         if (nextQuestionNumber > jumlahSoal) {
             return navigate(`submit`, { replace: true })
         }
