@@ -1,10 +1,10 @@
 import { getSubskillByIdSkillAndLevel } from "@/features/subskill/services/getSubskillByIdSkillAndLevel";
 import type { Route } from "./+types/knowledge-subskill";
 import { HeaderRoute } from "@/components/header-route";
-import { Item, ItemActions, ItemContent, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
+import { Item, ItemActions, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
-import { BanIcon, EyeIcon } from "lucide-react";
+import { BanIcon, EyeIcon, PenLineIcon } from "lucide-react";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 
@@ -40,6 +40,9 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                         </ItemMedia>
                         <ItemContent>
                             <ItemTitle>{subskill.namaSubSkill}</ItemTitle>
+                            <ItemDescription>
+                                diuji
+                            </ItemDescription>
                         </ItemContent>
                         <ItemActions>
                             {subskill.idDokumen ? (
@@ -53,6 +56,19 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                 <Button variant="secondary" disabled>
                                     <BanIcon />
                                     Dokumen belum diupload
+                                </Button>
+                            )}
+                            {subskill.idKuis && (subskill.kuis?.questions?.length ?? 0) > 0 ? (
+                                <Button asChild>
+                                    <Link to={`/app/kuis/${subskill.idKuis}/start`}>
+                                        <PenLineIcon />
+                                        Mulai Kuis
+                                    </Link>
+                                </Button>
+                            ) : (
+                                <Button variant="secondary" disabled>
+                                    <BanIcon />
+                                    Kuis belum dibuat
                                 </Button>
                             )}
                         </ItemActions>

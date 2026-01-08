@@ -53,6 +53,14 @@ export default [
                     ]),
                 ]),
             ]),
+
+
+            ...prefix("kuis", [
+                route(":idKuis/start", "routes/kuis/start.tsx"),
+                route(":idKuis/progress/:idKuisProgress/question/:questionNumber", "routes/kuis/progress.tsx"),
+            ]),
+
+
             ...prefix("pic-subskill", [
                 index("routes/pic-subskill/skill.tsx"),
                 ...prefix("skill/:idSkill/subskill", [

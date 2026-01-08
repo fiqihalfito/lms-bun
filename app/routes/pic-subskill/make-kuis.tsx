@@ -2,7 +2,7 @@ import { getSubskillByIdSubskill } from "@/features/subskill/services/getSubskil
 import type { Route } from "./+types/make-kuis";
 import invariant from "tiny-invariant";
 import { createKuis } from "@/features/kuis/services/createKuis";
-import { getQuestionsByIdKuis } from "@/features/kuis/services/getQuestionsByIdKuis";
+import { getAllQuestionsByIdKuis } from "@/features/kuis/services/getAllQuestionsByIdKuis";
 import { HeaderRoute } from "@/components/header-route";
 import { updateSubskill } from "@/features/subskill/services/updateSubskill";
 import { Badge } from "@/components/ui/badge";
@@ -31,7 +31,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     }
 
     // lalu return semua question berdasarkan idkuis yang didapat
-    const questions = await getQuestionsByIdKuis(idKuis)
+    const questions = await getAllQuestionsByIdKuis(idKuis)
 
     // toast
     const { headers, toast } = await getToast(request)

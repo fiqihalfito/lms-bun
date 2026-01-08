@@ -8,3 +8,12 @@ export function cn(...inputs: ClassValue[]) {
 export function wait(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
+
+export function shuffle<T>(array: T[]): T[] {
+  const result = [...array] // jangan mutasi original
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
+}
