@@ -58,6 +58,9 @@ export default [
             ...prefix("kuis", [
                 route(":idKuis/start", "routes/kuis/start.tsx"),
                 route(":idKuis/progress/:idKuisProgress/question/:questionNumber", "routes/kuis/progress.tsx"),
+
+                // action
+                route(":idKuis/progress/:idKuisProgress/question/:questionNumber/submit-current-jawaban", "features/kuis/action/submit-current-jawaban.tsx"),
             ]),
 
 
