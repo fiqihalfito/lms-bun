@@ -61,6 +61,7 @@ export default [
 
                 // action
                 route(":idKuis/progress/:idKuisProgress/question/:questionNumber/submit-current-jawaban", "features/kuis/action/submit-current-jawaban.tsx"),
+
             ]),
 
 
@@ -78,6 +79,11 @@ export default [
                                 ...prefix("question/:idKuisQuestion", [
                                     route("edit", "routes/pic-subskill/edit-question.tsx"),
                                     route("delete", "features/kuis/action/delete-question.tsx"),
+                                ]),
+
+                                // action
+                                ...prefix("action", [
+                                    route("lock", "features/kuis/action/lock-kuis.tsx"),
                                 ])
                             ])
                         ]),

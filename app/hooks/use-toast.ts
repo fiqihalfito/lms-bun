@@ -10,22 +10,26 @@ export function useToastEffect(toast?: ToastMessage) {
         if (toast.type === "success") {
             notify.success(toast.message, {
                 id: toast.type,
-                position: "top-center"
+                position: "top-center",
+                description: toast.description,
             });
         } else if (toast.type === "error") {
             notify.error(toast.message, {
                 id: toast.type,
-                position: "top-center"
+                position: "top-center",
+                description: toast.description
             });
         } else if (toast.type === "warning") {
             notify.warning(toast.message, {
                 id: toast.type,
-                position: "top-center"
+                position: "top-center",
+                description: toast.description
             });
         } else if (toast.type === "info") {
             notify.info(toast.message, {
                 id: toast.type,
-                position: "top-center"
+                position: "top-center",
+                description: toast.description
             });
         }
     }, [toast]);

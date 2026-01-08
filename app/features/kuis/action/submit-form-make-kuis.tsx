@@ -7,6 +7,7 @@ import { updateOption } from "../services/updateOptions";
 import { insertQuestion } from "../services/insertQuestion";
 import { insertOptions } from "../services/insertOption";
 import type { tKuisQuestionOption } from "database/schema";
+import { updateKuisMetaData } from "../services/updateKuisMetaData";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
 
@@ -22,7 +23,6 @@ export async function action({ request, params, context }: Route.ActionArgs) {
 
     if (idKuisQuestion) {
         // edit mode
-        console.log("ada idQuestion")
 
         // update question first
         await updateQuestion(idKuisQuestion as string, {
@@ -43,7 +43,6 @@ export async function action({ request, params, context }: Route.ActionArgs) {
 
     } else {
         // insert mode
-        console.log("tidak ada idQuestion")
         const newQuestion = await insertQuestion({
             question: submission.value.question,
             answerOption: submission.value.answerOption,
@@ -58,7 +57,15 @@ export async function action({ request, params, context }: Route.ActionArgs) {
         })) satisfies typeof tKuisQuestionOption.$inferInsert[]
         await insertOptions(newOptions)
 
-        return redirectWithSuccess(`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`, "Soal berhasil ditambahkan")
+        // mode kuis terkunci kalau insert
+        await updateKuisMetaData(params.idKuis, {
+            isLocked: true,
+        })
+
+        return redirectWithSuccess(`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`, {
+            message: "Soal berhasil ditambahkan",
+            description: "Kuis terkunci"
+        })
     }
 
 }

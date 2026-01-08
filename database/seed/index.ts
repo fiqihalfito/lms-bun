@@ -1,6 +1,6 @@
 import { sql } from "drizzle-orm";
 import { db } from "../connect";
-import { mLayanan, mSkill, mSubBidang, mSubSkill, mTeam, mTeamMember, mUserProfiles, mUsers, tDokumen, tStatusBaca } from "../schema";
+import { mLayanan, mSkill, mSubBidang, mSubSkill, mTeam, mTeamMember, mUserProfiles, mUsers, tDokumen, tKuis, tKuisJawabanUser, tKuisProgress, tKuisQuestion, tKuisQuestionOption, tStatusBaca } from "../schema";
 import { subbidangSeed } from "./subbidang-seed";
 import { mRole } from "database/schema/role";
 import { roleSeed } from "./role-seed";
@@ -33,7 +33,12 @@ async function main() {
                 ${mTeam}, 
                 ${mLayanan}, 
                 ${mRole},
-                ${mSubBidang}
+                ${mSubBidang},
+                ${tKuis},
+                ${tKuisQuestion},
+                ${tKuisQuestionOption},
+                ${tKuisProgress},
+                ${tKuisJawabanUser}
             RESTART IDENTITY CASCADE;
         `);
 

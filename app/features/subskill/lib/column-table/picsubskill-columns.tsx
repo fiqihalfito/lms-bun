@@ -1,10 +1,11 @@
 import type { ColumnDef } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
-import { BanIcon, EyeIcon, FileUpIcon, PencilIcon } from "lucide-react";
+import { BanIcon, EyeIcon, FileUpIcon, LockIcon, PencilIcon, UnlockIcon } from "lucide-react";
 import { NavLink } from "react-router";
 import { Badge } from "@/components/ui/badge";
 import type { getSubSkillByIdPIC } from "../../services/getSubSkillByIdPIC";
 import { UploadDokumenDirectButton } from "@/features/dokumen/components/subskill/upload-dokumen-button";
+import { LockedIcon } from "@hugeicons/core-free-icons";
 
 export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkillByIdPIC>>[number]["subskills"][number]>[] = [
     {
@@ -125,6 +126,44 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
             ) : (
                 <Badge variant="destructive">Not yet</Badge>
             );
+
+        },
+    },
+    {
+        id: "status-kuis",
+        header: "Status Kuis",
+        accessorFn: (row) => row.kuis?.isLocked,
+        cell: ({ getValue, row }) => {
+            // const date = getValue<string | Date | null>();
+            // return date ? (
+            //     <Badge variant={"secondary"}>
+            //         {new Date(date).toLocaleString("id-ID")}
+            //     </Badge>
+            // ) : (
+            //     <Badge variant="destructive">Not yet</Badge>
+            // );
+            const isLocked = getValue<boolean>();
+            if (row.original.idKuis && isLocked) {
+                return (
+                    <Badge variant="destructive">
+                        <LockIcon />
+                        Locked
+                    </Badge>
+                )
+            } else if (row.original.idKuis && !isLocked) {
+                return (
+                    <Badge variant="default">
+                        <UnlockIcon />
+                        Published
+                    </Badge>
+                )
+            } else {
+                return (
+                    <Badge variant="destructive">
+                        Not yet
+                    </Badge>
+                )
+            }
 
         },
     },

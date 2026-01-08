@@ -4,6 +4,7 @@ import { mUsers } from "./users";
 
 export const tKuis = pgTable('t_kuis', (t) => ({
     idKuis: t.uuid("id_kuis").defaultRandom().primaryKey(),
+    isLocked: t.boolean("is_locked").notNull().default(true),
     ...timestamps,
 }))
 

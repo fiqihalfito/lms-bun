@@ -13,6 +13,9 @@ import { data, Link, NavLink, Outlet, useFetcher } from "react-router";
 import { BelumAdaSoal } from "@/features/kuis/components/make-kuis/BelumAdaSoal";
 import { getToast } from "remix-toast";
 import { useToastEffect } from "@/hooks/use-toast";
+import { TombolTambahSoal } from "@/features/kuis/components/make-kuis/TombolTambahSoal";
+import { SwitchKuisLocked } from "@/features/kuis/components/make-kuis/SwitchKuisLocked";
+import { getKuisMetaDataByIdKuis } from "@/features/kuis/services/getKuisMetaDataByIdKuis";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -32,16 +35,17 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     // lalu return semua question berdasarkan idkuis yang didapat
     const questions = await getAllQuestionsByIdKuis(idKuis)
+    const kuisMetaData = await getKuisMetaDataByIdKuis(idKuis)
 
     // toast
     const { headers, toast } = await getToast(request)
 
-    return data({ questions, subskill, idKuis, toast }, { headers })
+    return data({ questions, subskill, idKuis, toast, kuisMetaData: kuisMetaData[0] }, { headers })
 }
 
 export default function MakeKuisRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { questions, subskill, idKuis, toast } = loaderData
+    const { questions, subskill, idKuis, toast, kuisMetaData } = loaderData
 
     useToastEffect(toast)
 
@@ -67,13 +71,9 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
                 }
             />
 
-            <div className="mb-6">
-                <Button size={"lg"} asChild>
-                    <NavLink to={`kuis/${idKuis}/add-question`} viewTransition>
-                        <PlusIcon />
-                        Tambah Soal
-                    </NavLink>
-                </Button>
+            <div className="mb-6 flex items-center justify-between gap-2 w-1/2">
+                <TombolTambahSoal idKuis={idKuis} />
+                <SwitchKuisLocked idKuis={idKuis} isLocked={kuisMetaData.isLocked} />
             </div>
 
             {/* ambil list questions di github */}
