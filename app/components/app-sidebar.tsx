@@ -31,10 +31,11 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { NavPICSubSkills } from "./nav-PIC-SKILL"
-import { Link, matchPath, useLocation, useMatch } from "react-router"
+import { Link, matchPath, useLocation, useMatch, useRouteLoaderData } from "react-router"
 import { DatabaseZap, FilesIcon, GaugeIcon, PyramidIcon } from "lucide-react"
 import { NavMaster } from "./nav-master"
 import { MainPageNavButton } from "./MainPageNavButton"
+import type { UserContextForAuthType } from "@/lib/context"
 
 const data = {
   user: {
@@ -123,6 +124,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const location = useLocation()
   const isMaster = location.pathname.includes("/app/master")
 
+  const { userData } = useRouteLoaderData("app") as { userData: UserContextForAuthType }
 
 
   return (
@@ -152,7 +154,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <>
             <NavMain items={data.navMain} />
             <NavPICSubSkills items={data.picSubSkills} />
-            <MasterPageNavButton className="mt-auto" />
+            {userData.idRole === "pegawai" && <MasterPageNavButton className="mt-auto" />}
           </>
         )}
       </SidebarContent>
