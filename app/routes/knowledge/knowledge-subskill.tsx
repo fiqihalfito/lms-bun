@@ -4,7 +4,7 @@ import { HeaderRoute } from "@/components/header-route";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
-import { BanIcon, EyeIcon, PenLineIcon } from "lucide-react";
+import { BanIcon, EyeIcon, LockIcon, PenLineIcon } from "lucide-react";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 
@@ -58,7 +58,12 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     Dokumen belum diupload
                                 </Button>
                             )}
-                            {subskill.idKuis && (subskill.kuis?.questions?.length ?? 0) > 0 ? (
+                            {subskill.kuis?.isLocked ? (
+                                <Button variant="secondary" disabled>
+                                    <LockIcon />
+                                    Kuis terkunci
+                                </Button>
+                            ) : subskill.idKuis && (subskill.kuis?.questions?.length ?? 0) > 0 ? (
                                 <Button asChild>
                                     <Link to={`/app/kuis/${subskill.idKuis}/start`}>
                                         <PenLineIcon />
