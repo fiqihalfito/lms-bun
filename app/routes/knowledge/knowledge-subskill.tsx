@@ -40,9 +40,9 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                         </ItemMedia>
                         <ItemContent>
                             <ItemTitle>{subskill.namaSubSkill}</ItemTitle>
-                            <ItemDescription>
+                            {/* <ItemDescription>
                                 diuji
-                            </ItemDescription>
+                            </ItemDescription> */}
                         </ItemContent>
                         <ItemActions>
                             {subskill.idDokumen ? (
