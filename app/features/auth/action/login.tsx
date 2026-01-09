@@ -24,7 +24,6 @@ export async function action({ request, params }: Route.ActionArgs) {
 
         return redirectWithToast("/app/dashboard", {
             message: "You are logged in",
-            description: "description of toast",
             type: "success",
         }, { headers });
     } catch (error) {
