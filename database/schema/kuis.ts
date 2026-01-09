@@ -13,7 +13,7 @@ export const tKuisQuestion = pgTable('t_kuis_question', (t) => ({
     idKuis: t.uuid("id_kuis").references(() => tKuis.idKuis),
     question: t.text("question").notNull(),
     answerOption: t.char("answer_option", { length: 1 }).notNull(),
-    waktuPengerjaanDetik: t.integer("waktu_pengerjaan_detik").default(60),
+    waktuPengerjaanDetik: t.integer("waktu_pengerjaan_detik").default(15),
 }))
 
 export const tKuisQuestionOption = pgTable('t_kuis_question_option', (t) => ({
