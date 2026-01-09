@@ -58,7 +58,7 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     Dokumen belum diupload
                                 </Button>
                             )}
-                            {subskill.kuis?.isLocked ? (
+                            {/* {subskill.kuis?.isLocked ? (
                                 <Button variant="secondary" disabled>
                                     <LockIcon />
                                     Kuis terkunci
@@ -75,7 +75,11 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     <BanIcon />
                                     Kuis belum dibuat
                                 </Button>
-                            )}
+                            )} */}
+                            <Button variant="secondary" disabled>
+                                <LockIcon />
+                                Kuis terkunci
+                            </Button>
                         </ItemActions>
                     </Item>
                 ))}
