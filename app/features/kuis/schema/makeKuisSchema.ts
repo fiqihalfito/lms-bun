@@ -11,4 +11,11 @@ export const makeKuisSchema = z.object({
         c: z.string(),
         d: z.string(),
     }),
+    waktuPengerjaanDetik: z.number()
+        .min(15, {
+            error: "minimal 15 detik",
+        })
+        .max(60 * 3, {
+            error: "maksimal 180 detik (3 menit)",
+        }),
 })

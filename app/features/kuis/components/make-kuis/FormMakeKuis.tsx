@@ -71,20 +71,18 @@ export function FormMakeKuis({ defaultValues, actionUrl }: FormMakeKuisProp) {
             className="flex flex-col gap-6 border shadow rounded-md p-6 w-1/3 mx-auto"
         >
             <FieldSet>
-                <Field>
-                    <FieldLabel htmlFor="soal">
-                        Soal
-                    </FieldLabel>
-
-                    <Textarea
-                        {...getTextareaProps(fields.question)}
-                        placeholder="Masukkan soal"
-                    />
-                    <FieldError id={fields.question.id}>{fields.question.errors}</FieldError>
-                </Field>
-
                 <FieldGroup>
+                    <Field>
+                        <FieldLabel htmlFor="soal">
+                            Soal
+                        </FieldLabel>
 
+                        <Textarea
+                            {...getTextareaProps(fields.question)}
+                            placeholder="Masukkan soal"
+                        />
+                        <FieldError id={fields.question.id}>{fields.question.errors}</FieldError>
+                    </Field>
                     <Field>
                         <FieldLabel>
                             Pilihan ganda
@@ -125,13 +123,24 @@ export function FormMakeKuis({ defaultValues, actionUrl }: FormMakeKuisProp) {
                         />
                         <FieldError id={fields.answerOption.id}>{fields.answerOption.errors}</FieldError>
                     </Field>
+                    <Field className="w-1/2">
+                        <FieldLabel>
+                            Waktu Pengerjaan (detik)
+                        </FieldLabel>
+                        <Input
+                            {...getInputProps(fields.waktuPengerjaanDetik, { type: "number" })}
+                            placeholder="Waktu pengerjaan"
+                        />
+                        <FieldError id={fields.waktuPengerjaanDetik.id}>{fields.waktuPengerjaanDetik.errors}</FieldError>
+                    </Field>
+
+                    <Field>
+                        <Button type="submit" disabled={submitting}>
+                            {submitting && <Spinner />}
+                            {submitting ? "Menyimpan..." : "Simpan"}
+                        </Button>
+                    </Field>
                 </FieldGroup>
-                <Field>
-                    <Button type="submit" disabled={submitting}>
-                        {submitting && <Spinner />}
-                        {submitting ? "Menyimpan..." : "Simpan"}
-                    </Button>
-                </Field>
             </FieldSet>
         </fetcher.Form>
     )
