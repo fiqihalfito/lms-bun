@@ -73,7 +73,7 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
 
             <div className="mb-6 flex items-center justify-between gap-2 w-1/2">
                 <TombolTambahSoal idKuis={idKuis} />
-                <SwitchKuisLocked idKuis={idKuis} isLocked={kuisMetaData.isLocked} />
+                <SwitchKuisLocked idKuis={idKuis} isLocked={kuisMetaData.isLocked} jumlahSoal={questions.length} />
             </div>
 
             {/* ambil list questions di github */}

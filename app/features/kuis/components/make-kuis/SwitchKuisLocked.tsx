@@ -5,7 +5,8 @@ import { useFetcher } from "react-router";
 
 type SwitchKuisLockedProp = {
     idKuis: string,
-    isLocked: boolean
+    isLocked: boolean,
+    jumlahSoal: number
 }
 
 export function SwitchKuisLocked({ idKuis, isLocked }: SwitchKuisLockedProp) {
