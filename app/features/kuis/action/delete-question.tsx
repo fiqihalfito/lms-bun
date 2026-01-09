@@ -1,16 +1,25 @@
-import { dataWithError, dataWithSuccess, redirectWithSuccess } from "remix-toast";
+import { dataWithError, dataWithSuccess } from "remix-toast";
 import { deleteOptions } from "../services/deleteOptions";
 import { deleteQuestion } from "../services/deleteQuestion";
 import type { Route } from "./+types/delete-question";
 import { getDbErrorMessage } from "database/utils/dbErrorUtils";
 import { db } from "database/connect";
+import { deleteKuisJawabanUserByIdKuisQuestion } from "../services/deleteKuisJawabanUserByIdKuisQuestion";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
 
     try {
 
         await db.transaction(async (tx) => {
-            // delete options first
+
+
+            // delete jawaban user first
+            await deleteKuisJawabanUserByIdKuisQuestion(params.idKuisQuestion, tx)
+
+            // update kuis progress (too advanced) otherwise make attempt kuis
+            // await updateKuisProgress()
+
+            // delete options 
             await deleteOptions(params.idKuisQuestion, tx)
 
             // delete question
