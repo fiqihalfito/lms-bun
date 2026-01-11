@@ -28,6 +28,7 @@ export async function action({ request, params, context }: Route.ActionArgs) {
         await updateQuestion(idKuisQuestion as string, {
             question: submission.value.question,
             answerOption: submission.value.answerOption,
+            waktuPengerjaanDetik: submission.value.waktuPengerjaanDetik,
             idKuis: params.idKuis
         })
 

@@ -129,6 +129,7 @@ export function FormMakeKuis({ defaultValues, actionUrl }: FormMakeKuisProp) {
                         </FieldLabel>
                         <Input
                             {...getInputProps(fields.waktuPengerjaanDetik, { type: "number" })}
+                            defaultValue={fields.waktuPengerjaanDetik.defaultValue}
                             placeholder="Waktu pengerjaan"
                         />
                         <FieldError id={fields.waktuPengerjaanDetik.id}>{fields.waktuPengerjaanDetik.errors}</FieldError>

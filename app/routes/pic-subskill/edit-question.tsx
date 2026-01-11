@@ -65,6 +65,7 @@ export default function EditQuestionRoute({ loaderData, params }: Route.Componen
                     ])
                 ) as { a: string; b: string; c: string; d: string },
                 idKuisQuestion: params.idKuisQuestion,
+                waktuPengerjaanDetik: Number(question[0].waktuPengerjaanDetik) ?? 15,
             }}
                 actionUrl={`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis/kuis/${params.idKuis}/submit`}
             />
