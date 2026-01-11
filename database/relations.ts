@@ -18,7 +18,15 @@ export const relations = defineRelations(schema, (r) => ({
         pembaca: r.one.tStatusBaca({
             from: r.tDokumen.idDokumen,
             to: r.tStatusBaca.idDokumen,
-        })
+        }),
+        statusBacaOne: r.one.tStatusBaca({
+            from: r.tDokumen.idDokumen,
+            to: r.tStatusBaca.idDokumen,
+        }),
+        statusBacaMany: r.many.tStatusBaca({
+            from: r.tDokumen.idDokumen,
+            to: r.tStatusBaca.idDokumen,
+        }),
         // pembaca: r.many.mUserProfiles({
         //     from: r.tDokumen.idDokumen.through(r.tStatusBaca.idDokumen),
         //     to: r.mUserProfiles.idUser.through(r.tStatusBaca.idPembaca)
@@ -52,6 +60,10 @@ export const relations = defineRelations(schema, (r) => ({
         kuis: r.one.tKuis({
             from: r.mSubSkill.idKuis,
             to: r.tKuis.idKuis
+        }),
+        dokumen: r.one.tDokumen({
+            from: r.mSubSkill.idDokumen,
+            to: r.tDokumen.idDokumen
         })
     },
     tKuisQuestion: {

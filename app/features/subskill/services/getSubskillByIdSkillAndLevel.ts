@@ -2,7 +2,7 @@ import { db } from "database/connect";
 import { mSubSkill } from "database/schema";
 import { and, eq } from "drizzle-orm";
 
-export async function getSubskillByIdSkillAndLevel(idSkill: string, level: number) {
+export async function getSubskillByIdSkillAndLevel(idSkill: string, level: number, idPembaca: string) {
     // const subskill = await db.select().from(mSubSkill)
     //     .where(and(eq(mSubSkill.idSkill, idSkill), eq(mSubSkill.level, level)))
     //     .orderBy(mSubSkill.urutan)
@@ -20,6 +20,15 @@ export async function getSubskillByIdSkillAndLevel(idSkill: string, level: numbe
                     questions: {
                         columns: {
                             idKuisQuestion: true
+                        }
+                    }
+                }
+            },
+            dokumen: {
+                with: {
+                    statusBacaOne: {
+                        where: {
+                            idPembaca: idPembaca
                         }
                     }
                 }

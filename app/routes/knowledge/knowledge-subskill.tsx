@@ -7,10 +7,13 @@ import { Button } from "@/components/ui/button";
 import { BanIcon, EyeIcon, LockIcon, PenLineIcon } from "lucide-react";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
+import { Badge } from "@/components/ui/badge";
+import { userContext } from "@/lib/context";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
-    const subskills = await getSubskillByIdSkillAndLevel(params.idSkill, Number(params.level))
+    const user = context.get(userContext)
+    const subskills = await getSubskillByIdSkillAndLevel(params.idSkill, Number(params.level), user.idUser)
 
     return { subskills }
 }
@@ -43,6 +46,11 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                             {/* <ItemDescription>
                                 diuji
                             </ItemDescription> */}
+                            {subskill.dokumen?.statusBacaOne ? (
+                                <Badge variant="default">Sudah dibaca</Badge>
+                            ) : (
+                                <Badge variant="destructive">Belum dibaca</Badge>
+                            )}
                         </ItemContent>
                         <ItemActions>
                             {subskill.idDokumen ? (
@@ -58,7 +66,13 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     Dokumen belum diupload
                                 </Button>
                             )}
-                            {/* {subskill.kuis?.isLocked ? (
+
+                            {!subskill.dokumen?.statusBacaOne ? (
+                                <Button variant="secondary" disabled>
+                                    <LockIcon />
+                                    Dokumen belum dibaca
+                                </Button>
+                            ) : subskill.kuis?.isLocked ? (
                                 <Button variant="secondary" disabled>
                                     <LockIcon />
                                     Kuis terkunci
@@ -75,11 +89,11 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     <BanIcon />
                                     Kuis belum dibuat
                                 </Button>
-                            )} */}
-                            <Button variant="secondary" disabled>
+                            )}
+                            {/* <Button variant="secondary" disabled>
                                 <LockIcon />
                                 Kuis terkunci
-                            </Button>
+                            </Button> */}
                         </ItemActions>
                     </Item>
                 ))}
