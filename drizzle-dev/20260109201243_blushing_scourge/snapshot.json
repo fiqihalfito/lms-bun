@@ -1,0 +1,1897 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "fa1ae20c-e9c2-40a2-bf05-17392335d632",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "m_user_profiles",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_users",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_dokumen",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_status_baca",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_subbidang",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_layanan",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_team",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_team_member",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_skill",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_subskill",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "m_role",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_kuis",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_kuis_jawaban_user",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_kuis_progress",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_kuis_question",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "t_kuis_question_option",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_user",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_user",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "type": "char(2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "deleted_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_user",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "email",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "password",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "varchar",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_role",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "deleted_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_dokumen",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "judul",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "varchar",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "tipe",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "filename",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_layanan",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "char(2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_uploader",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_team",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "deleted_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_status_baca",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_pembaca",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_dokumen",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "count_read",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "deleted_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "type": "char(2)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subbidang"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subbidang"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_layanan",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_layanan",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "type": "char(2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "deleted_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_team",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_team"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_team",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_team"
+    },
+    {
+      "type": "char(2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_team"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_team_member",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_team_member"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_team",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_team_member"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_user",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_team_member"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_skill",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_skill"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_skill",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_skill"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_team",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_skill"
+    },
+    {
+      "type": "char(2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_subbidang",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_skill"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_subskill",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_subskill",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "1",
+      "generated": null,
+      "identity": null,
+      "name": "level",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "urutan",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_pic",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_skill",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_dokumen",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "type": "varchar",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_role",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_role"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nama_role",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "m_role"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "true",
+      "generated": null,
+      "identity": null,
+      "name": "is_locked",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "deleted_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_jawaban_user",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_progress",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_question",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "char(1)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "answer",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "false",
+      "generated": null,
+      "identity": null,
+      "name": "is_correct",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "score",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "waktu_pengerjaan_detik",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_progress",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_user",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "score",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "jumlah_benar",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "jumlah_soal",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "started_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "completed_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "total_waktu_pengerjaan_detik",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "'[]'",
+      "generated": null,
+      "identity": null,
+      "name": "question_set",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_question",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "question",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question"
+    },
+    {
+      "type": "char(1)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "answer_option",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "15",
+      "generated": null,
+      "identity": null,
+      "name": "waktu_pengerjaan_detik",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "gen_random_uuid()",
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_question_option",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question_option"
+    },
+    {
+      "type": "uuid",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id_kuis_question",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question_option"
+    },
+    {
+      "type": "char(1)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "option",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question_option"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "option_desc",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "t_kuis_question_option"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_user"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_users",
+      "columnsTo": [
+        "id_user"
+      ],
+      "onUpdate": "CASCADE",
+      "onDelete": "NO ACTION",
+      "name": "m_user_profiles_id_user_m_users_id_user_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_subbidang"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_subbidang",
+      "columnsTo": [
+        "id_subbidang"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_user_profiles_id_subbidang_m_subbidang_id_subbidang_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_user_profiles"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_role"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_role",
+      "columnsTo": [
+        "id_role"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_users_id_role_m_role_id_role_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_users"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_layanan"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_layanan",
+      "columnsTo": [
+        "id_layanan"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_dokumen_id_layanan_m_layanan_id_layanan_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_subbidang"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_subbidang",
+      "columnsTo": [
+        "id_subbidang"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_dokumen_id_subbidang_m_subbidang_id_subbidang_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_uploader"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_user_profiles",
+      "columnsTo": [
+        "id_user"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_dokumen_id_uploader_m_user_profiles_id_user_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_team"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_team",
+      "columnsTo": [
+        "id_team"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_dokumen_id_team_m_team_id_team_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_dokumen"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_pembaca"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_user_profiles",
+      "columnsTo": [
+        "id_user"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_status_baca_id_pembaca_m_user_profiles_id_user_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_dokumen"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_dokumen",
+      "columnsTo": [
+        "id_dokumen"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_status_baca_id_dokumen_t_dokumen_id_dokumen_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_subbidang"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_subbidang",
+      "columnsTo": [
+        "id_subbidang"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_layanan_id_subbidang_m_subbidang_id_subbidang_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_layanan"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_subbidang"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_subbidang",
+      "columnsTo": [
+        "id_subbidang"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_team_id_subbidang_m_subbidang_id_subbidang_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_team"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_team"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_team",
+      "columnsTo": [
+        "id_team"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_team_member_id_team_m_team_id_team_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_team_member"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_user"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_users",
+      "columnsTo": [
+        "id_user"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_team_member_id_user_m_users_id_user_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_team_member"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_team"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_team",
+      "columnsTo": [
+        "id_team"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_skill_id_team_m_team_id_team_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_skill"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_subbidang"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_subbidang",
+      "columnsTo": [
+        "id_subbidang"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_skill_id_subbidang_m_subbidang_id_subbidang_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_skill"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_pic"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_users",
+      "columnsTo": [
+        "id_user"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_subskill_id_pic_m_users_id_user_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_skill"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_skill",
+      "columnsTo": [
+        "id_skill"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_subskill_id_skill_m_skill_id_skill_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_dokumen"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_dokumen",
+      "columnsTo": [
+        "id_dokumen"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_subskill_id_dokumen_t_dokumen_id_dokumen_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_kuis",
+      "columnsTo": [
+        "id_kuis"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "m_subskill_id_kuis_t_kuis_id_kuis_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "m_subskill"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis_progress"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_kuis_progress",
+      "columnsTo": [
+        "id_kuis_progress"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_kuis_jawaban_user_5sT9KseoJHue_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis_question"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_kuis_question",
+      "columnsTo": [
+        "id_kuis_question"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_kuis_jawaban_user_GQmipoOs3edB_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_kuis",
+      "columnsTo": [
+        "id_kuis"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_kuis_progress_id_kuis_t_kuis_id_kuis_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_user"
+      ],
+      "schemaTo": "public",
+      "tableTo": "m_users",
+      "columnsTo": [
+        "id_user"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_kuis_progress_id_user_m_users_id_user_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_kuis",
+      "columnsTo": [
+        "id_kuis"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_kuis_question_id_kuis_t_kuis_id_kuis_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_kuis_question"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis_question"
+      ],
+      "schemaTo": "public",
+      "tableTo": "t_kuis_question",
+      "columnsTo": [
+        "id_kuis_question"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "t_kuis_question_option_cnxzC0VSPkwd_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "t_kuis_question_option"
+    },
+    {
+      "columns": [
+        "id_user"
+      ],
+      "nameExplicit": false,
+      "name": "m_user_profiles_pkey",
+      "schema": "public",
+      "table": "m_user_profiles",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_user"
+      ],
+      "nameExplicit": false,
+      "name": "m_users_pkey",
+      "schema": "public",
+      "table": "m_users",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_dokumen"
+      ],
+      "nameExplicit": false,
+      "name": "t_dokumen_pkey",
+      "schema": "public",
+      "table": "t_dokumen",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_status_baca"
+      ],
+      "nameExplicit": false,
+      "name": "t_status_baca_pkey",
+      "schema": "public",
+      "table": "t_status_baca",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_subbidang"
+      ],
+      "nameExplicit": false,
+      "name": "m_subbidang_pkey",
+      "schema": "public",
+      "table": "m_subbidang",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_layanan"
+      ],
+      "nameExplicit": false,
+      "name": "m_layanan_pkey",
+      "schema": "public",
+      "table": "m_layanan",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_team"
+      ],
+      "nameExplicit": false,
+      "name": "m_team_pkey",
+      "schema": "public",
+      "table": "m_team",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_team_member"
+      ],
+      "nameExplicit": false,
+      "name": "m_team_member_pkey",
+      "schema": "public",
+      "table": "m_team_member",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_skill"
+      ],
+      "nameExplicit": false,
+      "name": "m_skill_pkey",
+      "schema": "public",
+      "table": "m_skill",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_subskill"
+      ],
+      "nameExplicit": false,
+      "name": "m_subskill_pkey",
+      "schema": "public",
+      "table": "m_subskill",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_role"
+      ],
+      "nameExplicit": false,
+      "name": "m_role_pkey",
+      "schema": "public",
+      "table": "m_role",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_kuis"
+      ],
+      "nameExplicit": false,
+      "name": "t_kuis_pkey",
+      "schema": "public",
+      "table": "t_kuis",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_kuis_jawaban_user"
+      ],
+      "nameExplicit": false,
+      "name": "t_kuis_jawaban_user_pkey",
+      "schema": "public",
+      "table": "t_kuis_jawaban_user",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_kuis_progress"
+      ],
+      "nameExplicit": false,
+      "name": "t_kuis_progress_pkey",
+      "schema": "public",
+      "table": "t_kuis_progress",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_kuis_question"
+      ],
+      "nameExplicit": false,
+      "name": "t_kuis_question_pkey",
+      "schema": "public",
+      "table": "t_kuis_question",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id_kuis_question_option"
+      ],
+      "nameExplicit": false,
+      "name": "t_kuis_question_option_pkey",
+      "schema": "public",
+      "table": "t_kuis_question_option",
+      "entityType": "pks"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_pembaca",
+        "id_dokumen"
+      ],
+      "nullsNotDistinct": false,
+      "name": "t_status_baca_id_pembaca_id_dokumen_unique",
+      "entityType": "uniques",
+      "schema": "public",
+      "table": "t_status_baca"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "id_kuis",
+        "id_user"
+      ],
+      "nullsNotDistinct": false,
+      "name": "t_kuis_progress_id_kuis_id_user_unique",
+      "entityType": "uniques",
+      "schema": "public",
+      "table": "t_kuis_progress"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "email"
+      ],
+      "nullsNotDistinct": false,
+      "name": "m_users_email_key",
+      "schema": "public",
+      "table": "m_users",
+      "entityType": "uniques"
+    }
+  ],
+  "renames": []
+}
