@@ -48,6 +48,12 @@ export const relations = defineRelations(schema, (r) => ({
             to: r.mUsers.idUser
         })
     },
+    mSkill: {
+        team: r.one.mTeam({
+            from: r.mSkill.idTeam,
+            to: r.mTeam.idTeam
+        })
+    },
     mSubSkill: {
         pic: r.one.mUserProfiles({
             from: r.mSubSkill.idPic,
@@ -80,6 +86,10 @@ export const relations = defineRelations(schema, (r) => ({
         questions: r.many.tKuisQuestion({
             from: r.tKuis.idKuis,
             to: r.tKuisQuestion.idKuis
+        }),
+        subSkill: r.one.mSubSkill({
+            from: r.tKuis.idKuis,
+            to: r.mSubSkill.idKuis,
         })
     }
 

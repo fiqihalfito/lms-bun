@@ -4,13 +4,14 @@ import { HeaderRoute } from "@/components/header-route";
 import { getIdQuestionsKuisProgress } from "@/features/kuis/services/pengerjaan-kuis/getIdQuestionsKuisProgress";
 import invariant from "tiny-invariant";
 import { getToast } from "remix-toast";
-import { data, useFetcher, useNavigate } from "react-router";
+import { data, useFetcher, useNavigate, useResolvedPath, useSubmit } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
 import { getNamaSubskillByIdKuis } from "@/features/subskill/services/getNamaSubskillByIdKuis";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { shuffle } from "@/lib/utils";
 import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from "@/components/ui/field";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect } from "react";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -40,29 +41,24 @@ export default function KuisRoute({ loaderData, params }: Route.ComponentProps) 
 
     const { question, namaSubskill, toast, jumlahSoal, options } = loaderData
 
+    useToastEffect(toast)
 
     const pilihanChar = ["A", "B", "C", "D"]
 
-    const navigate = useNavigate()
-    const fetcher = useFetcher()
+    const fetcherCurrentJawaban = useFetcher({ key: "submit-current-jawaban" })
     const handleSaveJawaban = (value: string) => {
-        fetcher.submit({
+
+        fetcherCurrentJawaban.submit({
             idKuisQuestion: question.idKuisQuestion,
-            jawaban: value
+            jawaban: value,
+            jumlahSoal: jumlahSoal,
         }, {
             method: "post",
-            action: "submit-current-jawaban"
+            action: "submit-current-jawaban",
         })
 
-        const nextQuestionNumber = Number(params.questionNumber) + 1
-        if (nextQuestionNumber > jumlahSoal) {
-            return navigate(`submit`, { replace: true })
-        }
-        return navigate(`../${nextQuestionNumber}`, { replace: true, relative: "path" })
     }
 
-
-    useToastEffect(toast)
 
     return (
         <div>

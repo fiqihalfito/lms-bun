@@ -18,6 +18,9 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     return { subskills }
 }
 
+// set current url here to localStorage to redirect back to this page after submit kuis
+
+
 export default function KnowledgeSubskillRoute({ loaderData, params }: Route.ComponentProps) {
 
     const { subskills } = loaderData

@@ -27,7 +27,7 @@ export const tKuisProgress = pgTable('t_kuis_progress', (t) => ({
     idKuisProgress: t.uuid("id_kuis_progress").defaultRandom().primaryKey(),
     idKuis: t.uuid("id_kuis").references(() => tKuis.idKuis),
     idUser: t.uuid("id_user").references(() => mUsers.idUser),
-    score: t.integer("score").default(0),
+    totalScore: t.integer("total_score").default(0),
     jumlahBenar: t.integer("jumlah_benar").default(0),
     jumlahSoal: t.integer("jumlah_soal").default(0),
     startedAt: t.timestamp("started_at", { mode: 'string' }).defaultNow(),

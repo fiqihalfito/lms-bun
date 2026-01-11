@@ -9,7 +9,7 @@ export async function createKuisProgress(idKuis: string, idUser: string) {
         completedAt: null,
         jumlahBenar: 0,
         jumlahSoal: 0,
-        score: 0,
+        totalScore: 0,
         totalWaktuPengerjaanDetik: 0,
         startedAt: sql`now()`,
     }).returning({ idKuisProgress: tKuisProgress.idKuisProgress })

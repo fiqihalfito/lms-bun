@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 
 export async function updateQuestionsInKuisProgress(idKuisProgress: string, idQuestions: string[]) {
     await db.update(tKuisProgress).set({
-        questionSet: JSON.stringify(idQuestions)
+        questionSet: JSON.stringify(idQuestions),
+        jumlahSoal: idQuestions.length,
     }).where(eq(tKuisProgress.idKuisProgress, idKuisProgress))
 }

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Link } from "react-router";
 import { Button } from "./ui/button";
+import React from "react";
 
 export type BreadCrumbItem = {
     label: string;
@@ -25,18 +26,22 @@ export function BreadCrumb({ routeBreadCrumb }: BreadCrumbProps) {
                 {routeBreadCrumb.map((item, index) => {
                     const isLast = index === routeBreadCrumb.length - 1;
                     return (
-                        <BreadcrumbItem key={index}>
+                        <React.Fragment key={index}>
                             {isLast ? (
-                                <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                                <BreadcrumbItem>
+                                    <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                                </BreadcrumbItem>
                             ) : (
                                 <>
-                                    <BreadcrumbLink asChild>
-                                        <Link className="hover:underline" to={item.to}>{item.label}</Link>
-                                    </BreadcrumbLink>
+                                    <BreadcrumbItem>
+                                        <BreadcrumbLink asChild>
+                                            <Link className="hover:underline" to={item.to}>{item.label}</Link>
+                                        </BreadcrumbLink>
+                                    </BreadcrumbItem>
                                     <BreadcrumbSeparator />
                                 </>
                             )}
-                        </BreadcrumbItem>
+                        </React.Fragment>
                     )
                 })}
             </BreadcrumbList>
