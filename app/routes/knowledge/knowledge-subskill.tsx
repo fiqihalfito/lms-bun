@@ -70,7 +70,7 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                 </Button>
                             )}
 
-                            {!subskill.dokumen?.statusBacaOne ? (
+                            {/* {!subskill.dokumen?.statusBacaOne ? (
                                 <Button variant="secondary" disabled>
                                     <LockIcon />
                                     Dokumen belum dibaca
@@ -92,11 +92,11 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     <BanIcon />
                                     Kuis belum dibuat
                                 </Button>
-                            )}
-                            {/* <Button variant="secondary" disabled>
+                            )} */}
+                            <Button variant="secondary" disabled>
                                 <LockIcon />
                                 Kuis terkunci
-                            </Button> */}
+                            </Button>
                         </ItemActions>
                     </Item>
                 ))}
