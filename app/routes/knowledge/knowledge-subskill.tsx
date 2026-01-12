@@ -15,9 +15,9 @@ import { useEffect } from "react";
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const user = context.get(userContext)
-    const subskills = await getSubskillByIdSkillAndLevel(params.idSkill, Number(params.level), user.idUser)
+    const { subskills, rataPersentase } = await getSubskillByIdSkillAndLevel(params.idSkill, Number(params.level), user.idUser)
 
-    return { subskills }
+    return { subskills, rataPersentase }
 }
 
 // set current url here to localStorage to redirect back to this page after submit kuis
@@ -25,7 +25,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
 export default function KnowledgeSubskillRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { subskills } = loaderData
+    const { subskills, rataPersentase } = loaderData
 
     const breadcrumb = useBreadcrumbs([
         { label: "Kategori", to: `/app/dokumen` },
@@ -45,6 +45,18 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
         <div>
             <BreadCrumb routeBreadCrumb={breadcrumb} />
             <HeaderRoute title="Subskill" description="list subskill berisi dokumen dan kuis yang harus dilengkapi" />
+            <div className="p-4 mb-6 border rounded-xl bg-muted/30 w-1/2">
+                <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-muted-foreground">Total Progress Level</span>
+                    <span className="text-sm font-bold text-emerald-600">{rataPersentase}%</span>
+                </div>
+                <div className="w-full h-3 overflow-hidden rounded-full bg-secondary">
+                    <div
+                        className="h-full transition-all duration-500 ease-in-out bg-emerald-600"
+                        style={{ width: `${rataPersentase}%` }}
+                    />
+                </div>
+            </div>
             <ItemGroup className="gap-y-3">
                 {subskills.map((subskill, i) => (
                     <Item variant="outline" key={i}>
@@ -72,6 +84,9 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                 )}
                                 {subskill.kuisProgress?.idKuisProgress && (
                                     <Badge variant="default" className="bg-emerald-600 hover:bg-emerald-600">jumlah benar: {subskill.kuisProgress.jumlahBenar}/{subskill.kuisProgress.jumlahSoal}</Badge>
+                                )}
+                                {subskill.kuisProgress?.idKuisProgress && (
+                                    <Badge variant="default" className="bg-emerald-600 hover:bg-emerald-600">persentase benar: {subskill.kuisProgress.persentaseBenar}%</Badge>
                                 )}
                             </div>
                         </ItemContent>

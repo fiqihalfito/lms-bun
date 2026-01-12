@@ -1,6 +1,6 @@
 import { db } from "database/connect";
 import { mSubSkill } from "database/schema";
-import { and, eq } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 
 export async function getSubskillByIdSkillAndLevel(idSkill: string, level: number, idPembaca: string) {
     // const subskill = await db.select().from(mSubSkill)
@@ -37,9 +37,25 @@ export async function getSubskillByIdSkillAndLevel(idSkill: string, level: numbe
             kuisProgress: {
                 where: {
                     idUser: idPembaca
+                },
+                extras: {
+                    persentaseBenar: (table) => sql<number>`(${table.jumlahBenar} * 100.0) / NULLIF(${table.jumlahSoal}, 0)`
                 }
             }
         }
     })
-    return res
+
+    // tambahkan prop persentase semua pengerjaan kuis
+    const totalPersentasePerLevel = res.reduce((acc, subskill) => {
+        if (subskill.kuisProgress?.persentaseBenar) {
+            acc += subskill.kuisProgress.persentaseBenar
+        }
+        return acc
+    }, 0)
+    const rataPersentase = totalPersentasePerLevel / res.length
+    const finalRes = {
+        subskills: res,
+        rataPersentase: rataPersentase
+    }
+    return finalRes
 }
