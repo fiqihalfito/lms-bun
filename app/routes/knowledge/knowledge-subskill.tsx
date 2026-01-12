@@ -2,13 +2,15 @@ import { getSubskillByIdSkillAndLevel } from "@/features/subskill/services/getSu
 import type { Route } from "./+types/knowledge-subskill";
 import { HeaderRoute } from "@/components/header-route";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { Button } from "@/components/ui/button";
 import { BanIcon, EyeIcon, LockIcon, PenLineIcon } from "lucide-react";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { userContext } from "@/lib/context";
+import { useLocalStorage } from 'usehooks-ts'
+import { useEffect } from "react";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -33,6 +35,12 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
         { label: "Subskill", to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level/${params.level}/subskill` },
     ])
 
+    const location = useLocation()
+    const [redirectBackAfterKuis, setRedirectBackAfterKuis, removeRedirectBackAfterKuis] = useLocalStorage('redirectBackAfterKuis', "/")
+    useEffect(() => {
+        setRedirectBackAfterKuis(location.pathname)
+    }, [location])
+
     return (
         <div>
             <BreadCrumb routeBreadCrumb={breadcrumb} />
@@ -45,15 +53,24 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                             {i + 1}
                         </ItemMedia>
                         <ItemContent>
-                            <ItemTitle>{subskill.namaSubSkill}</ItemTitle>
-                            {/* <ItemDescription>
-                                diuji
-                            </ItemDescription> */}
-                            {subskill.dokumen?.statusBacaOne ? (
-                                <Badge variant="default">Sudah dibaca</Badge>
-                            ) : (
-                                <Badge variant="destructive">Belum dibaca</Badge>
-                            )}
+                            <ItemTitle className="font-semibold leading-none">{subskill.namaSubSkill}</ItemTitle>
+                            <div className="flex flex-wrap items-center gap-2 mt-2">
+                                {subskill.pic?.namaUser && (
+                                    <Badge variant="outline" className="font-normal text-muted-foreground">
+                                        PIC: {subskill.pic.namaUser}
+                                    </Badge>
+                                )}
+                                {subskill.dokumen?.statusBacaOne ? (
+                                    <Badge variant="default" className="bg-emerald-600 hover:bg-emerald-600">Sudah dibaca</Badge>
+                                ) : (
+                                    <Badge variant="destructive">Belum dibaca</Badge>
+                                )}
+                                {subskill.kuisProgress?.idKuisProgress ? (
+                                    <Badge variant="default" className="bg-emerald-600 hover:bg-emerald-600">Sudah Kuis</Badge>
+                                ) : (
+                                    <Badge variant="destructive">Belum Kuis</Badge>
+                                )}
+                            </div>
                         </ItemContent>
                         <ItemActions>
                             {subskill.idDokumen ? (
@@ -70,7 +87,7 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                 </Button>
                             )}
 
-                            {/* {!subskill.dokumen?.statusBacaOne ? (
+                            {!subskill.dokumen?.statusBacaOne ? (
                                 <Button variant="secondary" disabled>
                                     <LockIcon />
                                     Dokumen belum dibaca
@@ -92,11 +109,11 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                     <BanIcon />
                                     Kuis belum dibuat
                                 </Button>
-                            )} */}
-                            <Button variant="secondary" disabled>
+                            )}
+                            {/* <Button variant="secondary" disabled>
                                 <LockIcon />
                                 Kuis terkunci
-                            </Button>
+                            </Button> */}
                         </ItemActions>
                     </Item>
                 ))}

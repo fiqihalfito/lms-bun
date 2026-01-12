@@ -32,6 +32,12 @@ export async function getSubskillByIdSkillAndLevel(idSkill: string, level: numbe
                         }
                     }
                 }
+            },
+            pic: true,
+            kuisProgress: {
+                where: {
+                    idUser: idPembaca
+                }
             }
         }
     })

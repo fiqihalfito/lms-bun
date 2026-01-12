@@ -70,6 +70,10 @@ export const relations = defineRelations(schema, (r) => ({
         dokumen: r.one.tDokumen({
             from: r.mSubSkill.idDokumen,
             to: r.tDokumen.idDokumen
+        }),
+        kuisProgress: r.one.tKuisProgress({
+            from: r.mSubSkill.idKuis,
+            to: r.tKuisProgress.idKuis
         })
     },
     tKuisQuestion: {

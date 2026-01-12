@@ -72,8 +72,8 @@ export function getDbErrorMessage(error: unknown): { message: string; constraint
 
         // Default case for any other unhandled DatabaseError
         return {
-            message: `A database error occurred: ${originalError.message}`,
-            constraint: null,
+            message: `A database error occurred: ${error.message}`,
+            constraint: originalError.message,
         };
     }
 

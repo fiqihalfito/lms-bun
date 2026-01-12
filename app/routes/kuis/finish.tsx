@@ -3,6 +3,7 @@ import { getKuisProgressById } from "@/features/kuis/services/getKuisProgressByI
 import { getToast } from "remix-toast"
 import { data, Link } from "react-router"
 import { useToastEffect } from "@/hooks/use-toast"
+import { useLocalStorage, useReadLocalStorage } from "usehooks-ts"
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
     const kuisProgress = await getKuisProgressById(params.idKuisProgress)
@@ -17,6 +18,8 @@ export default function KuisFinishRoute({ loaderData }: Route.ComponentProps) {
     const { kuisProgress, toast } = loaderData
 
     useToastEffect(toast)
+
+    const redirectBackAfterKuis = useReadLocalStorage('redirectBackAfterKuis')
 
     return (
         <div className="flex-1 flex flex-col">
@@ -50,7 +53,7 @@ export default function KuisFinishRoute({ loaderData }: Route.ComponentProps) {
 
                     <div className="pt-4">
                         <Link
-                            to="/kuis"
+                            to={redirectBackAfterKuis as string}
                             className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-xl shadow-md bg-primary hover:bg-primary/90 focus:shadow-outline focus:outline-none"
                         >
                             Kembali ke Daftar Subskill

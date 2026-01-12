@@ -4,14 +4,16 @@ import { HeaderRoute } from "@/components/header-route";
 import { getIdQuestionsKuisProgress } from "@/features/kuis/services/pengerjaan-kuis/getIdQuestionsKuisProgress";
 import invariant from "tiny-invariant";
 import { getToast } from "remix-toast";
-import { data, useFetcher, useNavigate, useResolvedPath, useSubmit } from "react-router";
+import { data } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
 import { getNamaSubskillByIdKuis } from "@/features/subskill/services/getNamaSubskillByIdKuis";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { shuffle } from "@/lib/utils";
-import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from "@/components/ui/field";
+import { Field, FieldContent, FieldLabel, FieldTitle } from "@/components/ui/field";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useEffect } from "react";
+import { Progress } from "@/components/ui/progress";
+import { useTimerKuis } from "@/features/kuis/hooks/use-timer-kuis";
+import { useSubmitCurrentJawaban } from "@/features/kuis/hooks/use-submit-current-jawaban";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -45,26 +47,56 @@ export default function KuisRoute({ loaderData, params }: Route.ComponentProps) 
 
     const pilihanChar = ["A", "B", "C", "D"]
 
-    const fetcherCurrentJawaban = useFetcher({ key: "submit-current-jawaban" })
-    const handleSaveJawaban = (value: string) => {
+    const { submitCurrentJawaban, fetcher } = useSubmitCurrentJawaban()
+    const isSubmitting = fetcher.state !== "idle";
 
-        fetcherCurrentJawaban.submit({
+    // ✨ UPDATE IMPLEMENTASI HOOK
+    const { timeLeft, waktuPengerjaanDetik } = useTimerKuis(
+        question.idKuisQuestion,
+        question.waktuPengerjaanDetik ?? 15,
+        isSubmitting, // 👈 Masukkan state ini agar timer berhenti saat submit
+        (elapsed) => {
+            // ⏰ TIMEOUT CASE
+            // Pastikan kita tidak submit double jika user baru saja klik submit manual
+            if (!isSubmitting) {
+                submitCurrentJawaban({
+                    idKuisQuestion: question.idKuisQuestion,
+                    waktuPengerjaanDetik: elapsed, // Gunakan elapsed dari callback
+                    jumlahSoal,
+                });
+            }
+        }
+    );
+
+    const handleSaveJawaban = (value: string) => {
+        // Submit jawaban manual
+        submitCurrentJawaban({
             idKuisQuestion: question.idKuisQuestion,
             jawaban: value,
-            jumlahSoal: jumlahSoal,
-        }, {
-            method: "post",
-            action: "submit-current-jawaban",
-        })
+            waktuPengerjaanDetik, // Mengirim waktu terakhir yang tercatat
+            jumlahSoal,
+        });
+    };
 
-    }
+    const formattedTime = `${Math.floor(timeLeft / 60).toString().padStart(2, "0")}:${(timeLeft % 60).toString().padStart(2, "0")}`;
+
+
 
 
     return (
-        <div>
+        <div className={isSubmitting ? "opacity-70 pointer-events-none" : ""}>
             <HeaderRoute title="Ujian" description={`Materi ujian berasal dari [${namaSubskill}]`} />
-            <div className="max-w-5xl mx-auto space-y-4">
-                <p className="text-sm text-muted-foreground">Pertanyaan No. {Number(params.questionNumber)} dari {jumlahSoal} pertanyaan</p>
+            <div className="max-w-5xl mx-auto space-y-8">
+                <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                        <p className="text-sm text-muted-foreground">Pertanyaan No. {Number(params.questionNumber)} dari {jumlahSoal} pertanyaan</p>
+                        <p className="text-sm text-muted-foreground font-bold">Waktu: {formattedTime}</p>
+                    </div>
+                    <div>
+                        <Progress className="h-1" value={timeLeft / question.waktuPengerjaanDetik! * 100} />
+                    </div>
+                </div>
+
                 <Card key={params.questionNumber}>
                     <CardHeader>
                         <CardTitle>{question.question}</CardTitle>
@@ -74,6 +106,7 @@ export default function KuisRoute({ loaderData, params }: Route.ComponentProps) 
                     <CardContent>
                         <RadioGroup
                             onValueChange={(value) => handleSaveJawaban(value)}
+                            disabled={isSubmitting}
                         >
                             {options.map((item, i) => (
                                 <FieldLabel key={item.idKuisQuestionOption} htmlFor={item.idKuisQuestionOption} className="font-normal border rounded cursor-pointer">
