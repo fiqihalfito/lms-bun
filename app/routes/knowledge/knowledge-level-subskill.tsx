@@ -1,21 +1,25 @@
 import { HeaderRoute } from "@/components/header-route";
 import type { Route } from "./+types/knowledge-level-subskill";
-import { getSubskillLevelByIdSkill } from "@/features/subskill/services/getSubskillLevelByIdSkill";
-import { Item, ItemContent, ItemDescription, ItemGroup, ItemTitle } from "@/components/ui/item";
-import { Link } from "react-router";
+import { getLevelSubskillListDataByIdSkill } from "@/features/subskill/services/getSubskillLevelByIdSkill";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
+import { userContext } from "@/lib/context";
+import { getNamaSkillByIdSkill } from "@/features/skill/services/getNamaSkillByIdSkill";
+import { LevelListKnowledge } from "@/features/subskill/components/LevelListKnowledge";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
-    const subskillLevel = await getSubskillLevelByIdSkill(params.idSkill)
+    const user = context.get(userContext)
+    const subskillLevel = await getLevelSubskillListDataByIdSkill(params.idSkill, user.idUser)
 
-    return { subskillLevel }
+    const namaSkill = await getNamaSkillByIdSkill(params.idSkill)
+
+    return { subskillLevel, namaSkill }
 }
 
 export default function KnowledgeLevelSubskillRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { subskillLevel } = loaderData
+    const { subskillLevel, namaSkill } = loaderData
 
     const breadcrumb = useBreadcrumbs([
         { label: "Kategori", to: `/app/dokumen` },
@@ -27,23 +31,9 @@ export default function KnowledgeLevelSubskillRoute({ loaderData, params }: Rout
     return (
         <div>
             <BreadCrumb routeBreadCrumb={breadcrumb} />
-            <HeaderRoute title="Level Subskill" description="tingkatan pembelajaran tiap subskill" />
-            <ItemGroup className="gap-y-3">
-                {subskillLevel.map((item, i) => (
-                    <Item key={i} variant="outline" asChild>
-                        <Link to={`${item.level}/subskill`}>
-                            {/* <ItemMedia variant="icon">
-                                {i + 1}
-                            </ItemMedia> */}
-                            <ItemContent>
-                                <ItemTitle>Level {item.level}</ItemTitle>
-                                <ItemDescription>Jumlah Subskill: {item.jumlah}</ItemDescription>
-                            </ItemContent>
-                        </Link>
+            <HeaderRoute title="Level Subskill" description={namaSkill} />
+            <LevelListKnowledge subskillLevel={subskillLevel} />
 
-                    </Item>
-                ))}
-            </ItemGroup>
         </div>
     )
 }

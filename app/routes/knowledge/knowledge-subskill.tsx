@@ -70,6 +70,9 @@ export default function KnowledgeSubskillRoute({ loaderData, params }: Route.Com
                                 ) : (
                                     <Badge variant="destructive">Belum Kuis</Badge>
                                 )}
+                                {subskill.kuisProgress?.idKuisProgress && (
+                                    <Badge variant="default" className="bg-emerald-600 hover:bg-emerald-600">jumlah benar: {subskill.kuisProgress.jumlahBenar}/{subskill.kuisProgress.jumlahSoal}</Badge>
+                                )}
                             </div>
                         </ItemContent>
                         <ItemActions>
