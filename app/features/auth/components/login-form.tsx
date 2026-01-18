@@ -13,13 +13,15 @@ import { Form, useFetcher } from "react-router"
 import { getFormProps, getInputProps, useForm } from "@conform-to/react"
 import { getZodConstraint, parseWithZod } from "@conform-to/zod/v4"
 import { loginSchema } from "@/features/auth/schema/login-schema"
+import { Spinner } from "@/components/ui/spinner"
 
 export function LoginForm({
     className,
     ...props
 }: React.ComponentProps<typeof Form>) {
 
-    const fetcher = useFetcher({ key: "login" });
+    const fetcher = useFetcher({ key: "login" })
+    const submitting = fetcher.state !== "idle"
 
     const [form, fields] = useForm({
         // Sync the result of last submission from action fetcher
@@ -78,7 +80,10 @@ export function LoginForm({
                     <FieldError id={fields.password.errorId}>{fields.password.errors}</FieldError>
                 </Field>
                 <Field>
-                    <Button type="submit">Login</Button>
+                    <Button type="submit" disabled={submitting}>
+                        {submitting && <Spinner />}
+                        {submitting ? "Checking..." : "Login"}
+                    </Button>
                 </Field>
                 {/* <FieldSeparator>Or continue with</FieldSeparator> */}
 
