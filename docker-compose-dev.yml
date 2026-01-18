@@ -36,7 +36,7 @@ services:
       command: server /data --console-address ":9090"
       volumes:
           # Path disesuaikan ke lokasi yang kamu minta
-          - F:/CODING/minio_storage/lms-minio:/data
+          - C:/Users/fiqih/Documents/Coding/minio/minio-lms:/data
       # - ./storage/minio_data:/data
       # - ./storage/pdfs:/data/pdfs # opsional: mount folder host untuk PDF
       restart: unless-stopped
