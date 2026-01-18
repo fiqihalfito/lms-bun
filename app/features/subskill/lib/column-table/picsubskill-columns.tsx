@@ -5,7 +5,6 @@ import { NavLink } from "react-router";
 import { Badge } from "@/components/ui/badge";
 import type { getSubSkillByIdPIC } from "../../services/getSubSkillByIdPIC";
 import { UploadDokumenDirectButton } from "@/features/dokumen/components/subskill/upload-dokumen-button";
-import { LockedIcon } from "@hugeicons/core-free-icons";
 
 export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkillByIdPIC>>[number]["subskills"][number]>[] = [
     {
@@ -63,7 +62,7 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
         id: "sudah-upload",
         header: "Sudah Upload",
         accessorFn: (row) => row.idDokumen,
-        cell: ({ getValue }) => {
+        cell: ({ getValue, row }) => {
             // const date = getValue<string | Date | null>();
             // return date ? (
             //     <Badge variant={"secondary"}>
@@ -74,9 +73,17 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
             // );
             const idDokumen = getValue<string | Date | null>();
             return idDokumen ? (
-                <Badge variant={"default"}>
-                    Done
-                </Badge>
+                <div className="flex items-center">
+                    <Badge variant={"default"}>
+                        Done
+                    </Badge>
+                    <Button variant="link" asChild size="sm">
+                        <NavLink to={`/app/dokumen/baca/${row.original.idDokumen}`}>
+                            <EyeIcon />
+                            Preview
+                        </NavLink>
+                    </Button>
+                </div>
             ) : (
                 <Badge variant="destructive">Not yet</Badge>
             );
@@ -84,33 +91,9 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
         },
     },
     {
-        id: "sudah-kuis",
+        id: "kuis",
         header: "Kuis",
         accessorFn: (row) => row.idKuis,
-        cell: ({ getValue }) => {
-            // const date = getValue<string | Date | null>();
-            // return date ? (
-            //     <Badge variant={"secondary"}>
-            //         {new Date(date).toLocaleString("id-ID")}
-            //     </Badge>
-            // ) : (
-            //     <Badge variant="destructive">Not yet</Badge>
-            // );
-            const idKuis = getValue<string | Date | null>();
-            return idKuis ? (
-                <Badge variant={"default"}>
-                    Done
-                </Badge>
-            ) : (
-                <Badge variant="destructive">Not yet</Badge>
-            );
-
-        },
-    },
-    {
-        id: "jumlah-soal",
-        header: "Jumlah Soal",
-        accessorFn: (row) => row.idKuis,
         cell: ({ getValue, row }) => {
             // const date = getValue<string | Date | null>();
             // return date ? (
@@ -122,48 +105,27 @@ export const picSubSkillColumns: ColumnDef<Awaited<ReturnType<typeof getSubSkill
             // );
             const idKuis = getValue<string | Date | null>();
             return idKuis ? (
-                <span>{row.original?.kuis?.questions?.length}</span>
+                <div className="flex flex-row gap-x-1">
+                    {row.original.kuis?.isLocked ? (
+                        <Badge variant="warning">
+                            <LockIcon />
+                            Terkunci
+                        </Badge>
+                    ) : (
+                        <Badge variant="default">
+                            <UnlockIcon />
+                            Published
+                        </Badge>
+                    )}
+                    {row.original.kuis?.questions && (
+                        <Badge variant={row.original.kuis.questions.length > 0 ? "default" : "warning"}>
+                            {row.original.kuis?.questions.length} Soal
+                        </Badge>
+                    )}
+                </div>
             ) : (
                 <Badge variant="destructive">Not yet</Badge>
             );
-
-        },
-    },
-    {
-        id: "status-kuis",
-        header: "Status Kuis",
-        accessorFn: (row) => row.kuis?.isLocked,
-        cell: ({ getValue, row }) => {
-            // const date = getValue<string | Date | null>();
-            // return date ? (
-            //     <Badge variant={"secondary"}>
-            //         {new Date(date).toLocaleString("id-ID")}
-            //     </Badge>
-            // ) : (
-            //     <Badge variant="destructive">Not yet</Badge>
-            // );
-            const isLocked = getValue<boolean>();
-            if (row.original.idKuis && isLocked) {
-                return (
-                    <Badge variant="destructive">
-                        <LockIcon />
-                        Locked
-                    </Badge>
-                )
-            } else if (row.original.idKuis && !isLocked) {
-                return (
-                    <Badge variant="default">
-                        <UnlockIcon />
-                        Published
-                    </Badge>
-                )
-            } else {
-                return (
-                    <Badge variant="destructive">
-                        Not yet
-                    </Badge>
-                )
-            }
 
         },
     },
