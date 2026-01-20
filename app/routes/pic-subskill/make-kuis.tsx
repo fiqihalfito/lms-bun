@@ -71,14 +71,13 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
                 }
             />
 
-            <div className="mb-6 flex items-center justify-between gap-2 w-1/2">
+            <div className="mb-6 flex items-center justify-between gap-2 w-2/3">
                 <TombolTambahSoal idKuis={idKuis} />
                 <SwitchKuisLocked idKuis={idKuis} isLocked={kuisMetaData.isLocked} jumlahSoal={questions.length} />
             </div>
 
-            {/* ambil list questions di github */}
-            <div className="grid grid-cols-2 gap-x-4 flex-1">
-                <div className="border-4 rounded-lg border-dashed flex flex-col p-4">
+            <div className="flex flex-row gap-4 flex-1">
+                <div className="border-4 rounded-lg border-dashed flex flex-col p-4 w-2/3">
                     {questions.length === 0 ? (
                         <BelumAdaSoal />
                     ) : (
