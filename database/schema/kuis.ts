@@ -14,6 +14,7 @@ export const tKuisQuestion = pgTable('t_kuis_question', (t) => ({
     question: t.text("question").notNull(),
     answerOption: t.char("answer_option", { length: 1 }).notNull(),
     waktuPengerjaanDetik: t.integer("waktu_pengerjaan_detik").default(15),
+    ...timestamps,
 }))
 
 export const tKuisQuestionOption = pgTable('t_kuis_question_option', (t) => ({
