@@ -30,13 +30,17 @@ authenticator.use(
             throw new Error("User tidak ditemukan!")
         }
         let userData = user[0]
-        // let hashPassword = userData.password
 
-        // // And verify
-        // let isMatch = await Bun.password.verify(password, hashPassword)
-        // if (!isMatch) {
-        //     throw new Error("Password salah!")
-        // }
+        // for development
+        if (process.env.USE_LDAP === "false") {
+            let hashPassword = userData.password
+
+            // And verify
+            let isMatch = await Bun.password.verify(password, hashPassword)
+            if (!isMatch) {
+                throw new Error("Password salah!")
+            }
+        }
 
 
 
