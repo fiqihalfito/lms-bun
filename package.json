@@ -7,10 +7,11 @@
     "dev": "bun --bun react-router dev",
     "start": "bun --bun react-router-serve ./build/server/index.js",
     "typecheck": "bun --bun react-router typegen && tsc",
-    "db:dev:push": "drizzle-kit push --config=drizzle-dev.config.ts",
+    "db:dev:push": "bun --bun drizzle-kit push --config=drizzle-dev.config.ts",
     "db:dev:seed": "bun database/seed/index.ts",
     "db:dev:seed-raw": "bun database/seed-raw/index.ts",
-    "db:dev:generate": "drizzle-kit generate --config=drizzle-dev.config.ts"
+    "db:dev:generate": "bun --bun drizzle-kit generate --config=drizzle-dev.config.ts",
+    "db:dev:pull": "bun --bun drizzle-kit pull --config=drizzle-dev.config.ts"
   },
   "dependencies": {
     "@better-upload/client": "^3.0.10",
