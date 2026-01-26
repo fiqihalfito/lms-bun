@@ -1,0 +1,6820 @@
+[
+  {
+    "idSubSkill": "1cb40ed1-3120-4659-b0fd-7e54c5dd27ba",
+    "namaSubSkill": "Basic Pipeline",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d51df871-c4cf-4ee6-b1dd-bc2744ae08f3",
+    "namaSubSkill": "Navigasi GitLab (GitLab UI)",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "af39fbd7-8d79-40db-8b5c-f140374f46b4",
+    "namaSubSkill": "Git Basic CLI",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0d4e923a-187a-47de-8325-a6d0d76f953d",
+    "namaSubSkill": "ConfigMap & Environment Variables",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9a5b8983-4e0b-4f6b-b07c-0c6c316dd6b1",
+    "namaSubSkill": "Pemahaman konsep backup aplikasi",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "147a8625-1a2a-45a2-84fc-3ed963741c83",
+    "namaSubSkill": "Ingress & Ingress Controller",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "51149ab2-b598-49ca-98a1-fac77e0bcc0f",
+    "namaSubSkill": "Secrets Management",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e4ae8dfb-67e0-4e5f-9fa7-7ebc73035456",
+    "namaSubSkill": "Memahami Query SQL Dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "55daf537-5a64-41df-8567-7288ab6d61c9",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "830effce-8dd3-4eaf-adff-ac5accefad72",
+    "namaSubSkill": "Memahami Fundamental Database",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d5b07896-f65f-44af-9f68-a6294f1b88b3",
+    "namaSubSkill": "Memahami Query SQL Dasar",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "59b41167-d997-4baa-a756-707c04cd9c1c",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "16e9b8aa-0796-416e-8861-8697ecb2fb30",
+    "namaSubSkill": "Melakukan Indexing Dasar",
+    "level": 1,
+    "urutan": 7,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ab3c443e-2f9b-4860-9421-67db18cf64b0",
+    "namaSubSkill": "Pemahaman metode backup aplikasi",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a704b2e9-8bd3-4e59-ab5b-4cf0ef9a0e64",
+    "namaSubSkill": "Terminal dan scripting untuk backup",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "cb138074-9e4a-463b-a4f4-855fca618269",
+    "namaSubSkill": "Backup aplikasi level OS",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4609490a-d4f9-406b-8228-b7836fd33fcd",
+    "namaSubSkill": "Melakukan Basic Maintenance",
+    "level": 1,
+    "urutan": 8,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0b7c486e-375f-42b5-916b-57884ba323dd",
+    "namaSubSkill": "Melakukan Basic Administration",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "82db64b4-a054-4180-9b84-f037183ca02b",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "21e2e982-fbe9-4162-a16b-6ee09b9c0105",
+    "namaSubSkill": "Melakukan Basic Maintenance",
+    "level": 1,
+    "urutan": 8,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "4201369d-1cf1-4409-837f-2034f3daae01",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1792b918-9b6c-4f72-b9b6-11d37de47973",
+    "namaSubSkill": "Pemahaman konsep restore aplikasi",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7c9b0caa-d4e4-484d-9ca1-17ba95a60d50",
+    "namaSubSkill": "Pemahaman metode backup aplikasi",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7643bb49-812b-482b-b4fc-be392638025e",
+    "namaSubSkill": "Terminal dan scripting untuk restore",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "dcfc02ee-256e-4293-b2f2-e72bf6ce1f61",
+    "namaSubSkill": "Restore aplikasi level OS dan Container",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7fe8ab9e-fbb9-400d-842d-6408d1bdb599",
+    "namaSubSkill": "Backup & restore GitLab instance",
+    "level": 1,
+    "urutan": 14,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "efb24d61-116d-4879-9e3a-9b623dee0bb1",
+    "namaSubSkill": "Manajemen secret GitLab",
+    "level": 1,
+    "urutan": 13,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "685080af-8728-4560-bb77-20936430a5df",
+    "namaSubSkill": "Container Registry",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "12f7b1ec-719a-4a62-b44d-9a6c15c54823",
+    "namaSubSkill": "Patch update & OS maintenance",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "74673954-92e1-4ecc-abca-e5af8a93b09c",
+    "idKuis": "809377b5-2960-4025-b706-fb2d731510db",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": {
+      "idKuis": "809377b5-2960-4025-b706-fb2d731510db"
+    }
+  },
+  {
+    "idSubSkill": "9d947705-b8ea-4e81-9d47-542e95359dab",
+    "namaSubSkill": "Password policy",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "d519c984-5276-4bde-b51e-8a174dba2fbd",
+    "idKuis": "20542666-0280-4672-9aa1-ed7b03f253da",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": {
+      "idKuis": "20542666-0280-4672-9aa1-ed7b03f253da"
+    }
+  },
+  {
+    "idSubSkill": "fb61b78e-4f17-419b-a033-21815861c925",
+    "namaSubSkill": "Basic Performance Monitoring",
+    "level": 1,
+    "urutan": 6,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "66f46958-c6d4-452e-a231-688875394548",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e5de1b61-f01b-4778-8306-d440e90b0439",
+    "namaSubSkill": "PV & PVC",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "dbf27718-5e69-4524-9ff3-968b32e5c71c",
+    "namaSubSkill": "Logging & monitoring container",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0890e328-e543-4b31-a8e3-989aaeae57f0",
+    "namaSubSkill": "Docker Compose dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "29fe1280-a6dc-4e46-bf01-a1ae80b34f82",
+    "namaSubSkill": "Memahami Query NoSQL Dasar",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "762dec25-ec14-47c5-b185-94f4df688e46",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "32927726-9786-45d6-a0e8-fc4faf923efb",
+    "namaSubSkill": "Dockerfile dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "879deb4b-a0c2-46cb-834b-df5d71ce3852",
+    "namaSubSkill": "Type Services",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ba9e2403-5e94-40aa-bc75-05da4defdc46",
+    "namaSubSkill": "Environment Variables",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b88677db-80e7-4aad-8fd2-126dd508c11e",
+    "namaSubSkill": "Pengumpulan metrik dasar (CPU, memori, disk)",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "a2683852-6110-40a3-a2be-a7741091b718",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "271abaa0-b8ec-47fd-a9fc-2a5e703ea760",
+    "namaSubSkill": "Pod Management",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ea0dd2ef-1544-4b86-a85e-d5a6c65aa41f",
+    "namaSubSkill": "Memeriksa log dan status sistem",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "31d43f0b-7afc-467c-b738-4c74b17a4131",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "47dbe0f3-d99f-418b-ba62-d07bb57ada49",
+    "namaSubSkill": "Instalasi web server",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8195466b-aa9e-4321-a0bd-83b80d8cab8d",
+    "namaSubSkill": "Virtual host / site",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "01540889-20c0-4f8a-8136-26865dce4a97",
+    "namaSubSkill": "Deploy static site",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1e266f8c-e3a8-4d33-b793-deb487b51fa0",
+    "namaSubSkill": "Analisa log basic",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0a1ab832-904c-4a27-8c08-b3269912b127",
+    "namaSubSkill": "Integrasi APM (Elasticsearch / Datadog) - basic agent",
+    "level": 1,
+    "urutan": 6,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "f3dbf6d1-f3d8-40df-a803-7d88e7794e3a",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9caa533f-bd71-4c35-bffd-2a1cced62e94",
+    "namaSubSkill": "GitLab Container Registry",
+    "level": 1,
+    "urutan": 12,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f9e8de30-80f8-4136-864f-66eecd4f3923",
+    "namaSubSkill": "Shared Runner",
+    "level": 1,
+    "urutan": 11,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c5c50716-ea8b-4d7e-967a-1d20fff2efaf",
+    "namaSubSkill": "Melakukan Backup Restore Dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "be7c07bd-1406-41cf-b099-f79a443679d9",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b4cc4cdb-00a7-417e-82a7-eb8e4c25951c",
+    "namaSubSkill": "Melakukan Instalasi dan Konfigurasi Dasar",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "63cc612a-c14a-45ca-81a2-6bad6d73fa97",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "af6b7a03-aa40-41ed-a0af-a7c0daa97cf9",
+    "namaSubSkill": "User/Group Management",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "977b05f2-f851-431d-882b-488f8f24e1d4",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bc769aca-526b-4a0b-b4a0-3a1987ed5fd6",
+    "namaSubSkill": "DNS/DHCP basic",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "dbaf6217-01c8-4688-84c6-f62e266a4a8f",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "67192edb-8f20-4d47-9c4e-0c47048c1d0e",
+    "namaSubSkill": "PowerShell basic",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "b96b45ca-be63-43e5-90ee-d573a9d285cf",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "744a23d3-5346-4bdb-a265-d1742ec302b7",
+    "namaSubSkill": "File sharing permissions",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "abb85da7-978e-4933-bc4e-b3d391a5e218",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fb72d41f-30bf-436d-ad36-d0bb18e777a9",
+    "namaSubSkill": "Kubectl commands dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "378e36e4-1988-42b4-953e-3ddf85778ff1",
+    "namaSubSkill": "Melakukan Indexing Dasar",
+    "level": 1,
+    "urutan": 7,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "c095fad6-eb12-4691-b162-6984239c67e8",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e069f9cf-09ba-4979-adb3-91311dbc0b4d",
+    "namaSubSkill": "Basic Performance Monitoring",
+    "level": 1,
+    "urutan": 6,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bd763e00-36c1-4445-9976-6c16e4a882b2",
+    "namaSubSkill": "Docker Networks dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": "5c5d46c0-94da-4593-acf9-8e28014da4da",
+    "idKuis": "46ca0e0b-4aac-43bc-ba61-eff6149bbc22",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": {
+      "idKuis": "46ca0e0b-4aac-43bc-ba61-eff6149bbc22"
+    }
+  },
+  {
+    "idSubSkill": "34877abd-07fc-4e35-ad5a-b24a1e50937d",
+    "namaSubSkill": "Docker Volumes",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": "678bb91c-8f58-4ef6-b529-7c15599a7689",
+    "idKuis": "731332f5-1b74-4864-bafb-162640213c18",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": {
+      "idKuis": "731332f5-1b74-4864-bafb-162640213c18"
+    }
+  },
+  {
+    "idSubSkill": "fbdb2249-0d9c-4660-a6ed-4982025b2933",
+    "namaSubSkill": "Docker Images",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": "93d07ac6-0c5c-497f-b172-2cf4c1658c67",
+    "idKuis": "6b2757d6-4ad4-482c-acb2-8f93baf23818",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": {
+      "idKuis": "6b2757d6-4ad4-482c-acb2-8f93baf23818"
+    }
+  },
+  {
+    "idSubSkill": "78a0a635-28e7-442c-b750-c55c5cfbdc4c",
+    "namaSubSkill": "Docker CLI dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": "aaf273ba-f937-4f57-9cad-f94cf7d5724c",
+    "idKuis": "4eb2c2df-5ef6-42ad-a44a-f4ad4ea0716d",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": {
+      "idKuis": "4eb2c2df-5ef6-42ad-a44a-f4ad4ea0716d"
+    }
+  },
+  {
+    "idSubSkill": "1dc6ddd4-5245-4dda-959d-fb21e797a02c",
+    "namaSubSkill": "Basic SSH hardening",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "6c51094b-591f-4be5-a274-196d3bbcf865",
+    "idKuis": "782e6c05-7002-4b20-8bad-2e0a6fb99a00",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": {
+      "idKuis": "782e6c05-7002-4b20-8bad-2e0a6fb99a00"
+    }
+  },
+  {
+    "idSubSkill": "481e2c6b-d6e3-4257-a7d4-39223a4d6f3c",
+    "namaSubSkill": "Firewall basic (UFW / Windows Firewall)",
+    "level": 1,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "2d94805a-a65f-4e31-94e5-a39244ec976f",
+    "idKuis": "d18d9401-db1d-49b9-9f74-819122f05614",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": {
+      "idKuis": "d18d9401-db1d-49b9-9f74-819122f05614"
+    }
+  },
+  {
+    "idSubSkill": "e22a375c-d453-4d92-b550-bbdecf9bad3c",
+    "namaSubSkill": "Basic Performance Monitoring",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "b0e42dac-e089-47d3-bd56-31f8ca81269f",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "5c312ec5-3ee2-453d-9a28-bd94b5fcd72a",
+    "namaSubSkill": "Memahami Fundamental Database",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "5b363aa0-d012-47d1-b7df-d5bb32e168fd",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "291faeac-5b4f-4456-956d-7628005b597b",
+    "namaSubSkill": "Melakukan Basic Administration",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "49f145d1-530d-43e9-8482-12d2813f140c",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d8a00733-2dcf-4038-a2a9-19c2a213dd35",
+    "namaSubSkill": "Melakukan Backup Restore Dasar",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "34dcd419-129d-4eda-b28b-bdd379f390e1",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3b575080-24e2-48a2-b7da-09cf24584e13",
+    "namaSubSkill": "Basic Performance Monitoring",
+    "level": 1,
+    "urutan": 6,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "b0849d4b-bc33-4cec-98ff-1218d714191b",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "68379f9d-8805-49f2-a067-899d86376813",
+    "namaSubSkill": "Melakukan Indexing Dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "1ca63dcc-33c7-4540-b03e-3635773f522c",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6c7b811f-582f-4e3a-8439-9019da355644",
+    "namaSubSkill": "Branch strategy",
+    "level": 1,
+    "urutan": 10,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3f046a20-58cf-46c9-bfff-f2292aea3a5a",
+    "namaSubSkill": "Melakukan Basic Maintenance",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "7be0db88-2b27-4aa3-bdaa-5534e4d5118b",
+    "idKuis": "4218406c-e176-4529-aa57-6311f459f592",
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": {
+      "idKuis": "4218406c-e176-4529-aa57-6311f459f592"
+    }
+  },
+  {
+    "idSubSkill": "8af4b77d-66f4-4223-8305-fe556333b672",
+    "namaSubSkill": "Melakukan Instalasi dan Konfigurasi Dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "c39207ff-aa5d-4136-83ce-9bc3372ea83d",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6ea2c729-e65a-41de-8821-8894e46a0851",
+    "namaSubSkill": "Memahami Fundamental Database",
+    "level": 1,
+    "urutan": null,
+    "idPic": "d74ab3a7-dd4d-43dc-a816-2eece5fdd11b",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "fdb90121-90a4-4840-af6f-890970c265d0",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Rizky Ramdani",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "15401388-b35b-49ed-9dfb-e6be93069177",
+    "namaSubSkill": "Instal dan konfigurasi agen monitoring",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "acf7f999-131f-427a-b647-3e8e6e2e2280",
+    "idKuis": "e14b10ad-bc90-4fb2-956c-83ca799e1d85",
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": {
+      "idKuis": "e14b10ad-bc90-4fb2-956c-83ca799e1d85"
+    }
+  },
+  {
+    "idSubSkill": "19ca7e49-c944-450f-8d9e-5446629332b3",
+    "namaSubSkill": "Melakukan Instalasi dan Konfigurasi Dasar",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "2c29761d-b7db-4427-99a0-4bf1ea2d8ea5",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "85b6a7f7-49df-4112-9814-1eaaaa9b052c",
+    "namaSubSkill": "Memahami Fundamental Database",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "a55cc1b5-5eac-4742-bf7a-c0afe0763173",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c4da8329-1081-45db-ab36-be220f5c20bf",
+    "namaSubSkill": "Melakukan Instalasi",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "8e033bc1-25bb-404f-a28a-9c9d869a81f6",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "df890e9c-f49b-4dbb-af7e-dfcc8c2453d4",
+    "idKuis": "04ca738b-bf16-4ed8-939f-7b595796a149",
+    "pic": {
+      "namaUser": "Latif Unggul Irfanto",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": {
+      "idKuis": "04ca738b-bf16-4ed8-939f-7b595796a149"
+    }
+  },
+  {
+    "idSubSkill": "6ff599c5-a061-4019-b3dc-bec52884ed8c",
+    "namaSubSkill": "Memahami sistem dasar",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "8e033bc1-25bb-404f-a28a-9c9d869a81f6",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "2300c3ed-b777-405c-9d22-a52692f80b66",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Latif Unggul Irfanto",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "74ea35e1-41cf-4fd5-99d7-c1e7784c293c",
+    "namaSubSkill": "Memahami Proses dan Resource",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "8e033bc1-25bb-404f-a28a-9c9d869a81f6",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Latif Unggul Irfanto",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "837e178e-ff2e-4a24-82d0-08898ed6295b",
+    "namaSubSkill": "Package dan Service",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "8e033bc1-25bb-404f-a28a-9c9d869a81f6",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Latif Unggul Irfanto",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e1cfe2dd-d43f-46b1-abe0-2bda49eb3403",
+    "namaSubSkill": "Keamanan Dasar (permission, firewall, ssh)",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "8e033bc1-25bb-404f-a28a-9c9d869a81f6",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Latif Unggul Irfanto",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "661455dc-f5a2-47f7-abbb-cab669480d17",
+    "namaSubSkill": "Melakukan Basic Administration",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "836f748c-219f-4360-8cef-9a250992ce75",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a7a6e4b3-4665-4aff-be55-a86c125f2feb",
+    "namaSubSkill": "Melakukan Backup Restore Dasar",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "f39001d8-c3fa-4b28-ab03-e5cf2af38b97",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "df9d1241-8992-4af8-b66f-d874d1cb4faf",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Kamila Aprilia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "69afb281-dfbd-4d38-911f-cd79fa811249",
+    "namaSubSkill": "Instalasi Linux (Ubuntu/CentOS/Rocky)",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": "01bca459-b88a-4785-a3bf-1f090e72ca4b",
+    "idKuis": "c34b2fea-763d-463f-bdba-2e6595e96cfa",
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": {
+      "idKuis": "c34b2fea-763d-463f-bdba-2e6595e96cfa"
+    }
+  },
+  {
+    "idSubSkill": "b28414b5-2b46-4315-aab0-2e2636c651a7",
+    "namaSubSkill": "Melakukan Basic Maintenance",
+    "level": 1,
+    "urutan": 8,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "18bab217-25f9-4377-8c0b-846955ea890a",
+    "namaSubSkill": "Melakukan Indexing Dasar",
+    "level": 1,
+    "urutan": 7,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3c8a1c56-4151-456a-b250-50babc34e542",
+    "namaSubSkill": "Melakukan Backup Restore Dasar",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c23cb2c9-51d8-42c1-a7f1-868386dc44f1",
+    "namaSubSkill": "Melakukan Basic Administration",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "26f74ff4-a30c-4eff-b805-6c630ca920b6",
+    "namaSubSkill": "Keamanan Dasar (permission, firewall, ssh)",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "283cf5b8-0951-495d-b90a-32a03e35a428",
+    "namaSubSkill": "Melakukan Instalasi",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d5e4f959-0a32-4428-bf18-ecf3006013a9",
+    "namaSubSkill": "Memahami sistem dasar",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e58b7752-3c8b-4d85-8d24-5dd7dffebe75",
+    "namaSubSkill": "Memahami Proses dan Resource",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "70ff3af3-3c9e-4b6a-9de9-5db785b652b8",
+    "namaSubSkill": "Package dan Service",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "81491591-18fb-4c24-8a04-942757457961",
+    "namaSubSkill": "Memahami Query SQL Dasar",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "12d0e730-4192-4497-9f81-b1d7c1b1923f",
+    "namaSubSkill": "Melakukan Instalasi dan Konfigurasi Dasar",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "c5c966fa-5081-462f-b0d5-493addfe7131",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "ab1fbb86-24d6-406f-8a73-3a55b9c0c7b2",
+    "idKuis": "ffbb3312-c1c3-4bbe-85df-8e17b8d8414b",
+    "pic": {
+      "namaUser": "Muhammad Ridha HAKIM",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": {
+      "idKuis": "ffbb3312-c1c3-4bbe-85df-8e17b8d8414b"
+    }
+  },
+  {
+    "idSubSkill": "cfc4f2df-8a3c-4063-9e99-4814abdf4170",
+    "namaSubSkill": "Pengaturan notifikasi alert sederhana",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "4c34b0ae-3fe6-4ec2-8ff0-5e0c23c9c984",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "59cf6900-d452-45eb-b0e5-c613d3f3a984",
+    "namaSubSkill": "Melihat dashboard dan grafik dasar",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "9c65890f-187d-4f18-95d2-bad4268b5a40",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fcfc6f20-7715-4448-9dcc-955c6a5d9c52",
+    "namaSubSkill": "Error Detection",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a3f1bc03-4aa1-4437-925b-09364810b52e",
+    "namaSubSkill": "Log Querying",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "198c4ee0-b2b8-4c08-8110-2e90b8177e65",
+    "namaSubSkill": "Log Understanding",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "dd475047-1924-4e11-8caf-25b4427f1f79",
+    "namaSubSkill": "Command line dasar linux",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": "93fa9cd9-396c-4f84-a11d-962f59f44f43",
+    "idKuis": "d7bf084f-873e-4fa3-85ec-f509be0fd5a2",
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": {
+      "idKuis": "d7bf084f-873e-4fa3-85ec-f509be0fd5a2"
+    }
+  },
+  {
+    "idSubSkill": "e1135129-38ba-4800-afa1-70cc22638c45",
+    "namaSubSkill": "User & Permission",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": "8b97af6c-d47f-4fa8-ad98-30420bdbe1e7",
+    "idKuis": "e210723e-4e09-4eee-be39-fc498029783c",
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": {
+      "idKuis": "e210723e-4e09-4eee-be39-fc498029783c"
+    }
+  },
+  {
+    "idSubSkill": "9e82d03d-c7ed-42c4-b086-d92bebf9864b",
+    "namaSubSkill": "Package manager (apt, yum/dnf)",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": "45e7e49b-0f64-49bf-978d-2754e5a2b8d7",
+    "idKuis": "7c7de5c2-0e0f-4d95-9488-5bf8ae60e169",
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": {
+      "idKuis": "7c7de5c2-0e0f-4d95-9488-5bf8ae60e169"
+    }
+  },
+  {
+    "idSubSkill": "05ac1c81-c43f-4d4a-9926-b507fd7509dd",
+    "namaSubSkill": "Systemctl & services dasar",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": "4301337a-abf6-42f1-beb0-611838d0c913",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "562f0c7d-916f-42ab-beca-fe4c14691b54",
+    "namaSubSkill": "SSH basic & key authentication",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": "31760978-abba-4f15-b1fa-8e8ab632f699",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4ca2d739-cd56-458b-85c9-8d8c357b9fff",
+    "namaSubSkill": "Log Visualization & Dashboard",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f5de6acf-fcb3-4ca7-86b7-1187cd0201a6",
+    "namaSubSkill": "Log Monitoring & Alerting",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a68842bb-b506-4bb8-b974-097a10aaea22",
+    "namaSubSkill": "Log Querying & Search for Dashboard",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "59ba7fc9-a976-49b0-9c82-485c55c47e8d",
+    "namaSubSkill": "Log Storage & Retention",
+    "level": 1,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7998fb95-d58a-4dde-ad66-128e761ca231",
+    "namaSubSkill": "Pipeline deployment sederhana",
+    "level": 1,
+    "urutan": 9,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "30793477-1afa-46e1-bbfd-d184a310ffd7",
+    "namaSubSkill": "Snapshot, cloning dasar",
+    "level": 1,
+    "urutan": 3,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "76a7ee8b-d042-4374-a9d8-330d42777d26",
+    "namaSubSkill": "Setting CPU, RAM, Storage",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b6ee809d-7c03-481f-8e4f-6a8110180970",
+    "namaSubSkill": "Memahami ISO image & template dasar",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "2be1ceb0-e2aa-4e5a-8ac6-655fbeb9b0d5",
+    "namaSubSkill": "Mengenal hypervisor (VirtualBox, Proxmox, VMware Player)",
+    "level": 1,
+    "urutan": 1,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "210bb9e4-1fb2-41c4-a024-cee5c0f53f1d",
+    "idKuis": "f53e25ee-8139-415d-958c-ece1ba69e08a",
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": {
+      "idKuis": "f53e25ee-8139-415d-958c-ece1ba69e08a"
+    }
+  },
+  {
+    "idSubSkill": "c4ac7123-84f2-4f72-82bb-fb5e7b23fd2b",
+    "namaSubSkill": "Instalasi Windows Server",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "ee0da8bc-87ff-4a05-afd8-fc5e8a845e9b",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4bbd0b65-d310-41d9-86fc-acc4991bce91",
+    "namaSubSkill": "Basic AD join",
+    "level": 1,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "cdc06c36-6746-4965-afef-9618055100f2",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "80f1d858-511a-42cf-8def-158df4498d0d",
+    "namaSubSkill": "Membuat VM (Linux/Windows)",
+    "level": 1,
+    "urutan": 2,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "18c2f43c-bc5b-4b70-80b1-4ae44e10c8a9",
+    "namaSubSkill": "Penggunaan environment variables",
+    "level": 1,
+    "urutan": 8,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e737b4df-808f-4162-a81b-1acdb68982e4",
+    "namaSubSkill": "Mekanisme cache",
+    "level": 1,
+    "urutan": 7,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "61e4807c-384c-4705-a2a1-95bb163ed428",
+    "namaSubSkill": "Dasar-dasar troubleshooting pipeline",
+    "level": 1,
+    "urutan": 5,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "98fc5efa-66f3-4ba7-829d-a21ad3c1e4db",
+    "namaSubSkill": "Self-Hosted Runner",
+    "level": 1,
+    "urutan": 4,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9484f1e6-27ff-4c85-9ac0-f787f53b96e2",
+    "namaSubSkill": "Job artifacts",
+    "level": 1,
+    "urutan": 6,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "2314bc91-5733-43e6-be86-8938d7294108",
+    "namaSubSkill": "Melakukan Query Tuning",
+    "level": 2,
+    "urutan": null,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "dc5168cc-3582-4c37-b46a-5d7f0f3e9f66",
+    "namaSubSkill": "Melakukan Indexing Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fb94e1a6-508e-4dbc-81d6-3a743e965f5a",
+    "namaSubSkill": "Melakukan Backup & Restore Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "96f18cd0-0cf9-4bb5-90a4-fd1187f02049",
+    "namaSubSkill": "Melakukan Konfigurasi Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1ce790ab-9f56-412a-adef-37930053055d",
+    "namaSubSkill": "Melakukan Replication Dasar",
+    "level": 2,
+    "urutan": null,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0a0637de-89ce-4d91-895f-b9a953d26d2b",
+    "namaSubSkill": "Melakukan Monitoring Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "127703ea-da67-45d0-8019-9be4a9c3173b",
+    "namaSubSkill": "Melakukan Query Tuning",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b4ac83b4-bef0-4746-a6a4-3f400867d817",
+    "namaSubSkill": "Melakukan Indexing Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "5f1e0975-fbe7-475d-96d9-07c07165e59e",
+    "idKuis": "82c704e1-5377-4344-8a26-959bcb258ff7",
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": {
+      "idKuis": "82c704e1-5377-4344-8a26-959bcb258ff7"
+    }
+  },
+  {
+    "idSubSkill": "0c1be252-63c1-4501-b9ba-e1d4412ae8ee",
+    "namaSubSkill": "Melakukan Backup & Restore Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ac38e405-f9c7-4972-82cc-7e7825e57a3b",
+    "namaSubSkill": "Melakukan Backup & Restore Lanjutan",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9c7ffef9-bb0b-42e7-9455-5ba25a643fd6",
+    "namaSubSkill": "Melakukan Konfigurasi Lanjutan",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f8e76201-c0ab-4fce-bfb1-097de6e22fb5",
+    "namaSubSkill": "Melakukan Replication Dasar",
+    "level": 2,
+    "urutan": 6,
+    "idPic": "9870e2cd-6003-43f0-93a0-a281061aed36",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andi Abd. Jalil",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4395e76c-965f-449a-933c-c9a2bf9b1e5e",
+    "namaSubSkill": "Melakukan Monitoring Lanjutan",
+    "level": 2,
+    "urutan": 7,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c093f2c8-117e-443e-8343-c906f870a8d2",
+    "namaSubSkill": "Memahami Query SQL Lanjutan",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4e64da07-38f8-4e81-b1da-9df93b69b57a",
+    "namaSubSkill": "Melakukan Query Tuning",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a3afb4ec-8d9b-40fb-9704-b9c096e93067",
+    "namaSubSkill": "Melakukan Indexing Lanjutan",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7f8b7802-f531-4acf-b742-bb4d69bd1f76",
+    "namaSubSkill": "Melakukan Query Tuning",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e0e8c2e2-18fb-4474-b18a-55377ac291e1",
+    "namaSubSkill": "Memahami Query SQL Lanjutan",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7024dc85-533d-4de3-8971-52119d39643b",
+    "namaSubSkill": "Melakukan Indexing Lanjutan",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "c4b6c2f9-1183-4f13-8721-570c70069671",
+    "idKuis": "d0f9cb09-6dd2-4a2f-9849-f646c9de193b",
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": {
+      "idKuis": "d0f9cb09-6dd2-4a2f-9849-f646c9de193b"
+    }
+  },
+  {
+    "idSubSkill": "bb004c71-b5c3-46c1-92a3-2568e7248f89",
+    "namaSubSkill": "Melakukan Backup & Restore Lanjutan",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "18859663-cd59-47a9-9df5-e706c4a3fa66",
+    "namaSubSkill": "Melakukan Konfigurasi Lanjutan",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "26904562-0707-47b4-9023-b7ab0a9537a9",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "65541c49-a826-42c6-828d-e105593da532",
+    "namaSubSkill": "Melakukan Replication Dasar",
+    "level": 2,
+    "urutan": 6,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fb9efbd5-4aa5-4198-8f5c-e397aa6dc5ac",
+    "namaSubSkill": "Melakukan Monitoring Lanjutan",
+    "level": 2,
+    "urutan": 7,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7bcca79c-f0c6-42f5-bc2d-a24e7394ac77",
+    "namaSubSkill": "Melakukan Konfigurasi Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "788d5b93-a8b3-424b-a679-44aa1d85b722",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7c85b144-fd2a-4f5c-aa05-59446f645b1b",
+    "namaSubSkill": "Melakukan Replication Dasar",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "74a3c163-2ffd-4951-8aac-f1a5d269b94c",
+    "idKuis": "eaa63dfe-930b-44e8-bcc5-34b2c4e69abf",
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": {
+      "idKuis": "eaa63dfe-930b-44e8-bcc5-34b2c4e69abf"
+    }
+  },
+  {
+    "idSubSkill": "d9d1effd-dbcd-4ac5-af09-fab93c0fddf3",
+    "namaSubSkill": "Melakukan Monitoring Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8dbc5d88-f82e-4d66-afae-c878ca857964",
+    "namaSubSkill": "Storage dan Filesystem management",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c8540eee-77a2-4253-af0b-d8b4a1ef5f0c",
+    "namaSubSkill": "Memahami Query SQL Lanjutan",
+    "level": 2,
+    "urutan": null,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "a5423ecd-d791-41e8-9394-bbb722f27db7",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bd9173ab-16e1-42c3-a9e3-7255afca5ce6",
+    "namaSubSkill": "Logging dan Monitoring",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bef1370d-3c6a-4ea9-bbec-310f18deced5",
+    "namaSubSkill": "Security dan Network (hardening)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f9f3d1c7-4f5f-4914-be1a-3de9a37a8209",
+    "namaSubSkill": "Script Automation",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "360bdd5d-9b32-4767-a723-1f93e1313044",
+    "namaSubSkill": "LVM, NFS, mount",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "2fe12e4c-90f5-4ad5-8d70-ab4130c164bd",
+    "namaSubSkill": "Firewall (iptables/nftables/firewalld)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d32b85f2-63f0-4359-b89e-026022b2c206",
+    "namaSubSkill": "Cron automation & bash scripting dasar",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3b64054a-f852-4fdb-93fd-0d5a23f47429",
+    "namaSubSkill": "Log management (journalctl, rsyslog)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1f0ef7e0-b8d1-4852-9691-6a6cca732935",
+    "namaSubSkill": "Performance tools (htop, iostat, netstat, ss)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8e8a27da-7b19-40f3-aceb-a852d8245873",
+    "namaSubSkill": "Storage dan Filesystem management",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4dd780fe-f7f8-4535-a7e2-4028377eb3d3",
+    "namaSubSkill": "Script Automation",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "32b3a632-f50a-46a0-99b8-cc0026eb9640",
+    "namaSubSkill": "Logging dan Monitoring",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "221d41a4-98f8-4aae-8e0c-76efa88b2b25",
+    "namaSubSkill": "Security dan Network (hardening)",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ac5c765e-d795-4429-ac68-cd8de49ae90f",
+    "namaSubSkill": "Backup & restore VM",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "cbb49072-bd9c-42f5-ad97-5ea1f3e03f6b",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "749f78b4-f1de-483d-94ed-6218e522532e",
+    "namaSubSkill": "Storage provisioning (LVM, thin provisioning)",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "5d46bcbd-bd7e-455e-b7a0-4924dd44ca3c",
+    "idKuis": "74a9c5cb-162c-44e0-b08a-19406d24431d",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": {
+      "idKuis": "74a9c5cb-162c-44e0-b08a-19406d24431d"
+    }
+  },
+  {
+    "idSubSkill": "2924dcd5-d2ec-4794-a925-fe257a59bd35",
+    "namaSubSkill": "Manajemen template & cloning otomatis",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "947ad6d8-e804-4895-8d29-3648e4569b87",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f2adfbe2-99a1-48af-a571-486a3f0afeff",
+    "namaSubSkill": "Migrasi VM manual",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "8880982e-2e54-424e-b7bc-b0952d2aeeb5",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "43d67e4d-599b-4874-ac45-f38056162fba",
+    "namaSubSkill": "Backup aplikasi level container (docker)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8827ba5b-487a-44f3-b30e-1600c76bd2b2",
+    "namaSubSkill": "Backup aplikasi level container (k8s, rke2)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d4afc5d8-47a1-4cc6-a4d0-83aff4e4e896",
+    "namaSubSkill": "Backup konfigurasi cluster (k8s, rke2)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000006",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Backup Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b5d11663-09ab-44a3-b04a-bc7d3aefb878",
+    "namaSubSkill": "Restore aplikasi level container (docker)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "981fbe0e-3c20-439c-88a5-6321c39abb2a",
+    "namaSubSkill": "Restore aplikasi level container (k8s, rke2)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fa8bb4e1-443b-453e-a3c1-f7d7180f776d",
+    "namaSubSkill": "Restore konfigurasi cluster (k8s, rke2)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7b56fa9c-0e1e-4875-a394-e40b8f26dca0",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000007",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Surya Nugraha",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Restore Aplikasi"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8e03cd23-a81d-4b24-8683-4ce114fc0c3a",
+    "namaSubSkill": "Integrasi APM untuk tracing & metrics",
+    "level": 2,
+    "urutan": 6,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "11a61dd7-5882-445d-9819-462e91d129f8",
+    "namaSubSkill": "Membangun dashboard kustom",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "27522ccc-5f4b-474f-a590-23aae89a6738",
+    "namaSubSkill": "Reverse proxy",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3aae5ad7-70fc-442b-b1e6-fa450f5b6b0c",
+    "namaSubSkill": "SSL/TLS (Let’s Encrypt/OpenSSL)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c15c8f78-0474-44da-b8b6-ef0bdb48b005",
+    "namaSubSkill": "Load balancing",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e8e8649d-f3b1-4a68-b134-910fe3117a41",
+    "namaSubSkill": "URL rewriting",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "279753ab-897b-478d-af32-9848a2b59add",
+    "namaSubSkill": "Performance tuning",
+    "level": 2,
+    "urutan": null,
+    "idPic": "7270d3e9-e4b5-4475-986e-4d99c1f0a572",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ayu Pebriani",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "149f6a86-4725-4f9b-aff9-c70a61fe09c3",
+    "namaSubSkill": "PowerShell automation",
+    "level": 2,
+    "urutan": 6,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ec2ff18a-94e2-4d35-863d-a2980db2be16",
+    "namaSubSkill": "Window Scheduller",
+    "level": 2,
+    "urutan": 7,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9b72e102-f716-4b72-83e2-e533ffd571ba",
+    "namaSubSkill": "Healthcheck Container",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": "154356c8-a146-4b7f-a177-525fa02b0faf",
+    "idKuis": "5958590a-4504-4bad-8b29-4176aa68bb50",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": {
+      "idKuis": "5958590a-4504-4bad-8b29-4176aa68bb50"
+    }
+  },
+  {
+    "idSubSkill": "57c68bbf-adc8-4f69-812e-32129dfebb84",
+    "namaSubSkill": "Multi stage Dockerfile",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": "744e37c2-e013-4e0e-806b-d9098b4f6c42",
+    "idKuis": "e524c3ad-7fe7-4890-99c4-5042378f9a99",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": {
+      "idKuis": "e524c3ad-7fe7-4890-99c4-5042378f9a99"
+    }
+  },
+  {
+    "idSubSkill": "58f522cc-e124-41cc-bd71-1f6c3d413d1a",
+    "namaSubSkill": "ADDS Administration",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "4af632ab-0eb3-45a2-b570-e98a43c2a915",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bd69f02c-0265-41e5-ac59-2e5d92df88cc",
+    "namaSubSkill": "GPO Management",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "599b3be3-2e50-40cb-82cf-75da70ed37c6",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "5d0dcd53-fd48-40f6-bfeb-c8c8e12c99de",
+    "namaSubSkill": "Hyper-V administration",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "9188675e-4c82-4377-bd39-aeb7c29bf8f7",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bf30e40c-7425-4056-9daf-d5c68b9b1620",
+    "namaSubSkill": "IIS web hosting",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "9b363f58-a6e8-4a7a-b18b-b967cd145eed",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d6e324bf-f432-4fbc-8a9e-d77882ee96ea",
+    "namaSubSkill": "Vulnerability scan (Nessus/OpenVAS)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "786b34e8-9d24-47b6-bfb8-a24cc671fcbd",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ad005335-5468-41d4-aa6e-e2f4f73a8adf",
+    "namaSubSkill": "Log auditing",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "a2ae1dc0-819a-41f3-bcbc-ab36acbbbbdc",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "78618429-326d-4088-a539-2c278864fe04",
+    "namaSubSkill": "Malware defense (ClamAV/Defender)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "5c25373d-a17f-4417-b383-14e4fa9c8f63",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ed6bdc18-0c47-4c72-92c3-fde8f93d8ca3",
+    "namaSubSkill": "Environment variables",
+    "level": 2,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4f0f8fb5-04b8-4d00-b30c-ed9d5c482927",
+    "namaSubSkill": "Image optimization",
+    "level": 2,
+    "urutan": null,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3dfea907-8db1-48ef-bbf5-dd898d091209",
+    "namaSubSkill": "Namespace & Resource Quota Dasar",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "5fb8919e-ef43-4a46-8c54-d1854a6c9b06",
+    "namaSubSkill": "Labels, Selectors, & Annotations",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "27fd3a5a-1ef7-471d-874b-fce2afe2eab0",
+    "namaSubSkill": "HPA & VPA",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9dc7743b-27ab-439e-88e8-d79a0db21d9b",
+    "namaSubSkill": "Helm Chart basic",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "635af308-5502-46e0-ad5b-c71f69ecc952",
+    "namaSubSkill": "RBAC & Security",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fb5d6efd-de7b-4bc1-9c3d-d5595e710eee",
+    "namaSubSkill": "Trigger / Child pipeline",
+    "level": 2,
+    "urutan": 7,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "affe3826-0a53-4310-9212-675da696e3b5",
+    "namaSubSkill": "Provisioning GitLab Runner Custom",
+    "level": 2,
+    "urutan": 8,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "44690e5d-2f13-48fa-a35d-ce1bf8416965",
+    "namaSubSkill": "Pipeline tingkat menengah",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "5383da20-7443-43e5-b0ed-bdf9a82a9196",
+    "namaSubSkill": "Pipeline multi stage",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "2b67128d-9a93-4f0f-906f-debd0b64c3aa",
+    "namaSubSkill": "Dependency antar job",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d3227bf8-f099-4e75-952c-6e35014b68f2",
+    "namaSubSkill": "Auto DevOps",
+    "level": 2,
+    "urutan": 4,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ee5c8757-41b8-4878-97ed-a12b50804838",
+    "namaSubSkill": "Cross-project pipelines",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ba49a9e4-eb3b-41f9-a470-622a3bb9058b",
+    "namaSubSkill": "Optimasi pipeline",
+    "level": 2,
+    "urutan": 6,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9a41ed04-529f-4884-a554-a1bc85b18ed5",
+    "namaSubSkill": "Log Collection & Aggregation",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "97880446-1d4f-4329-8c83-c7d75d20b030",
+    "namaSubSkill": "Log Parsing & Normalization",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8550229f-caf0-4304-b4c6-27d1950f5511",
+    "namaSubSkill": "Log Routing & Processing",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000c",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Management"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1866a434-eb6b-4a29-a7f6-68f5be573f74",
+    "namaSubSkill": "Root Cause Analysis (RCA)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "7f34cd3c-4689-4562-ab79-125ccd026fa5",
+    "namaSubSkill": "Log Correlation",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6727181a-a470-4c3b-bc5c-ac5922ce455b",
+    "namaSubSkill": "Visualization Insight",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0e4ddd07-8cdd-419d-b161-abf1833b0746",
+    "namaSubSkill": "Memahami Query SQL Lanjutan",
+    "level": 2,
+    "urutan": 9,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f52b7bb5-05f5-4f88-81ce-3866c271aa35",
+    "namaSubSkill": "Sistem dan Kernel Tuning",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6784696a-0d3b-4d3d-8c50-b5536b6c270a",
+    "namaSubSkill": "ReplicaSets & StatefulSets dasar",
+    "level": 2,
+    "urutan": 6,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f5fa7895-89c7-4d65-8e2e-dc2ced01634f",
+    "namaSubSkill": "CronJobs & Batch Jobs",
+    "level": 2,
+    "urutan": 7,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "489e6573-688e-484f-a05d-6aaa59f82e65",
+    "namaSubSkill": "Integrasi beberapa sumber data (Prometheus, Grafana)",
+    "level": 2,
+    "urutan": 3,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f8cd1125-1f23-4aac-bae3-bb43255a6fb7",
+    "namaSubSkill": "Mengatur threshold alert dan eskalasi",
+    "level": 2,
+    "urutan": 2,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f6cccb93-6158-4ff8-8bfd-9d0761d99641",
+    "namaSubSkill": "Pengumpulan metrik kustom",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "402744a2-96b3-4e3a-937f-dd4be8f17737",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": "e9c0bd19-08ee-4ee1-8189-84f7efb6b656",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fajri Nur Syarif",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6f3024b6-3191-4033-b05e-aab04b357548",
+    "namaSubSkill": "Audit tools (Lynis, CIS Benchmark)",
+    "level": 2,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": "8cbffa13-58ab-4ace-ad82-44942b3ce9da",
+    "idKuis": "c1fa7f98-6667-4155-804b-994bee0aac52",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": {
+      "idKuis": "c1fa7f98-6667-4155-804b-994bee0aac52"
+    }
+  },
+  {
+    "idSubSkill": "0bf7f19f-8483-4e47-bf6b-76231a7da187",
+    "namaSubSkill": "WSUS update management",
+    "level": 2,
+    "urutan": 5,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": "34564b0a-75aa-4436-bf4a-2437a06d90db",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ac6da7f5-5485-49d9-ad29-f2e6e29022dd",
+    "namaSubSkill": "Sistem dan Kernel Tuning",
+    "level": 2,
+    "urutan": null,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "2f0fcd18-3bfc-49e9-aa03-1952c8331de6",
+    "idKuis": "c075f5d6-3156-4ebc-9fb5-e927c8fcaed7",
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": {
+      "idKuis": "c075f5d6-3156-4ebc-9fb5-e927c8fcaed7"
+    }
+  },
+  {
+    "idSubSkill": "91c8997c-1c7a-40e9-a4a3-71f334193152",
+    "namaSubSkill": "Networking VM (NAT, Bridge, VLAN)",
+    "level": 2,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "7ca774d7-faea-43a5-8ec1-b49991e4fe0a",
+    "idKuis": "4e8219ce-a840-4d81-a62a-3994dd6b4217",
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": {
+      "idKuis": "4e8219ce-a840-4d81-a62a-3994dd6b4217"
+    }
+  },
+  {
+    "idSubSkill": "ec2c3f4c-4666-4de4-ba8f-72b21971ddf5",
+    "namaSubSkill": "Service Mesh Integration (Linkerd/Istio)",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "631580e3-8675-4490-ab82-1c0e55963004",
+    "namaSubSkill": "Otomatisasi remediasi insiden",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "cca3e4d9-bed0-4beb-b7ab-72d636e2d6a7",
+    "namaSubSkill": "API Gateway (Istio Gateway, Traefik)",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a94c2926-390e-4d96-9a99-7523ea1e9e1b",
+    "namaSubSkill": "Deployment Helm Chart (ArgoCD)",
+    "level": 3,
+    "urutan": 6,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "eca243fb-49a2-45e0-9ce3-9ff76edabb9f",
+    "namaSubSkill": "Alerting lanjutan (multi-condition, SLA)",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e27db914-18bd-4ca7-85f2-b45449b76795",
+    "namaSubSkill": "WAF (Mod Security)",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ed7067b6-d5be-4b32-aea2-d8e2effb431b",
+    "namaSubSkill": "Advanced caching (NGINX cache, Varnish)",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "38bc09cc-ce9d-48ef-b354-59a033ed3d2d",
+    "namaSubSkill": "High-availability web architecture",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "5b76f6b2-f7fe-4a0d-b668-c4f76d107163",
+    "namaSubSkill": "Melakukan Performance Tuning",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6d73ecdf-575d-425f-ab46-7b95f29f3e15",
+    "namaSubSkill": "Large-scale reverse proxy",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "bf3aca73-6bb5-4013-b26e-d4de18b679ea",
+    "namaSubSkill": "Melakukan Disaster Recovery",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4e2c5df9-dbe7-4bea-8d07-7a8801faecce",
+    "namaSubSkill": "Hardening web server",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000004",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Web Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "74580589-72e8-4d66-9066-ca1db216757f",
+    "namaSubSkill": "HA cluster (Pacemaker/Corosync)",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c953945b-c5a4-41df-b9cb-c79a667b7807",
+    "namaSubSkill": "Melakukan Performance Tuning",
+    "level": 3,
+    "urutan": null,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "c99d6daf-7b37-4d13-8d3a-68786c6d9f48",
+    "idKuis": "cb4d3943-8397-40a8-8abe-0840920a2f99",
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": {
+      "idKuis": "cb4d3943-8397-40a8-8abe-0840920a2f99"
+    }
+  },
+  {
+    "idSubSkill": "619d4748-1517-43e7-b953-dfe0479544c5",
+    "namaSubSkill": "Menerapkan High Availability",
+    "level": 3,
+    "urutan": null,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "79bf6c9a-9504-435f-bd88-f1c11814bb65",
+    "idKuis": "8eec1217-3936-4472-a669-73f00b76b44f",
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": {
+      "idKuis": "8eec1217-3936-4472-a669-73f00b76b44f"
+    }
+  },
+  {
+    "idSubSkill": "34a72f9f-2ff9-4f03-bd96-7099de44c156",
+    "namaSubSkill": "Troubleshooting level enterprise",
+    "level": 3,
+    "urutan": 6,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "55178f59-4c89-4eee-9f79-681ae72c8ae6",
+    "namaSubSkill": "Helm & Multi-Environment Deployment",
+    "level": 3,
+    "urutan": 7,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1811e801-09d7-4be9-932c-3fc4f41fe788",
+    "namaSubSkill": "Security & Compliance pipeline",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "53c0d744-03c7-4b68-98ea-633b5b034eb9",
+    "namaSubSkill": "Melakukan Skalabilitas Arsitektur",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b1d043b7-25ab-4895-8fc3-97fe68c8f909",
+    "namaSubSkill": "Menerapkan Security",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d943b077-795a-4171-89e8-0c6e1f5296ae",
+    "namaSubSkill": "Monitoring & observability",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8a9d3360-3a03-447e-920f-1b568ddb3a56",
+    "namaSubSkill": "Advanced networking (bonding, VLAN)",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9d3cf0cf-c4ec-4117-aa9e-38b7d5e052bf",
+    "namaSubSkill": "Linux hardening (CIS Benchmark)",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "abbaaf1e-dbce-493f-b975-a0178647f5db",
+    "namaSubSkill": "SELinux/AppArmor",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000002",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Linux Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "5ee6136b-b964-4299-81f7-72961c7a4240",
+    "namaSubSkill": "Advanced permissions & group strategy",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "642a1ca8-b731-4ae4-8646-8e29a71b66bf",
+    "namaSubSkill": "Pipeline Tingkat Lanjut & Monorepo",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8824bd08-c448-493c-be12-f11f0ba72899",
+    "namaSubSkill": "Autoscaling Runner",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ab75e77d-162d-4292-af33-eaf8abf3b145",
+    "namaSubSkill": "Disaster Recovery",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "ad719f69-de8f-4d6b-a6a8-98a4266d5182",
+    "namaSubSkill": "Melakukan High Availability",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "4d242348-3f78-47a0-9282-b0ecd9ccbb66",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Achmad Ridwan",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "a1fbb833-a3b9-4af2-8bda-40db78a67d52",
+    "namaSubSkill": "Configuration Management",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d282d11d-9f51-447c-b877-d9f93a544465",
+    "namaSubSkill": "Desain arsitektur monitoring (terpusat/HA)",
+    "level": 3,
+    "urutan": 7,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "133d1ca2-06fe-4641-a99b-857fb874547f",
+    "namaSubSkill": "Melakukan Performance Tuning",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f8852d81-04c9-45c0-b007-3b7a6e211548",
+    "namaSubSkill": "Menerapkan High Availability",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1050714d-2747-4eef-a266-1ede8bab452f",
+    "namaSubSkill": "Traffic & Pattern Analysis",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8160d60a-6761-4a1c-8072-e4d0ebe34dd4",
+    "namaSubSkill": "Incident Investigation",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3012d838-39bf-48d9-a2ba-e3c2c492e532",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000d",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Tedi Mahendra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Log Analisis"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "51cc5b64-2341-4826-900f-78fec28ae0ab",
+    "namaSubSkill": "Perencanaan Kapasitas Infrastruktur",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f365640e-c7be-455d-96bb-831eea3a389a",
+    "namaSubSkill": "Troubleshooting",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "76772c22-0c94-4a67-aeea-41639741d855",
+    "idSkill": "d3fba0e6-9b26-4b76-953f-59d847dc5f24",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Hananta Prasetia",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Windows"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "2d369661-b313-461a-ae7d-fca44d783184",
+    "namaSubSkill": "Disaster Recovery",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f283af59-244c-4172-af27-235e67ff97a1",
+    "namaSubSkill": "Perencanaan Kapasitas Infrastruktur",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0b97b80d-0dda-4468-976c-ec174ab5a32d",
+    "namaSubSkill": "Troubleshooting",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "15313c34-e19b-4d41-a8f9-72b20fe6b3b4",
+    "namaSubSkill": "Melakukan High Availability",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b6e23243-fd12-400e-a417-ce5a5d665be9",
+    "namaSubSkill": "Melakukan Skalabilitas Arsitektur",
+    "level": 3,
+    "urutan": null,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "22ae2195-988d-4adb-b53e-15777d3efd0a",
+    "idKuis": "0dd00efa-5a15-48e3-8f6c-1a7666244feb",
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": {
+      "idKuis": "0dd00efa-5a15-48e3-8f6c-1a7666244feb"
+    }
+  },
+  {
+    "idSubSkill": "e37bae76-bbe3-48b3-8740-6dc48feed392",
+    "namaSubSkill": "Hypervisor enterprise (VMware ESXi, Hyper-V, Proxmox cluster)",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "75136ff9-ab6f-4b50-b43a-1e63a8333668",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c7137773-6df1-400f-8766-67c9683ec13a",
+    "namaSubSkill": "Configuration Management",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "3129720e-c412-45c4-93f4-e7671e0c4e5d",
+    "idSkill": "e9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ikrar Harvy",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Administrasi Linux"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "df9464ac-f05a-492e-98f7-eb997dad80de",
+    "namaSubSkill": "Performance tuning & monitoring VM",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "54750c3c-e941-4f12-b2d7-4e84bc5624b6",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f19b865e-681d-4741-9d9e-80230367d394",
+    "namaSubSkill": "Melakukan Disaster Recovery",
+    "level": 3,
+    "urutan": null,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "d5784f1a-dbe3-4d60-a454-0e5ec8a7b364",
+    "idKuis": "cdbc8173-d764-43c9-87bd-feabbcfc92e7",
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": {
+      "idKuis": "cdbc8173-d764-43c9-87bd-feabbcfc92e7"
+    }
+  },
+  {
+    "idSubSkill": "7b983f88-d5ab-47ca-a3d6-b6472c35cfdb",
+    "namaSubSkill": "Melakukan Disaster Recovery",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "8a623469-4b42-4bf2-8bd9-7dc38ce10f5d",
+    "idSkill": "a9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Ando Pratama Wibawa",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "PostgreSQL"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c645a1e2-91ed-4e4e-ab56-c9712f04c3c2",
+    "namaSubSkill": "Menerapkan Security",
+    "level": 3,
+    "urutan": null,
+    "idPic": "06c65ea5-3b99-455c-bbe5-a9cd4311fe42",
+    "idSkill": "b9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "ba88b5c7-c100-4fa1-9f51-9282ab731f1d",
+    "idKuis": "2a3cfea0-a43e-46c8-87ce-a2f1da6cddd8",
+    "pic": {
+      "namaUser": "Bayu Tri Sulistyo",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MySQL"
+    },
+    "kuis": {
+      "idKuis": "2a3cfea0-a43e-46c8-87ce-a2f1da6cddd8"
+    }
+  },
+  {
+    "idSubSkill": "1f5fbcd7-98c4-4d0b-bfba-f9579079a706",
+    "namaSubSkill": "Security hardening Windows Server",
+    "level": 3,
+    "urutan": 6,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "64a198e3-5e52-4a32-a11e-6ba371754d98",
+    "namaSubSkill": "Intrusion detection system (OSSEC/Wazuh)",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "dca2cc5b-3969-427f-ab28-97314c7d3433",
+    "namaSubSkill": "SIEM integration",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f8eb8afe-731d-4237-abb7-144030cf42f8",
+    "namaSubSkill": "OS hardening architecture",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "0fb966f4-c3af-43c6-9e8e-b8d17b1e6bee",
+    "namaSubSkill": "Incident response & forensics",
+    "level": 3,
+    "urutan": null,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000008",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Security OS"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "41ce376f-9fdb-4072-91d3-852d0d7f849f",
+    "namaSubSkill": "Enterprise backup strategy",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c0630a93-2350-44c6-9d06-9fa404e6f141",
+    "namaSubSkill": "RDS deployment & management",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d7e8c37d-215e-4393-8632-9fbfab9de0e3",
+    "namaSubSkill": "High availability Windows services",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "abacab1f-59f0-4fcf-b3ed-e5d140db8957",
+    "namaSubSkill": "Domain trust, federation, advanced GPO",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e8c6ff7a-ffed-4d30-aea2-94f49cc52428",
+    "namaSubSkill": "Security hardening hypervisor",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "b006a0be-d6e0-46c9-b44c-203135b4bd40",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "b40835eb-dcc2-403f-bd22-f0c78b396319",
+    "namaSubSkill": "Menerapkan High Availability",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c6fddec0-846c-476d-9db5-f5fbefa04c16",
+    "namaSubSkill": "Multi-host networking",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "3b30a7db-45cf-44ea-bf32-b36a3f872686",
+    "namaSubSkill": "Menerapkan High Availability",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": "0710f9e8-9aff-4d40-aded-d053d3a099b4",
+    "idKuis": "863310ba-54fa-4b27-a665-45f9e5c6fe67",
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": {
+      "idKuis": "863310ba-54fa-4b27-a665-45f9e5c6fe67"
+    }
+  },
+  {
+    "idSubSkill": "0b4c1c6f-8d5b-44b2-97b5-2b409578d3ab",
+    "namaSubSkill": "Melakukan Disaster Recovery",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "418f0132-8299-477f-937f-540851664cf7",
+    "namaSubSkill": "Melakukan Performance Tuning",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "c4f43e71-9c9e-4e13-a010-ff03553e7397",
+    "namaSubSkill": "Menerapkan Security",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "703ec08b-d139-4e4c-9c60-e02861e0dac5",
+    "namaSubSkill": "Melakukan Skalabilitas Arsitektur",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "ee1b41ee-7ad3-428a-a502-66d945b9307d",
+    "idSkill": "d9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Asdin Wahyu Pamungkas",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "MongoDB"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d510f8d4-d834-4526-a3d9-1d12e1b9c17c",
+    "namaSubSkill": "Secret management container",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "dd98b4b5-7b17-4707-97b5-645a7c8f02a5",
+    "namaSubSkill": "AD enterprise design",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000003",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Windows Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "54b3df47-3535-4f03-9625-6ed688d866cb",
+    "namaSubSkill": "GitOps workflow",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000b",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Git & Gitlab"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "9f2f2891-de97-492a-932f-78d460521bb5",
+    "namaSubSkill": "Perencanaan kapasitas dan analisis tren",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "68c867d2-cb4b-4cce-ab6e-ce758a4bb62e",
+    "namaSubSkill": "Advanced Networking & Service Mesh Integration",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "4b5f9443-dfa7-4b29-8cda-843f46da987e",
+    "namaSubSkill": "BGP / Routing Antar Node",
+    "level": 3,
+    "urutan": 9,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8e69e448-e017-4ade-bf30-21982947d445",
+    "namaSubSkill": "Melakukan Skalabilitas Arsitektur",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d3e372b4-2141-4e6f-b63c-ad5d7a546cb2",
+    "namaSubSkill": "Menerapkan Security",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "04577662-ed90-4166-9f9a-6f1678562205",
+    "idSkill": "c9bce9a3-5d3f-4db7-9e41-9f8a6cfb92c1",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Fahri Bagus Firmansyah",
+      "team": [
+        {
+          "namaTeam": "DBA"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "SQL Server"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "297947d3-8e7e-4bab-8aac-103763e87801",
+    "namaSubSkill": "Distributed tracing menggunakan APM",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "f5163e0f-2bba-4a08-983e-4c82055ed851",
+    "namaSubSkill": "Volume driver",
+    "level": 3,
+    "urutan": 4,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e1fe9e69-0171-4304-8d12-8d3c5d683bdf",
+    "namaSubSkill": "Advanced Compose & Stack",
+    "level": 3,
+    "urutan": 5,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "fb7230a6-b53f-47ad-9ee1-9aa400886805",
+    "namaSubSkill": "Docker Swarm",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "24092b94-1aaa-4b35-8c67-3756596faab9",
+    "namaSubSkill": "Cluster virtualization",
+    "level": 3,
+    "urutan": 3,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "57080ba6-ac06-4ab2-9078-8aaf276fecb2",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "8dad9d1b-ee08-41b6-bf73-ada5146340ac",
+    "namaSubSkill": "High availability (HA) & live migration",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000001",
+    "idDokumen": "541b9e61-76e7-4889-94d9-0063677ee2e8",
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Virtual Machine"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "84885da8-e272-45e2-9460-45ababf06436",
+    "namaSubSkill": "Optimasi performa aplikasi & infrastruktur berdasarkan APM",
+    "level": 3,
+    "urutan": null,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "203f27dc-e9df-4fe5-b26a-e931757636ea",
+    "namaSubSkill": "Container lifecycle automation",
+    "level": 3,
+    "urutan": 6,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000009",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Docker"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "e67202d3-cb4a-4063-a9ab-d9ce0553d388",
+    "namaSubSkill": "IP Pool & IPAM",
+    "level": 3,
+    "urutan": 8,
+    "idPic": "f1668085-ddf3-4e80-a437-175af4c4b1bc",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Oktori Thio Nugroho",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "96210146-ab98-4461-8083-127963123638",
+    "namaSubSkill": "Deployment Strategy (Canary, Blue/Green)",
+    "level": 3,
+    "urutan": 1,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "d9be474f-5dd0-41a4-9d75-8df8a7d45cba",
+    "namaSubSkill": "Cluster Architecture & Management",
+    "level": 3,
+    "urutan": 2,
+    "idPic": "aa61d359-2f5e-4231-905a-314552f7e2ae",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-00000000000a",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Andika Putra",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Containerization Kubernetes"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "75b0b362-84d0-4df7-8c05-a51ff2efb77f",
+    "namaSubSkill": "Analisis prediktif & deteksi anomali",
+    "level": 4,
+    "urutan": 5,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "6a0be1d0-20a7-4e23-aa18-b57781e010d4",
+    "namaSubSkill": "Monitoring untuk keamanan & kepatuhan",
+    "level": 4,
+    "urutan": 4,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "1da499d0-7a8f-4b6b-91c1-ba1d9fa12556",
+    "namaSubSkill": "Monitoring multi-cluster / lintas region",
+    "level": 4,
+    "urutan": 3,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "53bb0f67-8e72-4927-9d14-50c935eb5c58",
+    "namaSubSkill": "Strategi monitoring tingkat enterprise",
+    "level": 4,
+    "urutan": 2,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  },
+  {
+    "idSubSkill": "065987da-91df-40a1-a01b-52b3f4aa3cca",
+    "namaSubSkill": "Integrasi monitoring dengan pipeline CI/CD",
+    "level": 4,
+    "urutan": 1,
+    "idPic": "3d0ca79d-a112-4cac-99d9-674aa94c49b3",
+    "idSkill": "11111111-aaaa-4aaa-8aaa-000000000005",
+    "idDokumen": null,
+    "idKuis": null,
+    "pic": {
+      "namaUser": "Agung Ramadhan Febriyanto",
+      "team": [
+        {
+          "namaTeam": "Devops"
+        }
+      ]
+    },
+    "skill": {
+      "namaSkill": "Monitoring Server & APM"
+    },
+    "kuis": null
+  }
+]
