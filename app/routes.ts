@@ -12,10 +12,12 @@ export default [
         ])
     ]),
 
+    route("dashboard", "routes/dashboard/public.tsx"),
+
     route("app", "routes/app.tsx", { id: "app" }, [
 
         layout("layout/sidebar-main-layout.tsx", [
-            route("dashboard", "routes/dashboard.tsx"),
+            route("dashboard", "routes/dashboard/private.tsx"),
 
             ...prefix("dokumen", [
                 // route dokumen
