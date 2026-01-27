@@ -8,6 +8,7 @@ import { insertQuestion } from "../services/insertQuestion";
 import { insertOptions } from "../services/insertOption";
 import type { tKuisQuestionOption } from "database/schema";
 import { updateKuisMetaData } from "../services/updateKuisMetaData";
+import { sql } from "drizzle-orm";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
 
@@ -29,7 +30,8 @@ export async function action({ request, params, context }: Route.ActionArgs) {
             question: submission.value.question,
             answerOption: submission.value.answerOption,
             waktuPengerjaanDetik: submission.value.waktuPengerjaanDetik,
-            idKuis: params.idKuis
+            idKuis: params.idKuis,
+            updated_at: sql`now()` as unknown as string,
         })
 
         // update option
@@ -47,7 +49,8 @@ export async function action({ request, params, context }: Route.ActionArgs) {
         const newQuestion = await insertQuestion({
             question: submission.value.question,
             answerOption: submission.value.answerOption,
-            idKuis: params.idKuis
+            idKuis: params.idKuis,
+            updated_at: sql`now()` as unknown as string,
         })
 
         // insert option
