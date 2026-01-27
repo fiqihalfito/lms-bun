@@ -4,7 +4,7 @@ import * as XLSX from "xlsx"
 async function main() {
 
     const res = await getSubskillBelumUploadDokumen()
-    await Bun.write("./test-query/result.json", JSON.stringify(res, null, 2))
+    // await Bun.write("./test-query/result.json", JSON.stringify(res, null, 2))
 
     const rows = res.map(mapToExcelRow)
 
