@@ -12,6 +12,7 @@ import { relations } from "./relations";
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL!,
+    // connectionString: "postgresql://admin_lms:Icungcans127@10.14.113.103:6666/lms_db",
 });
 
 // const client = new SQL({

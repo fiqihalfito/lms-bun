@@ -6,7 +6,7 @@ import { getAllQuestionsByIdKuis } from "@/features/kuis/services/getAllQuestion
 import { HeaderRoute } from "@/components/header-route";
 import { updateSubskill } from "@/features/subskill/services/updateSubskill";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeftIcon, PencilIcon, PlusIcon, TrashIcon } from "lucide-react";
+import { CalendarSyncIcon, ChevronLeftIcon, PencilIcon, PlusIcon, TimerIcon, TrashIcon } from "lucide-react";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
 import { Button } from "@/components/ui/button";
 import { data, Link, NavLink, Outlet, useFetcher } from "react-router";
@@ -16,6 +16,7 @@ import { useToastEffect } from "@/hooks/use-toast";
 import { TombolTambahSoal } from "@/features/kuis/components/make-kuis/TombolTambahSoal";
 import { SwitchKuisLocked } from "@/features/kuis/components/make-kuis/SwitchKuisLocked";
 import { getKuisMetaDataByIdKuis } from "@/features/kuis/services/getKuisMetaDataByIdKuis";
+import { formatHumanReadableTime } from "@/lib/utils";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -93,6 +94,16 @@ export default function MakeKuisRoute({ loaderData, params }: Route.ComponentPro
                                             {/* Jawaban : {q.answer?.toUpperCase()} . {q?.pilihan ? JSON.parse(q.pilihan)[q.answer!] : null} */}
                                             Jawaban : {q.answerOption.toUpperCase()} . {q.correctOption?.optionDesc}
                                         </ItemDescription>
+                                        <div className="flex flex-row gap-2 mt-4">
+                                            <Badge variant="outline">
+                                                <CalendarSyncIcon />
+                                                {formatHumanReadableTime(q.updated_at)}
+                                            </Badge>
+                                            <Badge variant="outline">
+                                                <TimerIcon />
+                                                {q.waktuPengerjaanDetik} detik
+                                            </Badge>
+                                        </div>
                                     </ItemContent>
                                     <ItemActions>
 

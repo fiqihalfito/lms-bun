@@ -1,0 +1,42 @@
+{
+	"React Router Loader Function": {
+		"prefix": "rr_loader",
+		"body": [
+			"export async function loader ({ request, params, context }: Route.LoaderArgs) {",
+			"",
+			"",
+			"",
+			"    return {}",
+			"}"
+		],
+		"description": "Generate a React Router loader function"
+	},
+	"React Router Action Function": {
+		"prefix": "rr_action",
+		"body": [
+			"export async function action ({ request, params, context }: Route.ActionArgs) {",
+			"",
+			"",
+			"",
+			"    return {}",
+			"}"
+		],
+		"description": "Generate a React Router action function"
+	},
+	"React Router Component Route Function": {
+		"prefix": "rr_component",
+		"body": [
+			"export default function ${1:ComponentName}({ loaderData, params }: Route.ComponentProps) {",
+			"",
+			"",
+			"",
+			"    return (",
+			"        <div>",
+			"            $0",
+			"        </div>",
+			"    )",
+			"}"
+		],
+		"description": "Generate a React Router loader function"
+	}
+}

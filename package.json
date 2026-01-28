@@ -7,6 +7,7 @@
     "dev": "bun --bun react-router dev",
     "start": "bun --bun react-router-serve ./build/server/index.js",
     "typecheck": "bun --bun react-router typegen && tsc",
+    
     "db:dev:push": "bun --bun drizzle-kit push --config=drizzle-dev.config.ts",
     "db:dev:seed": "bun database/seed/index.ts",
     "db:dev:seed-raw": "bun database/seed-raw/index.ts",
@@ -87,6 +88,7 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
     "vite-plugin-devtools-json": "^1.0.0",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "xlsx": "^0.18.5"
   }
 }
