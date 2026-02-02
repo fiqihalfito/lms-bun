@@ -1,60 +1,11 @@
 import type { Route } from "./+types/knowledge-skill";
 import { HeaderRoute } from "@/components/header-route";
-// import { Link } from "react-router"; // Uncomment jika ingin link aktif
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { getTeamById } from "@/features/team/services/getTeamById";
 import { getSkillAndStats } from "@/features/skill/services/getSkillAndStats";
 import { userContext } from "@/lib/context";
-
-// --- Imports Icons Generic (Abstrak) ---
-import {
-    Layers,
-    Command,
-    Box,
-    Cpu,
-    Hash,
-    Bookmark,
-    Tag,
-    Zap,
-    Grid,
-} from "lucide-react";
 import { SkillCard } from "@/features/skill/components/skill-card";
-
-// --- Helper Functions ---
-
-// 1. Generate Style (Icon & Color) secara deterministik berdasarkan string nama
-const getSkillVisual = (name: string) => {
-    // Pool Icon Abstrak (Teknis tapi general)
-    const icons = [Layers, Command, Box, Cpu, Hash, Bookmark, Tag, Zap, Grid];
-
-    // Pool Warna Background (Soft/Elegant)
-    const bgColors = [
-        "bg-blue-50 text-blue-600 border-blue-200",
-        "bg-violet-50 text-violet-600 border-violet-200",
-        "bg-emerald-50 text-emerald-600 border-emerald-200",
-        "bg-amber-50 text-amber-600 border-amber-200",
-        "bg-rose-50 text-rose-600 border-rose-200",
-        "bg-indigo-50 text-indigo-600 border-indigo-200",
-        "bg-cyan-50 text-cyan-600 border-cyan-200",
-        "bg-slate-50 text-slate-600 border-slate-200",
-    ];
-
-    // Simple hashing algorithm untuk mengubah string menjadi angka
-    let hash = 0;
-    for (let i = 0; i < name.length; i++) {
-        hash = name.charCodeAt(i) + ((hash << 5) - hash);
-    }
-
-    // Pastikan hash positif
-    const positiveHash = Math.abs(hash);
-
-    // Pilih icon dan warna berdasarkan hash (konsisten untuk nama yang sama)
-    const SelectedIcon = icons[positiveHash % icons.length];
-    const selectedColor = bgColors[positiveHash % bgColors.length];
-
-    return { Icon: SelectedIcon, colorClass: selectedColor };
-};
 
 
 
