@@ -13,7 +13,8 @@
     "db:dev:seed-raw": "bun database/seed-raw/index.ts",
     "db:dev:generate": "bun --bun drizzle-kit generate --config=drizzle-dev.config.ts",
     "db:dev:pull": "bun --bun drizzle-kit pull --config=drizzle-dev.config.ts",
-    "db:dev:studio": "bunx drizzle-kit studio --config=drizzle-dev.config.ts"
+    "db:dev:studio": "bunx drizzle-kit studio --config=drizzle-dev.config.ts",
+    "db:dev:test-query": "bun test/debug.ts"
   },
   "dependencies": {
     "@better-upload/client": "^3.0.10",
