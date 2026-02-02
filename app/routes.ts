@@ -143,6 +143,11 @@ export default [
         // ===== api =====
         ...prefix("api", [
             route("upload", "routes/upload.tsx"),
-        ])
-    ])
+        ]),
+
+
+    ]),
+
+    // ===== test query =====
+    route("test-query", "routes/test-query.tsx"),
 ] satisfies RouteConfig;
