@@ -1,10 +1,14 @@
 import { db } from "database/connect";
-import type { Route } from "./+types/test-query";
-import { mSkill, mSubSkill, tDokumen, tKuisProgress, tStatusBaca } from "database/schema";
+import { mSkill, mSubSkill, tKuisProgress, tStatusBaca } from "database/schema";
 import { and, eq, gte, sql } from "drizzle-orm";
 
-export async function loader({ request, params, context }: Route.LoaderArgs) {
+export type GroupLevelType = Record<string, {
+    jumlahSubskill: number;
+    sudahBaca: number;
+    lulusKuis: number;
+}>
 
+export async function getSkillAndStats(idUser: string, idTeam: string) {
 
     const t_statBaca = db.select({
         idDokumen: tStatusBaca.idDokumen,
@@ -42,7 +46,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     const t_skill = await db.select({
         idSkill: mSkill.idSkill,
         namaSkill: mSkill.namaSkill,
-        groupLevel: sql`
+        groupLevel: sql<GroupLevelType>`
             json_object_agg(
                 ${t_subskilllevel.level},
                 json_build_object(
@@ -62,5 +66,5 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
         .groupBy(mSkill.idSkill, mSkill.namaSkill)
         .where(eq(mSkill.idTeam, "aaaaaaaa-aaaa-4000-8000-000000000001"))
 
-    return { t_skill }
+    return t_skill
 }
