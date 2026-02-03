@@ -74,6 +74,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
         idUser: tKuisProgress.idUser,
         totalScore: tKuisProgress.totalScore,
         jumlahSoal: tKuisProgress.jumlahSoal,
+        totalWaktuPengerjaanDetik: tKuisProgress.totalWaktuPengerjaanDetik
     }).from(tKuisProgress)
         .where(
             and(
@@ -85,9 +86,9 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const t_levelsubskill = await db.select({
         level: mSubSkill.level,
-        jumlahSubskillPerLevel: sql`cast(count(${mSubSkill.level}) as int)`.as("jumlahSubskillPerLevel"),
-        sudahBaca: sql`cast(count(${t_statBaca.idDokumen}) as int)`.as("sudahBaca"),
-        lulusKuis: sql`cast(count(${t_statKuis.idKuis}) as int)`.as("lulusKuis"),
+        jumlahSubskillPerLevel: sql<number>`cast(count(${mSubSkill.level}) as int)`.as("jumlahSubskillPerLevel"),
+        sudahBaca: sql<number>`cast(count(${t_statBaca.idDokumen}) as int)`.as("sudahBaca"),
+        lulusKuis: sql<number>`cast(count(${t_statKuis.idKuis}) as int)`.as("lulusKuis"),
         isUnlocked: sql`
                 CASE
                     WHEN ${mSubSkill.level} = 1 THEN true
@@ -114,7 +115,8 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
                     count(${t_statBaca.idDokumen}) + count(${t_statKuis.idKuis})
                 )::float
                 * 100 / (2 * count(${mSubSkill.level}))
-                `.mapWith(Number).as("persentasePerLevel")
+                `.mapWith(Number).as("persentasePerLevel"),
+        totalWaktuPengerjaan: sql`coalesce(sum(${t_statKuis.totalWaktuPengerjaanDetik}), 0)`.mapWith(Number).as("totalWaktuPengerjaan")
     }).from(mSubSkill)
         .leftJoin(t_statBaca, eq(t_statBaca.idDokumen, mSubSkill.idDokumen))
         .leftJoin(t_statKuis, eq(t_statKuis.idKuis, mSubSkill.idKuis))

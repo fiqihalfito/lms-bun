@@ -88,6 +88,7 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
         idUser: tKuisProgress.idUser,
         totalScore: tKuisProgress.totalScore,
         jumlahSoal: tKuisProgress.jumlahSoal,
+        totalWaktuPengerjaanDetik: tKuisProgress.totalWaktuPengerjaanDetik
     }).from(tKuisProgress)
         .where(
             and(
@@ -128,7 +129,8 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
                     count(${t_statBaca.idDokumen}) + count(${t_statKuis.idKuis})
                 )::float
                 * 100 / (2 * count(${mSubSkill.level}))
-                `.mapWith(Number).as("persentasePerLevel")
+                `.mapWith(Number).as("persentasePerLevel"),
+        totalWaktuPengerjaan: sql`coalesce(sum(${t_statKuis.totalWaktuPengerjaanDetik}), 0)`.mapWith(Number).as("totalWaktuPengerjaan")
     }).from(mSubSkill)
         .leftJoin(t_statBaca, eq(t_statBaca.idDokumen, mSubSkill.idDokumen))
         .leftJoin(t_statKuis, eq(t_statKuis.idKuis, mSubSkill.idKuis))

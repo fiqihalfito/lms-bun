@@ -47,21 +47,21 @@ export const LevelListKnowledge = ({ subskillLevel }: LevelListKnowledge) => {
                                     <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted-foreground">
                                         <div className="flex items-center gap-1.5">
                                             <CheckCircle2 className="size-4 text-primary/70" />
-                                            <span>{item.sudahBaca}</span>
+                                            <span>{item.lulusKuis} / {item.jumlahSubskillPerLevel} Lulus Kuis</span>
                                         </div>
                                         <div className="flex items-center gap-1.5">
                                             <div className="size-1.5 rounded-full bg-orange-400" />
-                                            <span> Subskill</span>
+                                            <span>{item.sudahBaca} / {item.jumlahSubskillPerLevel} Sudah Dibaca</span>
                                         </div>
                                         <div className="flex items-center gap-1.5 border-l pl-4 border-border">
                                             <Clock className="size-4 text-primary/70" />
-                                            {/* <span>Total: {item.totalTimeSpent}</span> */}
+                                            <span>{item.totalWaktuPengerjaan}s</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center gap-2 self-start md:self-center">
-                                    {item.isUnlocked ? (
+                                    {!item.isUnlocked ? (
                                         <Badge variant="outline" className="px-3 py-1 bg-muted/50 text-muted-foreground border-transparent">
                                             <Lock className="size-3 mr-1.5" />
                                             Terkunci
