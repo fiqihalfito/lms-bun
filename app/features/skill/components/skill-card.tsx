@@ -1,6 +1,5 @@
 import { Link } from "react-router";
-import type { getSkillAndStats, GroupLevelType } from "../services/getSkillAndStats";
-import { calculateTotalProgress } from "../utils/calculateTotalProgress";
+import type { getSkillAndStats } from "../services/getSkillAndStats";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
