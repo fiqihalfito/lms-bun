@@ -14,7 +14,7 @@ export async function getSkillAndStats(idUser: string, idTeam: string) {
         idDokumen: tStatusBaca.idDokumen,
         idPembaca: tStatusBaca.idPembaca
     }).from(tStatusBaca)
-        .where(eq(tStatusBaca.idPembaca, "c5c966fa-5081-462f-b0d5-493addfe7131"))
+        .where(eq(tStatusBaca.idPembaca, idUser))
         .as("t_statBaca");
 
     const t_statKuis = db.select({
@@ -24,7 +24,7 @@ export async function getSkillAndStats(idUser: string, idTeam: string) {
     }).from(tKuisProgress)
         .where(
             and(
-                eq(tKuisProgress.idUser, "c5c966fa-5081-462f-b0d5-493addfe7131"),
+                eq(tKuisProgress.idUser, idUser),
                 gte(sql`${tKuisProgress.totalScore} * 100 / ${tKuisProgress.jumlahSoal}`, 80)
             )
         )
@@ -64,7 +64,7 @@ export async function getSkillAndStats(idUser: string, idTeam: string) {
     }).from(mSkill)
         .leftJoin(t_subskilllevel, eq(mSkill.idSkill, t_subskilllevel.idSkill))
         .groupBy(mSkill.idSkill, mSkill.namaSkill)
-        .where(eq(mSkill.idTeam, "aaaaaaaa-aaaa-4000-8000-000000000001"))
+        .where(eq(mSkill.idTeam, idTeam))
 
     return t_skill
 }
