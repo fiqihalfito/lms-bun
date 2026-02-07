@@ -28,16 +28,16 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
 
     const t_levelsubskill = await db.select({
         level: mSubSkill.level,
-        jumlahSubskillPerLevel: sql<number>`cast(count(${mSubSkill.level}) as int)`.as("jumlahSubskillPerLevel"),
+        jumlahSubskillPerLevel: sql<number>`cast(count(${mSubSkill.idSubSkill}) as int)`.as("jumlahSubskillPerLevel"),
         sudahBaca: sql<number>`cast(count(${t_statBaca.idDokumen}) as int)`.as("sudahBaca"),
         lulusKuis: sql<number>`cast(count(${t_statKuis.idKuis}) as int)`.as("lulusKuis"),
         isUnlocked: sql`
                 CASE
                     WHEN ${mSubSkill.level} = 1 THEN true
                     WHEN
-                    count(${t_statBaca.idDokumen}) = count(${mSubSkill.level})
+                    count(${t_statBaca.idDokumen}) >= count(${mSubSkill.level}) * 0.8
                     AND
-                    count(${t_statKuis.idKuis}) = count(${mSubSkill.level})
+                    count(${t_statKuis.idKuis}) >= count(${mSubSkill.level}) * 0.8
                     THEN true
                     ELSE false
                 END
