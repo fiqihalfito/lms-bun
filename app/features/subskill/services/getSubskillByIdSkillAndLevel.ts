@@ -44,18 +44,5 @@ export async function getSubskillByIdSkillAndLevel(idSkill: string, level: numbe
             }
         }
     })
-
-    // tambahkan prop persentase semua pengerjaan kuis
-    const totalPersentasePerLevel = res.reduce((acc, subskill) => {
-        if (subskill.kuisProgress?.persentaseBenar) {
-            acc += subskill.kuisProgress.persentaseBenar
-        }
-        return acc
-    }, 0)
-    const rataPersentase = totalPersentasePerLevel / res.length
-    const finalRes = {
-        subskills: res,
-        rataPersentase: rataPersentase
-    }
-    return finalRes
+    return res
 }

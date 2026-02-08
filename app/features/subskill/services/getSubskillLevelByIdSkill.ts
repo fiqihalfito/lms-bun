@@ -35,7 +35,7 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
                 CASE
                     WHEN ${mSubSkill.level} = 1 THEN true
                     WHEN
-                    count(${t_statBaca.idDokumen}) >= count(${mSubSkill.level}) * 0.8
+                    count(${t_statBaca.idDokumen}) >= count(${mSubSkill.level})
                     AND
                     count(${t_statKuis.idKuis}) >= count(${mSubSkill.level}) * 0.8
                     THEN true
