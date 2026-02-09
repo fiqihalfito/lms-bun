@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { tKuisJawabanUser } from "database/schema";
 import type { Tx } from "database/types";
 import { eq } from "drizzle-orm";

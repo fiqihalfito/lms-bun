@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { tKuisQuestionOption } from "database/schema";
 import { and, eq } from "drizzle-orm";
 

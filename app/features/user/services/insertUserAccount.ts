@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mUsers } from "database/schema";
 
 export async function insertUserAccount(userAccount: typeof mUsers.$inferInsert) {

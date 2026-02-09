@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { tDokumen } from "database/schema";
 
 export async function saveDokumenWithReturn(dokumen: typeof tDokumen.$inferInsert) {

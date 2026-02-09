@@ -3,7 +3,7 @@ import { deleteOptions } from "../services/deleteOptions";
 import { deleteQuestion } from "../services/deleteQuestion";
 import type { Route } from "./+types/delete-question";
 import { getDbErrorMessage } from "database/utils/dbErrorUtils";
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { deleteKuisJawabanUserByIdKuisQuestion } from "../services/deleteKuisJawabanUserByIdKuisQuestion";
 
 export async function action({ request, params, context }: Route.ActionArgs) {

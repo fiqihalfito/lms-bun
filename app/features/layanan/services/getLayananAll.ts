@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mLayanan } from "database/schema";
 import { eq, getColumns } from "drizzle-orm";
 

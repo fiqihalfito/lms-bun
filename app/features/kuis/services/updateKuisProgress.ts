@@ -1,5 +1,5 @@
 import { tKuisProgress } from "database/schema";
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { eq } from "drizzle-orm";
 import type { Tx } from "database/types";
 

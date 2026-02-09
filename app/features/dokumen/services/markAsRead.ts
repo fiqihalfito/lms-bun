@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { tStatusBaca } from "database/schema";
 import { sql } from "drizzle-orm";
 

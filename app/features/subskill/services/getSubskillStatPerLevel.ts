@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mSubSkill, tKuisProgress, tStatusBaca } from "database/schema";
 import { and, eq, getColumns, gte, sql } from "drizzle-orm";
 

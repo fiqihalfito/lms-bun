@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 
 export async function getSubSkillByIdPIC(idPIC: string, idSkill: string) {
     const res = await db.query.mSubSkill.findMany({

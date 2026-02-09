@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { tKuisProgress } from "database/schema";
 import { eq, sql } from "drizzle-orm";
 

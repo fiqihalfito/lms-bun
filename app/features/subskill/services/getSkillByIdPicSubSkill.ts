@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mSkill, mSubSkill } from "database/schema";
 import { count, eq } from "drizzle-orm";
 

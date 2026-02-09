@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { db } from "../connect";
+import { db } from "../connect.server";
 import { mLayanan, mSkill, mSubBidang, mSubSkill, mTeam, mTeamMember, mUserProfiles, mUsers, tDokumen, tKuis, tKuisJawabanUser, tKuisProgress, tKuisQuestion, tKuisQuestionOption, tStatusBaca } from "../schema";
 import { subbidangSeed } from "./subbidang-seed";
 import { mRole } from "database/schema/role";
