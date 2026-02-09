@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mUsers } from "database/schema";
 import { eq, getColumns } from "drizzle-orm";
 

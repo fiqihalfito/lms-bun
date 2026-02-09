@@ -1,4 +1,4 @@
-import { db } from "database/connect"
+import { db } from "database/connect.server"
 
 export async function getQuestionByIdKuis(idKuisQuestion: string) {
     const res = await db.query.tKuisQuestion.findFirst({

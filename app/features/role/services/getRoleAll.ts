@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mRole } from "database/schema";
 
 export async function getRoleAll() {

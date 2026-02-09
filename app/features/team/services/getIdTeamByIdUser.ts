@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { mTeam, mTeamMember } from "database/schema";
 import { eq } from "drizzle-orm";
 

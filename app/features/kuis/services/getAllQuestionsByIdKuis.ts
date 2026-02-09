@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { sql } from "drizzle-orm";
 
 export async function getAllQuestionsByIdKuis(idKuis: string) {

@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import type { Route } from "./+types/test-query";
 import { mSubSkill, tKuisProgress, tStatusBaca } from "database/schema";
 import { and, eq, gte, sql } from "drizzle-orm";

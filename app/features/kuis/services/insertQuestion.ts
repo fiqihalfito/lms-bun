@@ -1,4 +1,4 @@
-import { db } from "database/connect";
+import { db } from "database/connect.server";
 import { tKuisQuestion } from "database/schema";
 
 export async function insertQuestion(question: typeof tKuisQuestion.$inferInsert) {
