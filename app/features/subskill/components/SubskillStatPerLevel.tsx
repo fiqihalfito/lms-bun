@@ -52,7 +52,7 @@ export function SubskillStatPerLevel({ subskillStatPerLevel }: SubskillStatPerLe
                         <TrophyIcon className="text-amber-400 size-10" />
                     </div>
                     <div className="">
-                        <h2 className="font-semibold text-sm text-muted-foreground">Sudah Kuis</h2>
+                        <h2 className="font-semibold text-sm text-muted-foreground">Lulus Kuis</h2>
                         <div className="text-3xl font-semibold font-mono text-muted-foreground">{jumlahSudahKuis} / {jumlahSubskillPerLevel}</div>
                     </div>
                 </div>
