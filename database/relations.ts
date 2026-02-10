@@ -46,6 +46,10 @@ export const relations = defineRelations(schema, (r) => ({
         userAccount: r.one.mUsers({
             from: r.mUserProfiles.idUser,
             to: r.mUsers.idUser
+        }),
+        subBidang: r.one.mSubBidang({
+            from: r.mUserProfiles.idSubBidang,
+            to: r.mSubBidang.idSubBidang
         })
     },
     mSkill: {
