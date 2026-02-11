@@ -3,30 +3,51 @@ import { HeaderDashboardPublic } from "@/features/dashboard/public/components/he
 import { StatsSkill } from "@/features/dashboard/public/components/stats-skill";
 import { SubbidangFilter } from "@/features/dashboard/public/components/SubbidangFilter";
 import { getSkillStats } from "@/features/dashboard/public/services/getSkillStats";
+import { getStatBacaPerLevel } from "@/features/dashboard/public/services/getStatBacaPerLevel";
 import { getAllSubbidang } from "@/features/subbidang/services/getAllSubbidang";
+import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
+import { createLoader, parseAsString } from "nuqs/server";
+import { useNavigation } from "react-router";
+// import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
+
+
+export const searchParams = {
+    qSubBidang: parseAsString.withDefault('')
+}
+
+export const loadSearchParams = createLoader(searchParams)
+
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
+    // get url query
+    const { qSubBidang } = await loadSearchParams(request.url)
     const statsSkill = await getSkillStats()
-    const subbidang = await getAllSubbidang()
+    const allSubbidang = await getAllSubbidang()
+    const subbidangData = await getSubBidangNameByIdSubBidang(qSubBidang)
+    const statBaca = await getStatBacaPerLevel({ idSubBidang: qSubBidang })
+
 
     return {
         statsSkill,
-        subbidang
+        allSubbidang,
+        subbidangData
     }
 }
 
 export default function DashboardPublicRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { statsSkill, subbidang } = loaderData
+    const { statsSkill, allSubbidang, subbidangData } = loaderData
+    const navigation = useNavigation();
+    const isNavigating = Boolean(navigation.location);
 
     return (
         <div className="flex-1 ">
             <HeaderDashboardPublic />
             {/* container */}
             <div id="container" className="flex-1 max-w-7xl mx-auto">
-                <SubbidangFilter subbidang={subbidang} />
-                <StatsSkill statsSkill={statsSkill} />
+                <SubbidangFilter subbidang={allSubbidang} />
+                {/* <StatsSkill statsSkill={statsSkill} /> */}
             </div>
         </div>
     )
