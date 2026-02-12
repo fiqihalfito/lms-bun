@@ -1,6 +1,7 @@
 import { db } from "database/connect.server";
-import { mSkill, mSubSkill, mTeam, tStatusBaca } from "database/schema";
-import { eq, sql } from "drizzle-orm";
+import { mSkill, mSubSkill, mTeam, mTeamMember, mUserProfiles, tStatusBaca } from "database/schema";
+import { desc, eq, sql } from "drizzle-orm";
+import * as R from "remeda";
 
 type getStatBacaPerLevelProp = {
     idSubBidang?: string
@@ -15,46 +16,45 @@ interface Skill {
 }
 
 interface TeamGroup {
-    namaTeam: string | null;
+    namaTeam: string;
     skill: Skill[];
 }
 
 export async function getStatBacaPerLevel({ idSubBidang }: getStatBacaPerLevelProp) {
     const res = await db.select({
         namaTeam: mTeam.namaTeam,
+        jumlahMemberTeam: sql<number>`cast(count(distinct ${mUserProfiles.idUser}) as int)`,
         namaSkill: mSkill.namaSkill,
-        level: mSubSkill.level,
         jumlahSubskill: sql<number>`cast(count(${mSubSkill.idSubSkill}) as int)`,
-        jumlahSudahBaca: sql<number>`cast(count(${tStatusBaca.idStatusBaca}) as int)`,
+        level: mSubSkill.level,
+        jumlahSubskillPerLevel: sql<number>`cast(count(distinct ${mSubSkill.idSubSkill}) as int)`,
+        jumlahSudahBaca: sql<number>`cast(count(distinct ${tStatusBaca.idStatusBaca}) as int)`,
     }).from(mSkill)
         .leftJoin(mSubSkill, eq(mSkill.idSkill, mSubSkill.idSkill))
         .leftJoin(tStatusBaca, eq(mSubSkill.idDokumen, tStatusBaca.idDokumen))
         .leftJoin(mTeam, eq(mSkill.idTeam, mTeam.idTeam))
-        .groupBy(mSkill.namaSkill, mSubSkill.level, mTeam.namaTeam)
+        .leftJoin(mTeamMember, eq(mTeam.idTeam, mTeamMember.idTeam))
+        .leftJoin(mUserProfiles, eq(mTeamMember.idUser, mUserProfiles.idUser))
+        .groupBy(mSkill.namaSkill, mSubSkill.level, mTeam.namaTeam, mSkill.namaSkill)
+        .orderBy(desc(mSkill.namaSkill))
         .where(idSubBidang ? eq(mSkill.idSubBidang, idSubBidang) : undefined)
 
-    // 2. Gunakan di dalam reduce
-    const mappingRes = res.reduce((acc: TeamGroup[], item) => {
-        let team = acc.find(t => t.namaTeam === item.namaTeam);
-
-        const skillData: Skill = {
-            namaSkill: item.namaSkill,
-            level: item.level,
-            jumlahSubskill: item.jumlahSubskill,
-            jumlahSudahBaca: item.jumlahSudahBaca,
-        };
-
-        if (team) {
-            team.skill.push(skillData);
-        } else {
-            acc.push({
-                namaTeam: item.namaTeam,
-                skill: [skillData]
-            });
-        }
-
-        return acc;
-    }, [] as TeamGroup[]);
+    const mappingRes = R.pipe(
+        res,
+        R.groupBy(x => x.namaTeam ?? ""),
+        R.entries(),
+        R.map(([namaTeam, items]) => ({
+            namaTeam,
+            jumlahMemberTeam: items[0].jumlahMemberTeam,
+            skill: items.map(item => ({
+                namaSkill: item.namaSkill,
+                totalSubskill: item.jumlahSubskill,
+                level: item.level,
+                jumlahSubskill: item.jumlahSubskill,
+                jumlahSudahBaca: item.jumlahSudahBaca,
+            })),
+        }))
+    );
 
     return mappingRes
 }
