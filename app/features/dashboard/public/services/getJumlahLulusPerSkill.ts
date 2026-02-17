@@ -29,7 +29,7 @@ export async function getJumlahLulusPerSkill({ idSubBidang }: getJumlahLulusPerS
         .innerJoin(mSubSkill, eq(mSubSkill.idKuis, tKuisProgress.idKuis))
         .where(and(
             isNotNull(tKuisProgress.completedAt),
-            gte(sql`(${tKuisProgress.totalScore} / ${tKuisProgress.jumlahSoal}) * 100`, 80)
+            gte(sql`(${tKuisProgress.totalScore} * 100 / ${tKuisProgress.jumlahSoal})`, 80)
         ))
         .groupBy(mSubSkill.idSkill, tKuisProgress.idUser)
         .as("user_pass_count")
