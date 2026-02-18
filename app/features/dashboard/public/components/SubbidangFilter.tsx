@@ -11,7 +11,7 @@ export function SubbidangFilter({ subbidang }: SubbidangFilterProps) {
     const [subbidangQuery, setSubbidangQuery] = useQueryState('qSubBidang', { shallow: false })
 
     return (
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-2 mb-4">
             {subbidang.map((item) => (
                 <Button key={item.idSubBidang} variant={subbidangQuery === item.idSubBidang ? "default" : "outline"} onClick={() => setSubbidangQuery(item.idSubBidang)}>
                     {item.namaSubBidang}
