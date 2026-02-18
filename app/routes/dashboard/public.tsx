@@ -54,6 +54,7 @@ export default function DashboardPublicRoute({ loaderData, params }: Route.Compo
                 <SubbidangFilter subbidang={allSubbidang} />
                 {/* <StatsSkill statsSkill={statsSkill} /> */}
                 <StatLulusSkill teamStat={jumlahLulusPerSkill} />
+
             </div>
         </div>
     )
