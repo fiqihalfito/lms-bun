@@ -10,6 +10,8 @@ import { getAllSubbidang } from "@/features/subbidang/services/getAllSubbidang";
 import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
 import { createLoader, parseAsString } from "nuqs/server";
 import { useNavigation } from "react-router";
+import { getStatIndividu } from "@/features/dashboard/public/services/getStatIndividu";
+import { StatIndividu } from "@/features/dashboard/public/components/StatIndividu";
 // import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
 
 
@@ -29,6 +31,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     const subbidangData = await getSubBidangNameByIdSubBidang(qSubBidang)
     const statBaca = await getStatBacaPerLevel({ idSubBidang: qSubBidang })
     const jumlahLulusPerSkill = await getJumlahLulusPerSkill({ idSubBidang: qSubBidang })
+    const statIndividu = await getStatIndividu({ idSubBidang: qSubBidang })
 
 
     return {
@@ -36,13 +39,14 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
         allSubbidang,
         subbidangData,
         // statBaca,
-        jumlahLulusPerSkill
+        jumlahLulusPerSkill,
+        statIndividu
     }
 }
 
 export default function DashboardPublicRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { statsSkill, allSubbidang, subbidangData, jumlahLulusPerSkill } = loaderData
+    const { statsSkill, allSubbidang, subbidangData, jumlahLulusPerSkill, statIndividu } = loaderData
     const navigation = useNavigation();
     const isNavigating = Boolean(navigation.location);
 
@@ -54,7 +58,7 @@ export default function DashboardPublicRoute({ loaderData, params }: Route.Compo
                 <SubbidangFilter subbidang={allSubbidang} />
                 {/* <StatsSkill statsSkill={statsSkill} /> */}
                 <StatLulusSkill teamStat={jumlahLulusPerSkill} />
-
+                <StatIndividu statIndividuData={statIndividu} />
             </div>
         </div>
     )
