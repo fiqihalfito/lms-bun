@@ -13,7 +13,7 @@ export async function getJumlahLulusPerSkill({ idSubBidang }: getJumlahLulusPerS
     // jumlah subskill per skill
     const subskillCount = db.select({
         idSkill: mSubSkill.idSkill,
-        total: sql<number>`count(*)`.as("total")
+        total: sql<number>`cast(count(*) as int)`.as("total")
     })
         .from(mSubSkill)
         .groupBy(mSubSkill.idSkill)
@@ -23,7 +23,7 @@ export async function getJumlahLulusPerSkill({ idSubBidang }: getJumlahLulusPerS
     const userPassCount = db.select({
         idSkill: mSubSkill.idSkill,
         idUser: tKuisProgress.idUser,
-        passed: sql<number>`count(*)`.as("passed")
+        passed: sql<number>`cast(count(*) as int)`.as("passed")
     })
         .from(tKuisProgress)
         .innerJoin(mSubSkill, eq(mSubSkill.idKuis, tKuisProgress.idKuis))
@@ -33,6 +33,7 @@ export async function getJumlahLulusPerSkill({ idSubBidang }: getJumlahLulusPerS
         ))
         .groupBy(mSubSkill.idSkill, tKuisProgress.idUser)
         .as("user_pass_count")
+
 
     // user yang lulus semua subskill
     const userSkillLulus = db.select({
@@ -47,7 +48,7 @@ export async function getJumlahLulusPerSkill({ idSubBidang }: getJumlahLulusPerS
     // jumlah user lulus per skill
     const stat_lulus = db.select({
         idSkill: userSkillLulus.idSkill,
-        jumlahLulus: sql<number>`count(*)`.as("jumlahLulus")
+        jumlahLulus: sql<number>`cast(count(*) as int)`.as("jumlahLulus")
     })
         .from(userSkillLulus)
         .groupBy(userSkillLulus.idSkill)
