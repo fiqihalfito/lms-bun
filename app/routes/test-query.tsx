@@ -1,8 +1,4 @@
-import { getJumlahLulusPerSkill } from "@/features/dashboard/public/services/getJumlahLulusPerSkill";
 import type { Route } from "./+types/test-query";
-import { db } from "database/connect.server";
-import { mSkill, mSubSkill, mTeam, mTeamMember, mUserProfiles, tKuisProgress } from "database/schema";
-import { and, desc, eq, getColumns, gte, isNotNull, sql } from "drizzle-orm";
 import { getStatIndividu } from "@/features/dashboard/public/services/getStatIndividu";
 // import { getLevelSubskillListDataByIdSkill } from "@/features/subskill/services/getSubskillLevelByIdSkill";
 
