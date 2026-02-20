@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 // import { Button } from "@/components/ui/button";
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import { ArrowUpRight, CirclePlay, LayoutDashboardIcon, LayoutTemplateIcon } from "lucide-react";
 import { BackgroundPattern } from "@/components/background-pattern";
 import { Link } from "react-router";
 import { Button } from "./ui/button";
@@ -24,6 +24,11 @@ export default function Hero() {
           <Button size="lg" className="rounded-full text-base" asChild>
             <Link to="/auth/login">
               Mulai Belajar <ArrowUpRight className="h-5! w-5!" />
+            </Link>
+          </Button>
+          <Button size="lg" className="rounded-full text-base" asChild>
+            <Link to="/dashboard">
+              Dashboard <LayoutDashboardIcon className="h-5! w-5!" />
             </Link>
           </Button>
           {/* <Button

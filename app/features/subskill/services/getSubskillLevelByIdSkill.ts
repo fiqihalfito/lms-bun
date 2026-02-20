@@ -1,6 +1,6 @@
 import { db } from "database/connect.server";
 import { mSubSkill, tKuisProgress, tStatusBaca } from "database/schema";
-import { eq, and, sql, asc, gte } from "drizzle-orm";
+import { eq, and, sql, gte, getColumns } from "drizzle-orm";
 
 export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId: string) => {
 
@@ -26,22 +26,22 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
         )
         .as("t_statKuis");
 
-    const t_levelsubskill = await db.select({
+    const t_levelsubskill = db.select({
         level: mSubSkill.level,
         jumlahSubskillPerLevel: sql<number>`cast(count(${mSubSkill.idSubSkill}) as int)`.as("jumlahSubskillPerLevel"),
         sudahBaca: sql<number>`cast(count(${t_statBaca.idDokumen}) as int)`.as("sudahBaca"),
         lulusKuis: sql<number>`cast(count(${t_statKuis.idKuis}) as int)`.as("lulusKuis"),
-        isUnlocked: sql`
-                CASE
-                    WHEN ${mSubSkill.level} = 1 THEN true
-                    WHEN
-                    count(${t_statBaca.idDokumen}) >= count(${mSubSkill.level})
-                    AND
-                    count(${t_statKuis.idKuis}) >= count(${mSubSkill.level}) * 0.8
-                    THEN true
-                    ELSE false
-                END
-                `.mapWith(Boolean).as("isUnlocked"),
+        // isUnlocked: sql`
+        //         CASE
+        //             WHEN ${mSubSkill.level} = 1 THEN true
+        //             WHEN
+        //             count(${t_statBaca.idDokumen}) >= (count(${mSubSkill.level}) - 1)
+        //             AND
+        //             count(${t_statKuis.idKuis}) >= (count(${mSubSkill.level}) - 1) * 0.8
+        //             THEN true
+        //             ELSE false
+        //         END
+        //         `.mapWith(Boolean).as("isUnlocked"),
         isCompleted: sql`
             CASE
                 WHEN
@@ -52,6 +52,7 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
                 ELSE false
             END
             `.mapWith(Boolean).as("isCompleted"),
+
         persentasePerLevel: sql`
                 (
                     count(${t_statBaca.idDokumen}) + count(${t_statKuis.idKuis})
@@ -65,6 +66,15 @@ export const getLevelSubskillListDataByIdSkill = async (skillId: string, userId:
         .groupBy(mSubSkill.level)
         .where(eq(mSubSkill.idSkill, skillId))
         .orderBy(mSubSkill.level)
+        .as("t_levelsubskill")
 
-    return t_levelsubskill
+    const col_tLevelSubskill = getColumns(t_levelsubskill)
+    const t_unlockedLevelSubskill = await db.select({
+        ...col_tLevelSubskill,
+        isUnlocked: sql`LAG(${t_levelsubskill.isCompleted}, 1, true) OVER (ORDER BY ${t_levelsubskill.level})`.mapWith(Boolean).as("isUnlocked"),
+    })
+        .from(t_levelsubskill)
+
+
+    return t_unlockedLevelSubskill
 };
