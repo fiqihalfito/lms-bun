@@ -9,6 +9,6 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const res = await getStatIndividu({ idSubBidang: "s1" })
 
-
+    // ini uji coba
     return res
 }
