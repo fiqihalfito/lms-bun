@@ -1,10 +1,8 @@
-import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { User, Database, Terminal, Star } from "lucide-react";
+import { Database, Terminal } from "lucide-react";
 import { Separator } from '@/components/ui/separator';
 
 interface Skill {
