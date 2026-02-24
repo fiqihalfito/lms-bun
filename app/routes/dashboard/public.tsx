@@ -1,7 +1,6 @@
 import { StatLulusSkill } from "@/features/dashboard/public/components/StatLulusSkill";
 import type { Route } from "./+types/public";
 import { HeaderDashboardPublic } from "@/features/dashboard/public/components/header";
-import { StatsSkill } from "@/features/dashboard/public/components/stats-skill";
 import { SubbidangFilter } from "@/features/dashboard/public/components/SubbidangFilter";
 import { getJumlahLulusPerSkill } from "@/features/dashboard/public/services/getJumlahLulusPerSkill";
 import { getSkillStats } from "@/features/dashboard/public/services/getSkillStats";
@@ -12,6 +11,8 @@ import { createLoader, parseAsString } from "nuqs/server";
 import { useNavigation } from "react-router";
 import { getStatIndividu } from "@/features/dashboard/public/services/getStatIndividu";
 import { StatIndividu } from "@/features/dashboard/public/components/StatIndividu";
+import { IndikatorIndividu } from "@/features/dashboard/public/components/IndikatorIndividu";
+import { getBaseIndividuIndikator } from "@/features/dashboard/public/services/getBaseIndividuIndikator";
 // import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
 
 
@@ -33,6 +34,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     const jumlahLulusPerSkill = await getJumlahLulusPerSkill({ idSubBidang: qSubBidang })
     const statIndividu = await getStatIndividu({ idSubBidang: qSubBidang })
 
+    const baseIndividuIndikator = await getBaseIndividuIndikator()
 
     return {
         statsSkill,
@@ -40,13 +42,14 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
         subbidangData,
         // statBaca,
         jumlahLulusPerSkill,
-        statIndividu
+        statIndividu,
+        baseIndividuIndikator
     }
 }
 
 export default function DashboardPublicRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { statsSkill, allSubbidang, subbidangData, jumlahLulusPerSkill, statIndividu } = loaderData
+    const { statsSkill, allSubbidang, subbidangData, jumlahLulusPerSkill, statIndividu, baseIndividuIndikator } = loaderData
     const navigation = useNavigation();
     const isNavigating = Boolean(navigation.location);
 
@@ -59,6 +62,7 @@ export default function DashboardPublicRoute({ loaderData, params }: Route.Compo
                 {/* <StatsSkill statsSkill={statsSkill} /> */}
                 <StatLulusSkill teamStat={jumlahLulusPerSkill} />
                 <StatIndividu statIndividuData={statIndividu} />
+                <IndikatorIndividu baseIndividuIndikator={baseIndividuIndikator} />
             </div>
         </div>
     )

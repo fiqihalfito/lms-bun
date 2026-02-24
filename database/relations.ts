@@ -50,7 +50,11 @@ export const relations = defineRelations(schema, (r) => ({
         subBidang: r.one.mSubBidang({
             from: r.mUserProfiles.idSubBidang,
             to: r.mSubBidang.idSubBidang
-        })
+        }),
+        kuisProgress: r.many.tKuisProgress({
+            from: r.mUserProfiles.idUser,
+            to: r.tKuisProgress.idUser,
+        }),
     },
     mSkill: {
         team: r.one.mTeam({
@@ -82,6 +86,10 @@ export const relations = defineRelations(schema, (r) => ({
         kuisProgress: r.one.tKuisProgress({
             from: r.mSubSkill.idKuis,
             to: r.tKuisProgress.idKuis
+        }),
+        statusBaca: r.one.tStatusBaca({
+            from: r.mSubSkill.idDokumen,
+            to: r.tStatusBaca.idDokumen
         })
     },
     tKuisQuestion: {
@@ -104,10 +112,24 @@ export const relations = defineRelations(schema, (r) => ({
             to: r.mSubSkill.idKuis,
         })
     },
+    tKuisProgress: {
+        kuis: r.one.tKuis({
+            from: r.tKuisProgress.idKuis,
+            to: r.tKuis.idKuis
+        }),
+        user: r.one.mUserProfiles({
+            from: r.tKuisProgress.idUser,
+            to: r.mUserProfiles.idUser
+        })
+    },
     mTeam: {
         skill: r.many.mSkill({
             from: r.mTeam.idTeam,
             to: r.mSkill.idTeam
+        }),
+        userProfiles: r.many.mUserProfiles({
+            from: r.mTeam.idTeam.through(r.mTeamMember.idTeam),
+            to: r.mUserProfiles.idUser.through(r.mTeamMember.idUser)
         })
     }
 
