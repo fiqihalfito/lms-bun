@@ -2,17 +2,18 @@ import { StatLulusSkill } from "@/features/dashboard/public/components/StatLulus
 import type { Route } from "./+types/public";
 import { HeaderDashboardPublic } from "@/features/dashboard/public/components/header";
 import { SubbidangFilter } from "@/features/dashboard/public/components/SubbidangFilter";
-import { getJumlahLulusPerSkill } from "@/features/dashboard/public/services/getJumlahLulusPerSkill";
-import { getSkillStats } from "@/features/dashboard/public/services/getSkillStats";
-import { getStatBacaPerLevel } from "@/features/dashboard/public/services/getStatBacaPerLevel";
+import { getJumlahLulusPerSkill } from "@/features/dashboard/public/repositories/getJumlahLulusPerSkill";
+import { getSkillStats } from "@/features/dashboard/public/repositories/getSkillStats";
+import { getStatBacaPerLevel } from "@/features/dashboard/public/repositories/getStatBacaPerLevel";
 import { getAllSubbidang } from "@/features/subbidang/services/getAllSubbidang";
 import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
 import { createLoader, parseAsString } from "nuqs/server";
 import { useNavigation } from "react-router";
-import { getStatIndividu } from "@/features/dashboard/public/services/getStatIndividu";
+import { getStatIndividu } from "@/features/dashboard/public/repositories/getStatIndividu";
 import { StatIndividu } from "@/features/dashboard/public/components/StatIndividu";
 import { IndikatorIndividu } from "@/features/dashboard/public/components/IndikatorIndividu";
-import { getBaseIndividuIndikator } from "@/features/dashboard/public/services/getBaseIndividuIndikator";
+import { getBaseIndividuIndikator } from "@/features/dashboard/public/repositories/getBaseIndividuIndikator";
+import { IndividualIndikatorService } from "@/features/dashboard/public/services/IndividualIndikatorService";
 // import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
 
 
@@ -34,7 +35,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     const jumlahLulusPerSkill = await getJumlahLulusPerSkill({ idSubBidang: qSubBidang })
     const statIndividu = await getStatIndividu({ idSubBidang: qSubBidang })
 
-    const baseIndividuIndikator = await getBaseIndividuIndikator()
+    const individuIndikator = await IndividualIndikatorService()
 
     return {
         statsSkill,
@@ -43,13 +44,13 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
         // statBaca,
         jumlahLulusPerSkill,
         statIndividu,
-        baseIndividuIndikator
+        individuIndikator
     }
 }
 
 export default function DashboardPublicRoute({ loaderData, params }: Route.ComponentProps) {
 
-    const { statsSkill, allSubbidang, subbidangData, jumlahLulusPerSkill, statIndividu, baseIndividuIndikator } = loaderData
+    const { statsSkill, allSubbidang, subbidangData, jumlahLulusPerSkill, statIndividu, individuIndikator } = loaderData
     const navigation = useNavigation();
     const isNavigating = Boolean(navigation.location);
 
@@ -62,7 +63,7 @@ export default function DashboardPublicRoute({ loaderData, params }: Route.Compo
                 {/* <StatsSkill statsSkill={statsSkill} /> */}
                 <StatLulusSkill teamStat={jumlahLulusPerSkill} />
                 <StatIndividu statIndividuData={statIndividu} />
-                <IndikatorIndividu baseIndividuIndikator={baseIndividuIndikator} />
+                <IndikatorIndividu baseIndividuIndikator={individuIndikator} />
             </div>
         </div>
     )

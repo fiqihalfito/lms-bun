@@ -1,5 +1,5 @@
 import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@/components/ui/item"
-import type { getJumlahLulusPerSkill } from "../services/getJumlahLulusPerSkill"
+import type { getJumlahLulusPerSkill } from "../repositories/getJumlahLulusPerSkill"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 

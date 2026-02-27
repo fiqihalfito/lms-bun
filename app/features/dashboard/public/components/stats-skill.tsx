@@ -1,5 +1,5 @@
 import { Progress } from "@/components/ui/progress"
-import type { getSkillStats } from "../services/getSkillStats"
+import type { getSkillStats } from "../repositories/getSkillStats"
 
 type StatsSkillProps = {
     statsSkill: Awaited<ReturnType<typeof getSkillStats>>

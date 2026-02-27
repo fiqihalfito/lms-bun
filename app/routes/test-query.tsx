@@ -1,5 +1,6 @@
+import { IndividualIndikatorService } from "@/features/dashboard/public/services/IndividualIndikatorService";
 import type { Route } from "./+types/test-query";
-import { getIndividuIndikator } from "@/features/dashboard/public/services/getIndividuIndikator";
+// import { getIndividuIndikator } from "@/features/dashboard/public/repositories/getIndividuIndikator";
 // import { getLevelSubskillListDataByIdSkill } from "@/features/subskill/services/getSubskillLevelByIdSkill";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
@@ -9,7 +10,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     // const res = await getStatIndividu({ idSubBidang: "s1" })
 
-    const res = await getIndividuIndikator()
+    const res = await IndividualIndikatorService()
 
 
     return res
