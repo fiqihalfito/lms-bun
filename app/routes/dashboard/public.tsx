@@ -14,6 +14,7 @@ import { StatIndividu } from "@/features/dashboard/public/components/StatIndivid
 import { IndikatorIndividu } from "@/features/dashboard/public/components/IndikatorIndividu";
 import { getBaseIndividuIndikator } from "@/features/dashboard/public/repositories/getBaseIndividuIndikator";
 import { IndividualIndikatorService } from "@/features/dashboard/public/services/IndividualIndikatorService";
+import { NavDashboard } from "@/features/dashboard/public/components/NavDashboard";
 // import { getSubBidangNameByIdSubBidang } from "@/features/subbidang/services/getSubBidangNameByIdSubBidang";
 
 
@@ -58,12 +59,13 @@ export default function DashboardPublicRoute({ loaderData, params }: Route.Compo
         <div className="flex-1 ">
             <HeaderDashboardPublic />
             {/* container */}
-            <div id="container" className="flex-1 max-w-7xl mx-auto">
-                <SubbidangFilter subbidang={allSubbidang} />
+            <div id="container" className="flex-1 max-w-7xlx mx-autox">
+                <NavDashboard />
+                {/* <SubbidangFilter subbidang={allSubbidang} /> */}
                 {/* <StatsSkill statsSkill={statsSkill} /> */}
-                <StatLulusSkill teamStat={jumlahLulusPerSkill} />
+                {/* <StatLulusSkill teamStat={jumlahLulusPerSkill} />
                 <StatIndividu statIndividuData={statIndividu} />
-                <IndikatorIndividu baseIndividuIndikator={individuIndikator} />
+                <IndikatorIndividu baseIndividuIndikator={individuIndikator} /> */}
             </div>
         </div>
     )
