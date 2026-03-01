@@ -3,12 +3,7 @@ import { mSkill, mSubSkill, mTeam, mTeamMember, mUserProfiles, tKuisProgress } f
 import { and, desc, eq, getColumns, gte, isNotNull, sql } from "drizzle-orm";
 import * as R from "remeda";
 
-
-type getStatIndividuProp = {
-    idSubBidang?: string
-}
-
-export async function getStatIndividu({ idSubBidang }: getStatIndividuProp) {
+export async function getStatIndividu(idSubBidang?: string) {
     const t_lulus = db.select({
         idUser: tKuisProgress.idUser,
         idSkill: mSubSkill.idSkill,

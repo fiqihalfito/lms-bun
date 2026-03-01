@@ -9,7 +9,7 @@ type StatLulusSkillProp = {
 
 export function StatLulusSkill({ teamStat }: StatLulusSkillProp) {
     return (
-        <div className="mt-8">
+        <div className="mb-20">
             <h1 className="text-2xl font-bold tracking-tight mb-2">Total Lulus Skill</h1>
             <div className="grid grid-cols-2 gap-6">
                 {teamStat?.map((team) => (

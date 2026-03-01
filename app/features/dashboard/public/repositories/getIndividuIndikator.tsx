@@ -59,11 +59,11 @@ export async function getIndividuIndikator() {
             eq(user_x_skill_x_subskill.idUser, user_subskill_lulus_baca.idUser),
             eq(user_x_skill_x_subskill.idSubSkill, user_subskill_lulus_baca.idSubSkill)
         ))
-        // tes beberapa user aja
-        .where(or(
-            eq(user_x_skill_x_subskill.idUser, "c5c966fa-5081-462f-b0d5-493addfe7131"),
-            eq(user_x_skill_x_subskill.idUser, "9f42c1c4-0813-4ea5-8cf8-aacefee73d97")
-        ))
+    // tes beberapa user aja
+    // .where(or(
+    //     eq(user_x_skill_x_subskill.idUser, "c5c966fa-5081-462f-b0d5-493addfe7131"),
+    //     eq(user_x_skill_x_subskill.idUser, "9f42c1c4-0813-4ea5-8cf8-aacefee73d97")
+    // ))
 
     return user_x_subskill_lulus_baca
 

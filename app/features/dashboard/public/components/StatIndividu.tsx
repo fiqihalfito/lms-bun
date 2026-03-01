@@ -4,29 +4,15 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Database, Terminal } from "lucide-react";
 import { Separator } from '@/components/ui/separator';
-
-interface Skill {
-    namaSkill: string | null;
-    level: number | null;
-}
-
-interface UserData {
-    namaUser: string;
-    skills: Skill[];
-}
-
-interface TeamData {
-    namaTeam: string;
-    users: UserData[];
-}
+import type { getStatIndividu } from "../repositories/getStatIndividu";
 
 interface StatIndividuProps {
-    statIndividuData: TeamData[];
+    statIndividuData: Awaited<ReturnType<typeof getStatIndividu>>
 }
 
 export function StatIndividu({ statIndividuData }: StatIndividuProps) {
     return (
-        <div className="mt-10 mb-20 space-y-6">
+        <div className="mb-20 space-y-6">
             <div className="flex items-center justify-between">
                 <h1 className="text-2xl font-bold tracking-tight">Statistik Individu</h1>
                 <Badge variant="outline" className="px-3 py-1">

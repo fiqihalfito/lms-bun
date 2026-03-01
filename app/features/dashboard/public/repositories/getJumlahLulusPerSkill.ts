@@ -1,13 +1,9 @@
 import { db } from "database/connect.server"
-import { mSkill, mSubSkill, mTeam, mTeamMember, tKuis, tKuisProgress } from "database/schema"
+import { mSkill, mSubSkill, mTeam, mTeamMember, tKuisProgress } from "database/schema"
 import { and, eq, getColumns, gte, isNotNull, sql } from "drizzle-orm"
 import * as R from "remeda";
 
-type getJumlahLulusPerSkillProp = {
-    idSubBidang?: string
-}
-
-export async function getJumlahLulusPerSkill({ idSubBidang }: getJumlahLulusPerSkillProp) {
+export async function getJumlahLulusPerSkill(idSubBidang?: string) {
 
     // ===== DB START =====
     // jumlah subskill per skill
