@@ -23,5 +23,5 @@ export const db = drizzle({
     // client: pool,
     client: client,
     relations: relations,
-    // logger: true
+    logger: true
 });
