@@ -1,6 +1,6 @@
 import { db } from "database/connect.server"
 import { mSkill, mSubSkill, mTeam, mTeamMember, mUserProfiles, tKuisProgress, tStatusBaca } from "database/schema"
-import { and, eq, isNotNull, or, sql } from "drizzle-orm"
+import { and, eq, isNotNull, sql } from "drizzle-orm"
 
 
 export async function getIndividuIndikator() {
