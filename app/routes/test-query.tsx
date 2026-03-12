@@ -1,5 +1,5 @@
+import { getUserProfileAll } from "@/features/user/services/repo";
 import type { Route } from "./+types/test-query";
-import { getFirstIdTeam } from "@/features/team/services/getFirstIdTeam";
 // import { getIndividuIndikator } from "@/features/dashboard/public/repositories/getIndividuIndikator";
 // import { getLevelSubskillListDataByIdSkill } from "@/features/subskill/services/getSubskillLevelByIdSkill";
 
@@ -10,7 +10,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     // const res = await getStatIndividu({ idSubBidang: "s1" })
 
-    const res = await getFirstIdTeam("s1")
+    const res = await getUserProfileAll("s1")
 
 
     return res

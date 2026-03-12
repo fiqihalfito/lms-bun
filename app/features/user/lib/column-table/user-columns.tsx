@@ -1,8 +1,7 @@
 import type { ColumnDef } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
-import { EyeIcon, PencilIcon } from "lucide-react";
+import { PencilIcon } from "lucide-react";
 import { NavLink } from "react-router";
-import { Badge } from "@/components/ui/badge";
 import type { getUserProfileAll } from "../../services/repo";
 
 export const userColumns: ColumnDef<Awaited<ReturnType<typeof getUserProfileAll>>[number]>[] = [
@@ -14,6 +13,17 @@ export const userColumns: ColumnDef<Awaited<ReturnType<typeof getUserProfileAll>
     {
         accessorKey: "namaUser",
         header: "Nama User",
+    },
+    {
+        id: "team",
+        header: "Team",
+        cell: ({ row }) => {
+            if (row.original.team.length > 0) {
+                return row.original.team.map((team) => team.namaTeam).join(", ")
+            }
+
+            return "-"
+        }
     },
     {
         id: "action",
