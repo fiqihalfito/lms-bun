@@ -10,7 +10,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     // const res = await getStatIndividu({ idSubBidang: "s1" })
 
-    const res = await getUserProfileAll("s1")
+    const res = await getUserProfileAll("s1", { team: ["aaaaaaaa-aaaa-4000-8000-000000000001"] })
 
 
     return res

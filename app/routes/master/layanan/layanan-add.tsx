@@ -1,19 +1,19 @@
 import { HeaderRoute } from "@/components/header-route";
-import { FormUser } from "@/features/user/components/master-view/form-user";
-import type { Route } from "./+types/user-add";
+import type { Route } from "./+types/layanan-add";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
 import { ChevronLeftIcon } from "lucide-react";
+import { FormLayanan } from "@/features/layanan/components/master-view/form-layanan";
 
-export default function UserAddRoute({ loaderData }: Route.ComponentProps) {
+export default function LayananAddRoute({ loaderData }: Route.ComponentProps) {
 
     const navigate = useNavigate()
 
     return (
         <div>
-            <HeaderRoute title="Tambah User" description="Tambah Data User"
+            <HeaderRoute title="Tambah Layanan" description="Tambah Data Layanan"
                 actionButton={
-                    <Button variant={"link"} onClick={() => navigate(`/app/master/user`, {
+                    <Button variant={"link"} onClick={() => navigate(`/app/master/layanan`, {
                         viewTransition: true
                     })}>
                         <ChevronLeftIcon />
@@ -21,7 +21,7 @@ export default function UserAddRoute({ loaderData }: Route.ComponentProps) {
                     </Button>
                 }
             />
-            <FormUser />
+            <FormLayanan />
         </div>
     )
 }

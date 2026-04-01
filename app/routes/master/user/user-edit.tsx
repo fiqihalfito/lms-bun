@@ -1,5 +1,5 @@
 import { HeaderRoute } from "@/components/header-route";
-import { FormUser } from "@/features/user/components/form-user";
+import { FormUser } from "@/features/user/components/master-view/form-user";
 import { getUserDataByIdUser } from "@/features/user/services/repo/getUserDataByIdUser";
 import { userContext } from "@/lib/context";
 import type { Route } from "./+types/user-edit";
