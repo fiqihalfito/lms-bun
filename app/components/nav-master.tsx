@@ -33,20 +33,15 @@ const route: RouteType = [
     url: "/app/master/skill",
     icon: PyramidIcon,
   },
-  {
-    title: "SubBidang",
-    url: "/app/master/subbidang",
-    icon: BuildingIcon,
-  },
+  // {
+  //   title: "SubBidang",
+  //   url: "/app/master/subbidang",
+  //   icon: BuildingIcon,
+  // },
   {
     title: "Team",
     url: "/app/master/team",
     icon: ShieldIcon,
-  },
-  {
-    title: "Anggota Team",
-    url: "/app/master/anggota-team",
-    icon: UsersIcon,
   },
   {
     title: "Role",

@@ -7,6 +7,7 @@ import { updateUserProfile } from "../services/repo/updateUserProfile";
 import { insertUserAccount } from "../services/insertUserAccount";
 import { insertUserProfile } from "../services/repo/insertUserProfile";
 import { getDbErrorMessage } from "database/utils/dbErrorUtils";
+import { updateTeamMember } from "@/features/team/services/updateTeamMember";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
 
@@ -46,6 +47,9 @@ export async function action({ request, params, context }: Route.ActionArgs) {
             await updateUserProfile(idUser as string, {
                 namaUser: submission.value.namaUser,
                 idUser: idUser as string,
+            });
+            await updateTeamMember(idUser as string, {
+                idTeam: submission.value.idTeam,
             });
             return redirectWithSuccess(`/app/master/user`, `User ${submission.value.namaUser} berhasil diupdate`)
         }

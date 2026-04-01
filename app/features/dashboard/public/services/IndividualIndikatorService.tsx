@@ -1,8 +1,22 @@
+import { getFirstIdTeam } from "@/features/team/services/getFirstIdTeam";
 import { getIndividuIndikator } from "../repositories/getIndividuIndikator";
 import * as R from "remeda";
 
-export async function IndividualIndikatorService() {
-    const raw = await getIndividuIndikator()
+type IndividualIndikatorServiceFilter = {
+    idTeam?: string | null
+}
+
+export async function IndividualIndikatorService(filter: IndividualIndikatorServiceFilter = {}) {
+
+
+    let idTeam = filter.idTeam
+
+    if (!idTeam) {
+        // buat default jika tidak ada team
+        idTeam = await getFirstIdTeam("s1")
+    }
+
+    const raw = await getIndividuIndikator({ idTeam })
 
 
     // transform

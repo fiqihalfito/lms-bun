@@ -117,7 +117,7 @@ export default [
             ...prefix("master", [
                 index("routes/master/home.tsx"),
                 ...prefix("user", [
-                    index("routes/master/user/user.tsx"),
+                    index("routes/master/user/user-home.tsx"),
                     route("add", "routes/master/user/user-add.tsx"),
                     ...prefix(":idUser", [
                         route("edit", "routes/master/user/user-edit.tsx"),
@@ -127,9 +127,47 @@ export default [
                     ...prefix("action", [
                         route("submit-user", "features/user/action/submit-user.tsx"),
                     ])
-                ])
-            ])
+                ]),
+                ...prefix("layanan", [
+                    index("routes/master/layanan/layanan-home.tsx"),
+                    route("add", "routes/master/layanan/layanan-add.tsx"),
+                    ...prefix(":idLayanan", [
+                        route("edit", "routes/master/layanan/layanan-edit.tsx"),
+                    ]),
 
+                    // action layanan
+                    ...prefix("action", [
+                        route("submit-layanan", "features/layanan/action/submit-layanan.tsx"),
+                    ])
+                ]),
+                ...prefix("team", [
+                    index("routes/master/team/team-home.tsx"),
+                    route("add", "routes/master/team/team-add.tsx"),
+                    ...prefix(":idTeam", [
+                        route("edit", "routes/master/team/team-edit.tsx"),
+                    ]),
+
+                    // action team
+                    ...prefix("action", [
+                        route("submit-team", "features/team/action/submit-team.tsx"),
+                    ])
+                ]),
+                ...prefix("skill", [
+                    index("routes/master/skill/skill-home.tsx"),
+                    route("team/:idTeam", "routes/master/skill/skill-list-page.tsx", [
+                        route("skill/:idSkill", "routes/master/skill/skill-subskill-list-page.tsx"),
+                    ]),
+                    // route("add", "routes/master/skill/skill-add.tsx"),
+                    // ...prefix(":idSkill", [
+                    //     route("edit", "routes/master/skill/skill-edit.tsx"),
+                    // ]),
+
+                    // action team
+                    // ...prefix("action", [
+                    //     route("submit-team", "features/team/action/submit-team.tsx"),
+                    // ])
+                ])
+            ]),
         ]),
 
         // resources

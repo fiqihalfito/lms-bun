@@ -1,4 +1,4 @@
-import { mUserProfiles, mUsers, tDokumen } from 'database/schema';
+import { mTeam, mUserProfiles, mUsers, tDokumen } from 'database/schema';
 import { createInsertSchema } from 'drizzle-zod';
 import { z } from 'zod';
 
@@ -16,8 +16,15 @@ export const userAccountSchema = createInsertSchema(mUsers, {
     idRole: true,
 })
 
+export const teamSchema = createInsertSchema(mTeam, {
+    idTeam: z.string({ error: (issue) => issue.input === undefined ? "Wajib diisi" : "Invalid input." }).min(1, "Team harus diisi"),
+}).pick({
+    idTeam: true,
+})
+
 export const userSchema = z.object({
     ...userProfilSchema.shape,
     ...userAccountSchema.shape,
+    ...teamSchema.shape,
     newpassword: z.string().optional(),
 })

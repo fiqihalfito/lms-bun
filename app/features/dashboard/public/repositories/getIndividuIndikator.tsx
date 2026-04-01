@@ -1,10 +1,15 @@
 import { wait } from "@/lib/utils"
 import { db } from "database/connect.server"
 import { mSkill, mSubSkill, mTeam, mTeamMember, mUserProfiles, tKuisProgress, tStatusBaca } from "database/schema"
-import { and, eq, isNotNull, or, sql } from "drizzle-orm"
+import { and, eq, isNotNull, sql } from "drizzle-orm"
 
+type IndividualIndikatorRepositoryFilter = {
+    idTeam?: string
+}
 
-export async function getIndividuIndikator() {
+export async function getIndividuIndikator(filter: IndividualIndikatorRepositoryFilter) {
+
+    const { idTeam } = filter
 
     await wait(3000)
 
@@ -61,6 +66,7 @@ export async function getIndividuIndikator() {
             eq(user_x_skill_x_subskill.idUser, user_subskill_lulus_baca.idUser),
             eq(user_x_skill_x_subskill.idSubSkill, user_subskill_lulus_baca.idSubSkill)
         ))
+        .where(idTeam ? eq(user_x_skill_x_subskill.idTeam, idTeam) : undefined)
     // tes beberapa user aja
     // .where(or(
     //     eq(user_x_skill_x_subskill.idUser, "c5c966fa-5081-462f-b0d5-493addfe7131"),

@@ -11,6 +11,7 @@ export async function getUserDataByIdUser(idUser: string) {
                     password: false
                 }
             },
+            team: true
         }
     })
 

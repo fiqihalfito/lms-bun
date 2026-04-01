@@ -1,8 +1,8 @@
 import { useFetcher, type Form } from "react-router"
-import type { getUserDataByIdUser } from "../services/repo/getUserDataByIdUser"
+import type { getUserDataByIdUser } from "../../services/repo/getUserDataByIdUser"
 import { getFormProps, getInputProps, useForm } from "@conform-to/react";
 import { getZodConstraint, parseWithZod } from "@conform-to/zod/v4";
-import { userProfilSchema, userSchema } from "../schema/user-schema";
+import { userProfilSchema, userSchema } from "../../schema/user-schema";
 import { cn } from "@/lib/utils";
 import {
     Field,
@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
 import { Select } from "@/components/select-custom";
 import type { loader as loaderGetRoleAll } from "@/features/role/loaders/get-role-all";
+import type { loader as loaderGetTeamAll } from "@/features/team/loaders/get-team-all";
 
 type FormUserprop = {
     // mode: "insert" | "update",
@@ -29,6 +30,7 @@ export function FormUser({ dv, className, ...props }: FormUserprop) {
 
     const fetcher = useFetcher({ key: "form-user" });
     const fetcherSelectRole = useFetcher<typeof loaderGetRoleAll>({ key: "select-role" });
+    const fetcherSelectTeam = useFetcher<typeof loaderGetTeamAll>({ key: "select-team" });
 
     const [form, fields] = useForm({
         // Sync the result of last submission from action fetcher
@@ -38,11 +40,12 @@ export function FormUser({ dv, className, ...props }: FormUserprop) {
         onValidate({ formData }) {
             return parseWithZod(formData, { schema: userSchema });
         },
-        constraint: getZodConstraint(userProfilSchema),
+        // constraint: getZodConstraint(userProfilSchema),
 
         defaultValue: {
             email: dv?.userAccount?.email,
             idRole: dv?.userAccount?.idRole,
+            idTeam: dv?.team[0].idTeam,
             namaUser: dv?.namaUser,
         },
         onSubmit(event, { formData, submission, action, method }) {
@@ -105,6 +108,28 @@ export function FormUser({ dv, className, ...props }: FormUserprop) {
                             placeholder="Password Baru"
                         />
                         <FieldError id={fields.newpassword.errorId}>{fields.newpassword.errors}</FieldError>
+                    </Field>
+                    <Field>
+                        <FieldLabel htmlFor={fields.idTeam.id}>Team</FieldLabel>
+                        <Select
+                            id={fields.idTeam.id}
+                            name={fields.idTeam.name}
+                            defaultValue={fields.idTeam.defaultValue}
+                            placeholder="Pilih Team"
+                            label="Team"
+                            items={fetcherSelectTeam.data?.teams.map((team) => ({
+                                value: team.idTeam,
+                                name: team.namaTeam,
+                            })) ?? []}
+                            fetcherState={fetcherSelectTeam.state}
+                            loadItems={() => fetcherSelectTeam.load("/app/resources/team/get-team-all")}
+                        />
+                        {fetcherSelectTeam.state === "loading" && (
+                            <FieldDescription className="flex items-center gap-2">
+                                <Spinner /> <span>Memuat Team...</span>
+                            </FieldDescription>
+                        )}
+                        <FieldError id={fields.idTeam.errorId}>{fields.idTeam.errors}</FieldError>
                     </Field>
                     <Field>
                         <FieldLabel htmlFor={fields.idRole.id}>Role</FieldLabel>

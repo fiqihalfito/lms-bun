@@ -1,5 +1,5 @@
 import { HeaderRoute } from "@/components/header-route";
-import { FormUser } from "@/features/user/components/form-user";
+import { FormUser } from "@/features/user/components/master-view/form-user";
 import type { Route } from "./+types/user-add";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
