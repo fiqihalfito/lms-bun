@@ -69,6 +69,7 @@ export async function getStatIndividu(idSubBidang?: string) {
     const t_level_lulus_tertinggi_col = getColumns(t_level_lulus_tertinggi)
     const t_joinedUserSkill = await db.select({
         ...t_level_lulus_tertinggi_col,
+        idUser: mUserProfiles.idUser,
         namaUser: mUserProfiles.namaUser,
         namaTeam: mTeam.namaTeam,
         namaSkill: mSkill.namaSkill
@@ -108,6 +109,7 @@ export async function getStatIndividu(idSubBidang?: string) {
                 R.entries(),
                 R.map(([namaUser, listCurrSkills]) => ({
                     namaUser,
+                    idUser: listCurrSkills[0].idUser,
                     skills: listCurrSkills.map(skill => ({
                         namaSkill: skill.namaSkill,
                         level: skill.level,

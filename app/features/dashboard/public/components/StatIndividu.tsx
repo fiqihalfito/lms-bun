@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Database, Terminal } from "lucide-react";
 import { Separator } from '@/components/ui/separator';
 import type { getStatIndividu } from "../repositories/getStatIndividu";
+import { NavLink } from "react-router";
 
 interface StatIndividuProps {
     statIndividuData: Awaited<ReturnType<typeof getStatIndividu>>
@@ -34,42 +35,45 @@ export function StatIndividu({ statIndividuData }: StatIndividuProps) {
                     <TabsContent key={team.namaTeam} value={team.namaTeam}>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {team.users.map((user, idx) => (
-                                <Card key={idx} className="overflow-hidden hover:border-primary/50 transition-colors">
-                                    <CardHeader className="flex flex-row items-center space-x-4 pb-2">
-                                        <Avatar className="h-10 w-10 border">
-                                            <AvatarFallback className="bg-primary/5 text-primary text-xs">
-                                                {user.namaUser.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
-                                            </AvatarFallback>
-                                        </Avatar>
-                                        <div className="flex flex-col">
-                                            <CardTitle className="text-sm font-medium leading-none">
-                                                {user.namaUser}
-                                            </CardTitle>
-                                            <p className="text-xs text-muted-foreground mt-1">
-                                                {team.namaTeam} Specialist
-                                            </p>
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="flex flex-wrap gap-1.5 mt-2">
-                                            {user.skills.some(s => s.namaSkill) ? (
-                                                user.skills.map((skill, sIdx) => (
-                                                    skill.namaSkill && (
-                                                        <Badge key={sIdx} variant="outline">
-                                                            {skill.namaSkill}
-                                                            <Separator orientation="vertical" />
-                                                            <div className="flex ml-1">
-                                                                level {skill.level}
-                                                            </div>
-                                                        </Badge>
-                                                    )
-                                                ))
-                                            ) : (
-                                                <span className="text-[10px] italic text-muted-foreground">Belum ada skill yang lulus   </span>
-                                            )}
-                                        </div>
-                                    </CardContent>
-                                </Card>
+                                <NavLink to={`/dashboard/stat-individu/${user.idUser}`} key={idx}>
+                                    <Card className="overflow-hidden hover:border-primary/50 transition-colors">
+                                        <CardHeader className="flex flex-row items-center space-x-4 pb-2">
+                                            <Avatar className="h-10 w-10 border">
+                                                <AvatarFallback className="bg-primary/5 text-primary text-xs">
+                                                    {user.namaUser.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
+                                                </AvatarFallback>
+                                            </Avatar>
+                                            <div className="flex flex-col">
+                                                <CardTitle className="text-sm font-medium leading-none">
+                                                    {user.namaUser}
+                                                </CardTitle>
+                                                <p className="text-xs text-muted-foreground mt-1">
+                                                    {team.namaTeam} Specialist
+                                                </p>
+                                            </div>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="flex flex-wrap gap-1.5 mt-2">
+                                                {user.skills.some(s => s.namaSkill) ? (
+                                                    user.skills.map((skill, sIdx) => (
+                                                        skill.namaSkill && (
+                                                            <Badge key={sIdx} variant="outline">
+                                                                {skill.namaSkill}
+                                                                <Separator orientation="vertical" />
+                                                                <div className="flex ml-1">
+                                                                    level {skill.level}
+                                                                </div>
+                                                            </Badge>
+                                                        )
+                                                    ))
+                                                ) : (
+                                                    <span className="text-[10px] italic text-muted-foreground">Belum ada skill yang lulus   </span>
+                                                )}
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </NavLink>
+
                             ))}
                         </div>
                     </TabsContent>

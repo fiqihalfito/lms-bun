@@ -44,10 +44,9 @@ export default function DashboardPublicRoute({ loaderData, params }: Route.Compo
         <div className="flex-1 ">
             <HeaderDashboardPublic />
             {/* container */}
-            {isNavigating && <Badge><Spinner />Loading</Badge>}
-            <div id="container" className="mx-40 flex gap-x-32 ">
+            <div id="container" className="mx-4 xl:mx-40 flex gap-x-8 xl:gap-x-16 ">
                 {/* h-fit penting untuk sticky kalau parent flex */}
-                <div className="sticky top-16 w-60 h-fit shrink-0">
+                <div className="sticky top-16 w-52 h-fit ">
                     <NavDashboard />
                 </div>
                 <div className="flex-1">

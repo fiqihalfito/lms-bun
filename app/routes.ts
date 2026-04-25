@@ -14,7 +14,9 @@ export default [
 
 
     route("dashboard", "routes/dashboard/public/public.tsx", [
-        route("stat-individu", "routes/dashboard/public/stat-individu.tsx"),
+        route("stat-individu", "routes/dashboard/public/stat-individu.tsx", [
+            route(":idUser", "routes/dashboard/public/stat-individu-detail.tsx")
+        ]),
         route("stat-lulus-skill", "routes/dashboard/public/stat-lulus-skill.tsx"),
         route("indikator-individu", "routes/dashboard/public/indikator-individu.tsx"),
     ]),
