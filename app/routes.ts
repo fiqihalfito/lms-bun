@@ -13,13 +13,17 @@ export default [
     ]),
 
 
-    route("dashboard", "routes/dashboard/public/public.tsx", [
-        route("stat-individu", "routes/dashboard/public/stat-individu.tsx", [
-            route(":idUser", "routes/dashboard/public/stat-individu-detail.tsx")
+    layout('layout/dashboard-public-layout.tsx', [
+        ...prefix("dashboard", [
+            index("routes/dashboard/public/public.tsx"),
+            route("stat-lulus-skill", "routes/dashboard/public/stat-lulus-skill.tsx"),
+            route("stat-individu", "routes/dashboard/public/stat-individu.tsx", [
+                route(":idUser", "routes/dashboard/public/stat-individu-detail.tsx")
+            ]),
         ]),
-        route("stat-lulus-skill", "routes/dashboard/public/stat-lulus-skill.tsx"),
-        route("indikator-individu", "routes/dashboard/public/indikator-individu.tsx"),
+        // route("indikator-individu", "routes/dashboard/public/indikator-individu.tsx"),
     ]),
+
 
     route("app", "routes/app.tsx", { id: "app" }, [
 
