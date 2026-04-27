@@ -6,7 +6,7 @@ export function NavDashboard() {
             <h6 className="px-4 font-medium text-sm text-muted-foreground">Menu</h6>
             <ButtonNavDashboard label="Stat Lulus Skill" to="/dashboard/stat-lulus-skill" />
             <ButtonNavDashboard label="Stat Individu" to="/dashboard/stat-individu" />
-            <ButtonNavDashboard label="Indikator Individu" to="/dashboard/indikator-individu" />
+            {/* <ButtonNavDashboard label="Indikator Individu" to="/dashboard/indikator-individu" /> */}
         </div>
     )
 }
