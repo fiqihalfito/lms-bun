@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator"
-import type { IndividualIndikatorService } from "../services/IndividualIndikatorService"
+import type { IndividualIndikatorService } from "../services/x-IndividualIndikatorService"
 import { TabsContent } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 import { CheckIcon, XIcon } from "lucide-react"

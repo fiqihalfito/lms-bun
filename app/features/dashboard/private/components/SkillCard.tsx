@@ -1,12 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { getSkillAndStats } from "../services/getSkillAndStats"
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { BookOpen, Trophy, TrendingUp, Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import type { DashboardService } from "../services/DashboardService";
 
 type SkillCardProp = {
-    skillData: Awaited<ReturnType<typeof getSkillAndStats>>[number]["groupTeam"][number]
+    skillData: Awaited<ReturnType<typeof DashboardService.getSkillAndStats>>[number]["groupTeam"][number]
 }
 
 export function SkillCard({ skillData }: SkillCardProp) {

@@ -4,26 +4,26 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Database, Terminal } from "lucide-react";
 import { Separator } from '@/components/ui/separator';
-import type { getStatIndividu } from "../repositories/getStatIndividu";
 import { NavLink } from "react-router";
+import type { DashboardService } from "../services/DashboardService";
 
 interface StatIndividuProps {
-    statIndividuData: Awaited<ReturnType<typeof getStatIndividu>>
+    listIndividuSkillData: Awaited<ReturnType<typeof DashboardService.getListIndividuSkill>>
 }
 
-export function StatIndividu({ statIndividuData }: StatIndividuProps) {
+export function StatIndividu({ listIndividuSkillData }: StatIndividuProps) {
     return (
         <div className="mb-20 space-y-6">
             <div className="flex items-center justify-between">
                 <h1 className="text-2xl font-bold tracking-tight">Statistik Individu</h1>
                 <Badge variant="outline" className="px-3 py-1">
-                    Total {statIndividuData.reduce((acc, team) => acc + team.users.length, 0)} Personil
+                    Total {listIndividuSkillData.reduce((acc, team) => acc + team.users.length, 0)} Personil
                 </Badge>
             </div>
 
-            <Tabs defaultValue={statIndividuData[0]?.namaTeam} className="w-full">
+            <Tabs defaultValue={listIndividuSkillData[0]?.namaTeam} className="w-full">
                 <TabsList className="grid w-full max-w-md grid-cols-2 mb-8">
-                    {statIndividuData.map((team) => (
+                    {listIndividuSkillData.map((team) => (
                         <TabsTrigger key={team.namaTeam} value={team.namaTeam} className="capitalize">
                             {team.namaTeam === 'DBA' ? <Database className="w-4 h-4 mr-2" /> : <Terminal className="w-4 h-4 mr-2" />}
                             {team.namaTeam}
@@ -31,7 +31,7 @@ export function StatIndividu({ statIndividuData }: StatIndividuProps) {
                     ))}
                 </TabsList>
 
-                {statIndividuData.map((team) => (
+                {listIndividuSkillData.map((team) => (
                     <TabsContent key={team.namaTeam} value={team.namaTeam}>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {team.users.map((user, idx) => (

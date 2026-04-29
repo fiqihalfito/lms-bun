@@ -1,10 +1,9 @@
 import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@/components/ui/item"
-import type { getJumlahLulusPerSkill } from "../repositories/getJumlahLulusPerSkill"
-import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
+import type { DashboardService } from "../services/DashboardService"
 
 type StatLulusSkillProp = {
-    teamStat: Awaited<ReturnType<typeof getJumlahLulusPerSkill>>
+    teamStat: Awaited<ReturnType<typeof DashboardService.getJumlahLulusPerSkill>>
 }
 
 export function StatLulusSkill({ teamStat }: StatLulusSkillProp) {

@@ -2,21 +2,20 @@ import { getToast } from "remix-toast";
 import type { Route } from "./+types/private";
 import { data } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
-import { HeaderRoute } from "@/components/header-route";
 import { userContext } from "@/lib/context";
 import { getIdTeamByIdUser } from "@/features/team/services/getIdTeamByIdUser";
-import { getSkillAndStats } from "@/features/dashboard/private/services/getSkillAndStats";
 import { ListSkillCollapsible } from "@/features/dashboard/private/components/ListSkillCollapsible";
 import { SkillCard } from "@/features/dashboard/private/components/SkillCard";
 import { getUserProfilesByIdUser } from "@/features/user/services/repo/getUserProfilesByIdUser";
 import { UserProfile } from "@/features/dashboard/private/components/UserProfile";
+import { DashboardService } from "@/features/dashboard/private/services/DashboardService";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const { toast, headers } = await getToast(request);
     const user = context.get(userContext)
     const currentTeam = await getIdTeamByIdUser(user.idUser)
-    const skillStats = await getSkillAndStats(user.idSubBidang!, currentTeam, user.idUser)
+    const skillStats = await DashboardService.getSkillAndStats(user.idSubBidang!, currentTeam, user.idUser)
 
     const userProfile = await getUserProfilesByIdUser(user.idUser)
 
