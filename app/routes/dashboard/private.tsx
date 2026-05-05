@@ -3,44 +3,52 @@ import type { Route } from "./+types/private";
 import { data } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
 import { userContext } from "@/lib/context";
-import { getIdTeamByIdUser } from "@/features/team/services/getIdTeamByIdUser";
 import { ListSkillCollapsible } from "@/features/dashboard/private/components/ListSkillCollapsible";
 import { SkillCard } from "@/features/dashboard/private/components/SkillCard";
-import { getUserProfilesByIdUser } from "@/features/user/services/repo/getUserProfilesByIdUser";
 import { UserProfile } from "@/features/dashboard/private/components/UserProfile";
 import { DashboardService } from "@/features/dashboard/private/services/DashboardService";
+import { TeamService } from "@/features/team/services/TeamService";
+import { UserProfileService } from "@/features/user/services/UserProfileService";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
+  const { toast, headers } = await getToast(request);
+  const user = context.get(userContext);
+  const currentTeam = await TeamService.getIdTeamByIdUser(user.idUser);
+  const skillStats = await DashboardService.getSkillAndStats(
+    user.idSubBidang!,
+    currentTeam,
+    user.idUser,
+  );
 
-    const { toast, headers } = await getToast(request);
-    const user = context.get(userContext)
-    const currentTeam = await getIdTeamByIdUser(user.idUser)
-    const skillStats = await DashboardService.getSkillAndStats(user.idSubBidang!, currentTeam, user.idUser)
+  const userProfile = await UserProfileService.getUserProfileByIdUser(
+    user.idUser,
+  );
 
-    const userProfile = await getUserProfilesByIdUser(user.idUser)
-
-    return data({ toast, skillStats, userProfile }, { headers })
+  return data({ toast, skillStats, userProfile }, { headers });
 }
 
 export default function DashboardRoute({ loaderData }: Route.ComponentProps) {
+  const { toast, skillStats, userProfile } = loaderData;
 
-    const { toast, skillStats, userProfile } = loaderData
+  useToastEffect(toast);
 
-    useToastEffect(toast)
-
-    return (
-        <div>
-            {/* <HeaderRoute title="Dashboard" description="Melihat status terkini progress dokumen" /> */}
-            <UserProfile userProfile={userProfile[0]} />
-            <div className="space-y-4">
-                {skillStats.map((teamData, index) => (
-                    <ListSkillCollapsible key={teamData.idTeam} namaTeam={teamData.namaTeam} isOpen={index === 0}>
-                        {teamData.groupTeam.map((skillData) => (
-                            <SkillCard key={skillData.idSkill} skillData={skillData} />
-                        ))}
-                    </ListSkillCollapsible>
-                ))}
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      {/* <HeaderRoute title="Dashboard" description="Melihat status terkini progress dokumen" /> */}
+      <UserProfile userProfile={userProfile} />
+      <div className="space-y-4">
+        {skillStats.map((teamData, index) => (
+          <ListSkillCollapsible
+            key={teamData.idTeam}
+            namaTeam={teamData.namaTeam}
+            isOpen={index === 0}
+          >
+            {teamData.groupTeam.map((skillData) => (
+              <SkillCard key={skillData.idSkill} skillData={skillData} />
+            ))}
+          </ListSkillCollapsible>
+        ))}
+      </div>
+    </div>
+  );
 }

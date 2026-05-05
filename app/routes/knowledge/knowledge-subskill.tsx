@@ -1,60 +1,79 @@
-import { getSubskillByIdSkillAndLevel } from "@/features/subskill/services/getSubskillByIdSkillAndLevel";
 import type { Route } from "./+types/knowledge-subskill";
 import { HeaderRoute } from "@/components/header-route";
 import { useLocation } from "react-router";
 import { BreadCrumb } from "@/components/breadcrumb";
 import { useBreadcrumbs } from "@/hooks/use-breadcrumbs";
 import { userContext } from "@/lib/context";
-import { useLocalStorage } from 'usehooks-ts'
+import { useLocalStorage } from "usehooks-ts";
 import { useEffect } from "react";
-import { getSubskillStatPerLevel } from "@/features/subskill/services/getSubskillStatPerLevel";
 import { SubskillStatPerLevel } from "@/features/subskill/components/SubskillStatPerLevel";
-import { getNamaSkillByIdSkill } from "@/features/skill/services/getNamaSkillByIdSkill";
 import BadgeSkillLevel from "@/features/skill/components/BadgeSkillLevel";
 import { SubskillLevelList } from "@/features/subskill/components/SubskillLevelList";
+import { SubskillService } from "@/features/subskill/services/SubskillService";
+import { SkillService } from "@/features/skill/services/SkillService";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
+  const user = context.get(userContext);
+  const subskills = await SubskillService.getSubskillByIdSkillAndLevel(
+    params.idSkill,
+    Number(params.level),
+    user.idUser,
+  );
+  const subskillStatPerLevel = await SubskillService.getSubskillStatPerLevel(
+    params.idSkill,
+    Number(params.level),
+    user.idUser,
+  );
+  const namaSkill = await SkillService.getNamaSkillByIdSkill(params.idSkill);
 
-    const user = context.get(userContext)
-    const subskills = await getSubskillByIdSkillAndLevel(params.idSkill, Number(params.level), user.idUser)
-    const subskillStatPerLevel = await getSubskillStatPerLevel(params.idSkill, Number(params.level), user.idUser)
-    const namaSkill = await getNamaSkillByIdSkill(params.idSkill)
-
-    return { subskills, subskillStatPerLevel, namaSkill }
+  return { subskills, subskillStatPerLevel, namaSkill };
 }
 
 // set current url here to localStorage to redirect back to this page after submit kuis
 
+export default function KnowledgeSubskillRoute({
+  loaderData,
+  params,
+}: Route.ComponentProps) {
+  const { subskills, subskillStatPerLevel, namaSkill } = loaderData;
 
-export default function KnowledgeSubskillRoute({ loaderData, params }: Route.ComponentProps) {
+  const breadcrumb = useBreadcrumbs([
+    { label: "Kategori", to: `/app/dokumen` },
+    { label: "Team", to: `/app/knowledge/team` },
+    { label: "Skill", to: `/app/knowledge/team/${params.idTeam}/skill` },
+    {
+      label: "Level",
+      to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level`,
+    },
+    {
+      label: "Subskill",
+      to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level/${params.level}/subskill`,
+    },
+  ]);
 
-    const { subskills, subskillStatPerLevel, namaSkill } = loaderData
+  const location = useLocation();
+  const [
+    redirectBackAfterKuis,
+    setRedirectBackAfterKuis,
+    removeRedirectBackAfterKuis,
+  ] = useLocalStorage("redirectBackAfterKuis", "/");
+  useEffect(() => {
+    setRedirectBackAfterKuis(location.pathname);
+  }, [location]);
 
-    const breadcrumb = useBreadcrumbs([
-        { label: "Kategori", to: `/app/dokumen` },
-        { label: "Team", to: `/app/knowledge/team` },
-        { label: "Skill", to: `/app/knowledge/team/${params.idTeam}/skill` },
-        { label: "Level", to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level` },
-        { label: "Subskill", to: `/app/knowledge/team/${params.idTeam}/skill/${params.idSkill}/level/${params.level}/subskill` },
-    ])
+  return (
+    <div>
+      <BreadCrumb routeBreadCrumb={breadcrumb} />
+      <HeaderRoute
+        title="Subskill"
+        description="list subskill berisi dokumen dan kuis yang harus dilengkapi"
+      />
 
-    const location = useLocation()
-    const [redirectBackAfterKuis, setRedirectBackAfterKuis, removeRedirectBackAfterKuis] = useLocalStorage('redirectBackAfterKuis', "/")
-    useEffect(() => {
-        setRedirectBackAfterKuis(location.pathname)
-    }, [location])
+      <SubskillStatPerLevel subskillStatPerLevel={subskillStatPerLevel} />
 
-    return (
-        <div>
-            <BreadCrumb routeBreadCrumb={breadcrumb} />
-            <HeaderRoute title="Subskill" description="list subskill berisi dokumen dan kuis yang harus dilengkapi" />
+      <BadgeSkillLevel namaSkill={namaSkill} level={params.level} />
 
-            <SubskillStatPerLevel subskillStatPerLevel={subskillStatPerLevel} />
-
-            <BadgeSkillLevel namaSkill={namaSkill} level={params.level} />
-
-
-            <SubskillLevelList subskills={subskills} />
-        </div>
-    )
+      <SubskillLevelList subskills={subskills} />
+    </div>
+  );
 }

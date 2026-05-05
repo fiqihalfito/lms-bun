@@ -1,11 +1,10 @@
 import { userContext } from "@/lib/context";
-import { getLayananAll } from "@/features/layanan/services/getLayananAll";
 import type { Route } from "./+types/get-layanan-all";
+import { LayananService } from "../services/LayananService";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
+  const user = context.get(userContext);
+  const layanan = await LayananService.getAllLayanan(user?.idSubBidang!);
 
-    const user = context.get(userContext)
-    const layanan = await getLayananAll(user?.idSubBidang!)
-
-    return { layanan }
+  return { layanan };
 }

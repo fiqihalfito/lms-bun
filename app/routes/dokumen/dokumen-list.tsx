@@ -1,11 +1,11 @@
 import { PageKnowledge } from "@/features/dokumen/components/PageKnowledge";
 import { PageNonKnowledge } from "@/features/dokumen/components/PageNonKnowledge";
 import type { Route } from "./+types/dokumen-list";
-import { getDokumenByTipe } from "@/features/dokumen/services";
 import { userContext } from "@/lib/context";
 import { getToast } from "remix-toast";
 import { data } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
+import { DokumenService } from "@/features/dokumen/services/DokumenService";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
@@ -20,7 +20,7 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
         // const dokumen = await getDokumenByTipe(tipeDokumen);
         return data({ dokumen: [], toast }, { headers })
     } else {
-        const dokumen = await getDokumenByTipe(tipeDokumen, user.idUser);
+        const dokumen = await DokumenService.getDokumenByTipe(tipeDokumen, user.idUser);
         return data({ dokumen, toast }, { headers })
     }
 }

@@ -1,75 +1,84 @@
-import { parseWithZod } from "@conform-to/zod/v4";
 import type { Route } from "./+types/submit-form-make-kuis";
-import { makeKuisSchema } from "../schema/makeKuisSchema";
 import { dataWithError, redirectWithSuccess } from "remix-toast";
-import { updateQuestion } from "../services/updateQuestion";
-import { updateOption } from "../services/updateOptions";
-import { insertQuestion } from "../services/insertQuestion";
-import { insertOptions } from "../services/insertOption";
-import type { tKuisQuestionOption } from "database/schema";
-import { updateKuisMetaData } from "../services/updateKuisMetaData";
-import { sql } from "drizzle-orm";
+import { ManageKuisService } from "../services/ManageKuisService";
 
 export async function action({ request, params, context }: Route.ActionArgs) {
+  const formData = await request.formData();
 
-    const formData = await request.formData()
-    const submission = parseWithZod(formData, { schema: makeKuisSchema })
+  const { success, message, description, payload } =
+    await ManageKuisService.submitMakeKuis(formData, params.idKuis);
 
-    if (submission.status !== "success") {
-        return dataWithError(submission.reply(), "Data yang dikirim error")
-    }
+  if (success) {
+    return redirectWithSuccess(
+      `/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`,
+      { message, description },
+    );
+  } else {
+    return dataWithError(payload, message);
+  }
+  // const submission = parseWithZod(formData, { schema: makeKuisSchema });
 
-    // cek kalau ada idQuestion, berarti edit, instead insert
-    const idKuisQuestion = formData.get("idKuisQuestion")
+  // if (submission.status !== "success") {
+  //   return dataWithError(submission.reply(), "Data yang dikirim error");
+  // }
 
-    if (idKuisQuestion) {
-        // edit mode
+  // // cek kalau ada idQuestion, berarti edit, instead insert
+  // const idKuisQuestion = formData.get("idKuisQuestion");
 
-        // update question first
-        await updateQuestion(idKuisQuestion as string, {
-            question: submission.value.question,
-            answerOption: submission.value.answerOption,
-            waktuPengerjaanDetik: submission.value.waktuPengerjaanDetik,
-            idKuis: params.idKuis,
-            updated_at: sql`now()` as unknown as string,
-        })
+  // if (idKuisQuestion) {
+  //   // edit mode
 
-        // update option
-        for (const [key, value] of Object.entries(submission.value.options)) {
-            await updateOption(idKuisQuestion as string, {
-                option: key,
-                optionDesc: value
-            })
-        }
+  //   // update question first
+  //   await updateQuestion(idKuisQuestion as string, {
+  //     question: submission.value.question,
+  //     answerOption: submission.value.answerOption,
+  //     waktuPengerjaanDetik: submission.value.waktuPengerjaanDetik,
+  //     idKuis: params.idKuis,
+  //     updated_at: sql`now()` as unknown as string,
+  //   });
 
-        return redirectWithSuccess(`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`, "Soal berhasil diupdate")
+  //   // update option
+  //   for (const [key, value] of Object.entries(submission.value.options)) {
+  //     await updateOption(idKuisQuestion as string, {
+  //       option: key,
+  //       optionDesc: value,
+  //     });
+  //   }
 
-    } else {
-        // insert mode
-        const newQuestion = await insertQuestion({
-            question: submission.value.question,
-            answerOption: submission.value.answerOption,
-            idKuis: params.idKuis,
-            updated_at: sql`now()` as unknown as string,
-        })
+  //   return redirectWithSuccess(
+  //     `/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`,
+  //     "Soal berhasil diupdate",
+  //   );
+  // } else {
+  //   // insert mode
+  //   const newQuestion = await insertQuestion({
+  //     question: submission.value.question,
+  //     answerOption: submission.value.answerOption,
+  //     idKuis: params.idKuis,
+  //     updated_at: sql`now()` as unknown as string,
+  //   });
 
-        // insert option
-        const newOptions = Object.entries(submission.value.options).map(([key, value]) => ({
-            option: key,
-            optionDesc: value,
-            idKuisQuestion: newQuestion[0].idKuisQuestion,
-        })) satisfies typeof tKuisQuestionOption.$inferInsert[]
-        await insertOptions(newOptions)
+  //   // insert option
+  //   const newOptions = Object.entries(submission.value.options).map(
+  //     ([key, value]) => ({
+  //       option: key,
+  //       optionDesc: value,
+  //       idKuisQuestion: newQuestion[0].idKuisQuestion,
+  //     }),
+  //   ) satisfies (typeof tKuisQuestionOption.$inferInsert)[];
+  //   await insertOptions(newOptions);
 
-        // mode kuis terkunci kalau insert
-        await updateKuisMetaData(params.idKuis, {
-            isLocked: true,
-        })
+  //   // mode kuis terkunci kalau insert
+  //   await updateKuisMetaData(params.idKuis, {
+  //     isLocked: true,
+  //   });
 
-        return redirectWithSuccess(`/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`, {
-            message: "Soal berhasil ditambahkan",
-            description: "Kuis terkunci"
-        })
-    }
-
+  //   return redirectWithSuccess(
+  //     `/app/pic-subskill/skill/${params.idSkill}/subskill/${params.idSubSkill}/make-kuis`,
+  //     {
+  //       message: "Soal berhasil ditambahkan",
+  //       description: "Kuis terkunci",
+  //     },
+  //   );
+  // }
 }
