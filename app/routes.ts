@@ -175,6 +175,18 @@ export default [
             route("submit-team", "features/team/action/submit-team.tsx"),
           ]),
         ]),
+        ...prefix("role", [
+          index("routes/master/role/role-home.tsx"),
+          // route("add", "routes/master/role/role-add.tsx"),
+          // ...prefix(":idRole", [
+          //   route("edit", "routes/master/role/role-edit.tsx"),
+          // ]),
+
+          // action team
+          // ...prefix("action", [
+          //   route("submit-role", "features/role/action/submit-role.tsx"),
+          // ]),
+        ]),
         ...prefix("skill", [
           index("routes/master/skill/skill-home.tsx"),
           route("team/:idTeam", "routes/master/skill/skill-list-page.tsx", [
