@@ -32,7 +32,7 @@ export default function SkillListPage({
     <div>
       <HeaderRoute title={title} description={description} />
 
-      <div className="flex flex-row border divide-x-2 rounded-md">
+      <div className="flex flex-row border divide-x-1 rounded-md">
         <div className="w-1/4 py-4">
           <Badge className="mx-4">{nameTeam}</Badge>
           <SkillList skills={skills} />
