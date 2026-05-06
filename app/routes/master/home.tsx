@@ -22,11 +22,16 @@ export default function MasterHome({ loaderData }: Route.ComponentProps) {
     const getLevelStats = (subSkills: typeof picUploadStatus[number]["subSkill"], level: number) => {
         const total = subSkills.filter((s) => s.level === level).length;
         const uploaded = subSkills.filter((s) => s.level === level && s.idDokumen !== null).length;
-        const isComplete = uploaded === total;
+        const kuis = subSkills.filter((s) => s.level === level && s.kuis !== null && s.kuis.jumlahSoal > 0).length;
+        const isCompleteUploaded = uploaded === total;
+        const isCompleteKuis = kuis === total;
 
         return {
-            label: `${uploaded}/${total}`,
-            className: cn("text-center font-bold", isComplete ? "text-green-500" : "text-red-500"),
+            label: <>
+                <span className={cn(isCompleteUploaded ? "text-green-500" : "text-red-500")}>{uploaded}/{total} dok</span>
+                <span> - </span>
+                <span className={cn(isCompleteKuis ? "text-green-500" : "text-red-500")}>{kuis}/{total} kuis</span>
+            </>,
         };
     };
 
@@ -55,9 +60,9 @@ export default function MasterHome({ loaderData }: Route.ComponentProps) {
                                 <TableCell className="font-medium">{index + 1}</TableCell>
                                 <TableCell>{item.namaUser}</TableCell>
                                 {[1, 2, 3, 4].map((level) => {
-                                    const { label, className } = getLevelStats(item.subSkill, level);
+                                    const { label } = getLevelStats(item.subSkill, level);
                                     return (
-                                        <TableCell key={level} className={className}>
+                                        <TableCell key={level} className={"font-semibold text-center"}>
                                             {label}
                                         </TableCell>
                                     );
