@@ -19,6 +19,11 @@ type RouteType = {
 
 const route: RouteType = [
   {
+    title: "Dashboard",
+    url: "/app/master",
+    icon: LayoutDashboardIcon,
+  },
+  {
     title: "User",
     url: "/app/master/user",
     icon: UserIcon,

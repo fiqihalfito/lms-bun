@@ -55,6 +55,10 @@ export const relations = defineRelations(schema, (r) => ({
             from: r.mUserProfiles.idUser,
             to: r.tKuisProgress.idUser,
         }),
+        subSkill: r.many.mSubSkill({
+            from: r.mUserProfiles.idUser,
+            to: r.mSubSkill.idPic,
+        })
     },
     mSkill: {
         team: r.one.mTeam({
