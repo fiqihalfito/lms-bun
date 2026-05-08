@@ -1,4 +1,4 @@
-import type { GroupLevelType } from "../services/getSkillAndStats";
+import type { GroupLevelType } from "../lib/types";
 
 // 2. Menghitung total persentase skill
 export const calculateTotalProgress = (groupLevel: GroupLevelType) => {

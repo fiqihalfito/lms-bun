@@ -4,6 +4,7 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowRight01Icon, MoreHorizontalCircle01Icon } from "@hugeicons/core-free-icons"
+import { ArrowRightIcon, MoreHorizontalIcon } from "lucide-react"
 
 function Breadcrumb({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -84,7 +85,8 @@ function BreadcrumbSeparator({
       {...props}
     >
       {children ?? (
-        <HugeiconsIcon icon={ArrowRight01Icon} strokeWidth={2} phosphor="CaretRightIcon" />
+        // <HugeiconsIcon icon={ArrowRight01Icon} strokeWidth={2} phosphor="CaretRightIcon" />
+        <ArrowRightIcon />
       )}
     </li>
   )
@@ -105,7 +107,8 @@ function BreadcrumbEllipsis({
       )}
       {...props}
     >
-      <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} phosphor="DotsThreeIcon" />
+      {/* <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} phosphor="DotsThreeIcon" /> */}
+      <MoreHorizontalIcon />
       <span className="sr-only">More</span>
     </span>
   )

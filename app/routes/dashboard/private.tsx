@@ -13,10 +13,11 @@ import { UserProfileService } from "@/features/user/services/UserProfileService"
 export async function loader({ request, params, context }: Route.LoaderArgs) {
   const { toast, headers } = await getToast(request);
   const user = context.get(userContext);
-  const currentTeam = await TeamService.getIdTeamByIdUser(user.idUser);
+  // const currentTeam = await TeamService.getIdTeamByIdUser(user.idUser);
+  const currentTeam = await TeamService.getTeamsByIdUser(user.idUser);
   const skillStats = await DashboardService.getSkillAndStats(
     user.idSubBidang!,
-    currentTeam,
+    currentTeam[0]?.idTeam ?? null,
     user.idUser,
   );
 
@@ -24,18 +25,18 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     user.idUser,
   );
 
-  return data({ toast, skillStats, userProfile }, { headers });
+  return data({ toast, skillStats, userProfile, currentTeam }, { headers });
 }
 
 export default function DashboardRoute({ loaderData }: Route.ComponentProps) {
-  const { toast, skillStats, userProfile } = loaderData;
+  const { toast, skillStats, userProfile, currentTeam } = loaderData;
 
   useToastEffect(toast);
 
   return (
     <div>
       {/* <HeaderRoute title="Dashboard" description="Melihat status terkini progress dokumen" /> */}
-      <UserProfile userProfile={userProfile} />
+      <UserProfile userProfile={userProfile} currentTeam={currentTeam} />
       <div className="space-y-4">
         {skillStats.map((teamData, index) => (
           <ListSkillCollapsible

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { Cancel01Icon } from "@hugeicons/core-free-icons"
+import { CircleXIcon } from "lucide-react"
 
 function Dialog({
   ...props
@@ -66,7 +67,8 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close data-slot="dialog-close" asChild>
             <Button variant="ghost" className="absolute top-4 right-4" size="icon-sm">
-              <HugeiconsIcon icon={Cancel01Icon} strokeWidth={2} phosphor="XIcon" />
+              {/* <HugeiconsIcon icon={Cancel01Icon} strokeWidth={2} phosphor="XIcon" /> */}
+              <CircleXIcon />
               <span className="sr-only">Close</span>
             </Button>
           </DialogPrimitive.Close>

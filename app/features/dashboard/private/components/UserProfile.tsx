@@ -10,20 +10,26 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import type { UserProfileService } from "@/features/user/services/UserProfileService";
+import type { TeamService } from "@/features/team/services/TeamService";
 
 type UserProfileProps = {
   // Menggunakan tipe data yang kamu berikan
   userProfile: Awaited<
     ReturnType<typeof UserProfileService.getUserProfileByIdUser>
   >;
+  currentTeam: Awaited<
+    ReturnType<typeof TeamService.getTeamsByIdUser>
+  >;
 };
 
-export function UserProfile({ userProfile }: UserProfileProps) {
+export function UserProfile({ userProfile, currentTeam }: UserProfileProps) {
   const initials = userProfile.namaUser
     .split(" ")
     .map((n) => n[0])
     .join("")
     .toUpperCase();
+
+  const displayTeam = currentTeam.length > 0 ? currentTeam.map((t) => t.namaTeam).join(", ") : "tidak masuk team manapun";
 
   return (
     <div className="border shadow rounded-lg p-8 mb-6 space-y-6">
@@ -57,112 +63,14 @@ export function UserProfile({ userProfile }: UserProfileProps) {
             ) : (
               <Badge variant="outline">Tanpa Bidang</Badge>
             )}
-            <Badge
-              variant="outline"
-              className="px-3 py-1 flex gap-1.5 items-center"
-            >
-              <ShieldCheck className="w-3.5 h-3.5 text-green-600" />
-              Active Member
-            </Badge>
           </div>
+          <Badge>
+            {displayTeam}
+          </Badge>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Teams Section */}
-        <Card className="md:col-span-2 overflow-hidden border shadow-md p-0">
-          <CardHeader className="bg-slate-900 text-white p-4">
-            <div className="flex items-center gap-2">
-              <Users className="w-5 h-5" />
-              <CardTitle>Team Assignments</CardTitle>
-            </div>
-            <CardDescription className="text-slate-400">
-              Daftar tim yang diikuti oleh user ini
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="">
-            <div className="divide-y divide-slate-100">
-              {userProfile.team.length > 0 ? (
-                userProfile.team.map((t) => (
-                  <div
-                    key={t.idTeam}
-                    className="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors border rounded-2xl shadow"
-                  >
-                    <div className="space-y-1">
-                      <p className="font-semibold text-slate-800">
-                        {t.namaTeam || "Unnamed Team"}
-                      </p>
-                      {/* <p className="text-xs text-muted-foreground uppercase tracking-wider">ID: {t.idTeam}</p> */}
-                    </div>
-                    <Badge variant="outline" className="text-[10px]">
-                      MEMBER
-                    </Badge>
-                  </div>
-                ))
-              ) : (
-                <div className="p-8 text-center text-muted-foreground">
-                  User belum terdaftar di tim manapun.
-                </div>
-              )}
-            </div>
-          </CardContent>
-        </Card>
 
-        {/* Metadata Section */}
-        <Card className="border-none shadow-md">
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-primary" />
-              <CardTitle className="text-lg">Aktivitas Akun</CardTitle>
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <Calendar className="w-4 h-4 mt-0.5 text-muted-foreground" />
-                <div>
-                  <p className="text-xs font-medium text-slate-500 uppercase">
-                    Dibuat pada
-                  </p>
-                  <p className="text-sm font-semibold italic text-slate-700">
-                    {new Date(userProfile.created_at).toLocaleDateString(
-                      "id-ID",
-                      {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      },
-                    )}
-                  </p>
-                </div>
-              </div>
-
-              <Separator />
-
-              <div className="flex items-start gap-3">
-                <Clock className="w-4 h-4 mt-0.5 text-muted-foreground" />
-                <div>
-                  <p className="text-xs font-medium text-slate-500 uppercase">
-                    Pembaruan Terakhir
-                  </p>
-                  <p className="text-sm font-semibold italic text-slate-700">
-                    {userProfile.updated_at
-                      ? new Date(userProfile.updated_at).toLocaleDateString(
-                          "id-ID",
-                          {
-                            day: "numeric",
-                            month: "long",
-                            year: "numeric",
-                          },
-                        )
-                      : "Belum pernah diperbarui"}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </div >
   );
 }

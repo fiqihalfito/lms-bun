@@ -75,8 +75,8 @@ export function ListSkillCollapsible({ namaTeam, children, isOpen }: ListSkillCo
                         </Button>
                     </div>
                 </CollapsibleTrigger>
-                <CollapsibleContent className="transition-all duration-300 ease-in-out data-[state=closed]:opacity-0 data-[state=open]:opacity-100 overflow-hidden">
-                    <div className="px-4 pb-8 pt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-2 duration-500">
+                <CollapsibleContent className=" transition-all duration-300 ease-in-out data-[state=closed]:opacity-0 data-[state=open]:opacity-100 overflow-hiddenx">
+                    <div className="px-4 pb-8 pt-6 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-2 duration-500">
                         {children}
                     </div>
                 </CollapsibleContent>
