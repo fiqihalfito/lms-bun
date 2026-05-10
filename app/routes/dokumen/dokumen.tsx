@@ -12,11 +12,11 @@ export default function DokumenRoute({ }: Route.ComponentProps) {
         <div>
             <HeaderRoute title="Dokumen" description="Tipe Dokumen" />
             <div className="flex flex-col gap-4">
+                <ItemDokumenLinkLobby title="Knowledge" description="Dokumen Pembelajaran dan Skill" icon={PyramidIcon} to="/app/knowledge/team" />
                 <div className="grid grid-cols-2 gap-4">
                     <ItemDokumenLinkLobby title="SOP" description="Standard Operating Procedure" icon={BookKeyIcon} to="tipe/sop" />
                     <ItemDokumenLinkLobby title="IK" description="Instruksi Kerja" icon={BookCheckIcon} to="tipe/ik" />
                 </div>
-                <ItemDokumenLinkLobby title="Knowledge" description="Dokumen Pembelajaran dan Skill" icon={PyramidIcon} to="/app/knowledge/team" />
             </div>
         </div>
     )
