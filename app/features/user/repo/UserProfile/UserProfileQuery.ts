@@ -77,4 +77,13 @@ export abstract class UserProfileQuery {
     });
     return res;
   }
+
+  static async findIdPic(idPic: string) {
+    const res = await db.query.mUserPICSubskill.findFirst({
+      where: {
+        idPic: idPic,
+      },
+    });
+    return res;
+  }
 }

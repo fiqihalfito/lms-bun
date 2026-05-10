@@ -2,12 +2,18 @@ import invariant from "tiny-invariant";
 import { SubskillQuery } from "../repo/SubskillQuery";
 import type { mSubSkill } from "database/schema";
 import { SubskillMutation } from "../repo/SubskillMutation";
+import { UserProfileQuery } from "@/features/user/repo/UserProfile/UserProfileQuery";
 
 export abstract class SubskillService {
   static async getSubskillByIdWithSkill(idSubskill: string) {
     const data = await SubskillQuery.findByIdWithSkill(idSubskill);
     invariant(data, "Subskill not found");
     return data;
+  }
+
+  static async checkIsPIC(idPic: string) {
+    const data = await UserProfileQuery.findIdPic(idPic);
+    return !!data;
   }
 
   static async getSubskillByIdSkill(idSkill: string) {

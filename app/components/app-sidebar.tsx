@@ -124,7 +124,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const location = useLocation()
   const isMaster = location.pathname.includes("/app/master")
 
-  const { userData } = useRouteLoaderData("app") as { userData: UserContextForAuthType }
+  const { userData, isPIC } = useRouteLoaderData("app") as { userData: UserContextForAuthType, isPIC: boolean }
 
 
   return (
@@ -153,7 +153,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         ) : (
           <>
             <NavMain items={data.navMain} />
-            <NavPICSubSkills items={data.picSubSkills} />
+            {isPIC && <NavPICSubSkills items={data.picSubSkills} />}
             {userData.idRole === "pegawai" && <MasterPageNavButton className="mt-auto" />}
           </>
         )}

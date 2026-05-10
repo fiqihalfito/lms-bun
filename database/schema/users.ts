@@ -17,3 +17,9 @@ export const mUserProfiles = pgTable("m_user_profiles", (t) => ({
     idSubBidang: t.char("id_subbidang", { length: 2 }).references(() => mSubBidang.idSubBidang),
     ...timestamps,
 }));
+
+export const mUserPICSubskill = pgTable("m_user_pic_subskill", (t) => ({
+    idUserPIC: t.uuid("id_user_pic").primaryKey().defaultRandom(),
+    idPic: t.uuid("id_pic").references(() => mUsers.idUser).unique(),
+    ...timestamps,
+}));
