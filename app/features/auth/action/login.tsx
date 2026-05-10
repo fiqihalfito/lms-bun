@@ -2,8 +2,7 @@ import { parseWithZod } from "@conform-to/zod/v4";
 import type { Route } from "./+types/login";
 import { loginSchema } from "../schema/login-schema";
 import { dataWithError, redirectWithToast } from "remix-toast";
-import { authenticator } from "../services/auth.server";
-import { saveSession } from "@/features/session/services/session.server";
+import { AuthService } from "../services/AuthService";
 
 export async function action({ request, params }: Route.ActionArgs) {
   const cloned = request.clone();
@@ -15,13 +14,14 @@ export async function action({ request, params }: Route.ActionArgs) {
   }
 
   try {
-    // verify credentials
-    let idUser = await authenticator.authenticate("form", request);
-    // save session
-    const headers = await saveSession(request, idUser);
+    // // verify credentials
+    // let idUser = await authenticator.authenticate("form", request);
+    // // save session
+    // const headers = await saveSession(request, idUser);
+    const { idUser, headers, loginPath } = await AuthService.login(request);
 
     return redirectWithToast(
-      "/app/dashboard",
+      loginPath,
       {
         message: "You are logged in",
         type: "success",

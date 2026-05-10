@@ -16,4 +16,16 @@ export abstract class RoleQuery {
       .where(eq(mRole.idRole, idRole));
     return res[0].namaRole;
   }
+
+  static async findRoleByIdUser(idUser: string) {
+    const res = await db.query.mUsers.findFirst({
+      columns: {
+        idRole: true,
+      },
+      where: {
+        idUser: idUser,
+      },
+    });
+    return res?.idRole;
+  }
 }
