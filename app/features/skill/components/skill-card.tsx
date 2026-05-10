@@ -149,7 +149,7 @@ export function SkillCard({ skill, idTeam }: SkillCardProps) {
       <CardFooter>
         <Button variant="outline" className={cn("w-full py-6 hover:bg-primary hover:text-primary-foreground")} asChild>
           <Link to={`/app/knowledge/team/${idTeam}/skill/${skill.idSkill}/level`}>
-            Lihat Detail
+            Mulai Belajar
             <LogInIcon />
           </Link>
         </Button>
