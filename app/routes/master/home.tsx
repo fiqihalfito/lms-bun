@@ -4,18 +4,25 @@ import { DashboardAdminService } from "@/features/dashboard/admin/services/Dashb
 import { TableWrapper } from "@/components/table-wrapper";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
+import { getToast } from "remix-toast";
+import { data } from "react-router";
+import { useToastEffect } from "@/hooks/use-toast";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     // data PIC yang telah upload dan membuat kuis
     const picUploadStatus = await DashboardAdminService.getPicUploadStatus()
 
-    return { picUploadStatus }
+    const { toast, headers } = await getToast(request);
+
+    return data({ picUploadStatus, toast }, { headers })
 }
 
 export default function MasterHome({ loaderData }: Route.ComponentProps) {
 
-    const { picUploadStatus } = loaderData
+    const { picUploadStatus, toast } = loaderData
+
+    useToastEffect(toast)
 
     // return <pre>{JSON.stringify(picUploadStatus, null, 2)}</pre>
 
