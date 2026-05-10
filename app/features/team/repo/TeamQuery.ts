@@ -24,7 +24,7 @@ export abstract class TeamQuery {
     return res[0].idTeam;
   }
 
-  static async findTeamsByIdUser(idUser: string) {
+  static async findTeamByIdUser(idUser: string) {
     const res = await db.query.mUserProfiles.findFirst({
       columns: {
         idUser: true,

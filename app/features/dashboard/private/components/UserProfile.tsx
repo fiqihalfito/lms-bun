@@ -1,14 +1,6 @@
-import { Calendar, Briefcase, Users, Clock, ShieldCheck } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Briefcase } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import type { UserProfileService } from "@/features/user/services/UserProfileService";
 import type { TeamService } from "@/features/team/services/TeamService";
 
@@ -18,7 +10,7 @@ type UserProfileProps = {
     ReturnType<typeof UserProfileService.getUserProfileByIdUser>
   >;
   currentTeam: Awaited<
-    ReturnType<typeof TeamService.getTeamsByIdUser>
+    ReturnType<typeof TeamService.getTeamByIdUser>
   >;
 };
 
@@ -29,7 +21,7 @@ export function UserProfile({ userProfile, currentTeam }: UserProfileProps) {
     .join("")
     .toUpperCase();
 
-  const displayTeam = currentTeam.length > 0 ? currentTeam.map((t) => t.namaTeam).join(", ") : "tidak masuk team manapun";
+  const displayTeam = currentTeam ? currentTeam.namaTeam : "tidak masuk team manapun";
 
   return (
     <div className="border shadow rounded-lg p-8 mb-6 space-y-6">

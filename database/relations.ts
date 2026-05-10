@@ -39,7 +39,7 @@ export const relations = defineRelations(schema, (r) => ({
         })
     },
     mUserProfiles: {
-        team: r.many.mTeam({
+        team: r.one.mTeam({
             from: r.mUserProfiles.idUser.through(r.mTeamMember.idUser),
             to: r.mTeam.idTeam.through(r.mTeamMember.idTeam)
         }),
@@ -58,6 +58,10 @@ export const relations = defineRelations(schema, (r) => ({
         subSkill: r.many.mSubSkill({
             from: r.mUserProfiles.idUser,
             to: r.mSubSkill.idPic,
+        }),
+        skills: r.many.mSkill({
+            from: r.mUserProfiles.idUser.through(r.mTeamMember.idUser),
+            to: r.mSkill.idTeam.through(r.mTeamMember.idTeam)
         })
     },
     mSkill: {
@@ -131,7 +135,7 @@ export const relations = defineRelations(schema, (r) => ({
             from: r.mTeam.idTeam,
             to: r.mSkill.idTeam
         }),
-        userProfiles: r.many.mUserProfiles({
+        userProfiles: r.one.mUserProfiles({
             from: r.mTeam.idTeam.through(r.mTeamMember.idTeam),
             to: r.mUserProfiles.idUser.through(r.mTeamMember.idUser)
         })

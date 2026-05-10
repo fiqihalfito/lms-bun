@@ -19,11 +19,8 @@ export abstract class TeamService {
     return idTeam;
   }
 
-  static async getTeamsByIdUser(idUser: string) {
-    const teams = await TeamQuery.findTeamsByIdUser(idUser);
-    if (!teams || teams.length === 0) {
-      return [];
-    }
+  static async getTeamByIdUser(idUser: string) {
+    const teams = await TeamQuery.findTeamByIdUser(idUser);
     return teams;
   }
 
