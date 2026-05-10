@@ -1,12 +1,11 @@
-import { TeamService } from "@/features/team/services/TeamService";
 import { DashboardQuery } from "../repo/DashboardQuery";
-import * as R from 'remeda'
 
 export abstract class DashboardService {
 
 
     static async getUserResultSkills(idUser: string) {
-        // const idTeam = await TeamService.getIdTeamByIdUser(idUser)
+
+
         const data = await DashboardQuery.findUserResultSkills(idUser)
 
         // transform optimized =====================================

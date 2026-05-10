@@ -1,6 +1,6 @@
 import { getToast } from "remix-toast";
 import type { Route } from "./+types/private";
-import { data } from "react-router";
+import { Await, data } from "react-router";
 import { useToastEffect } from "@/hooks/use-toast";
 import { userContext } from "@/lib/context";
 import { UserProfile } from "@/features/dashboard/private/components/UserProfile";
@@ -8,12 +8,15 @@ import { DashboardService } from "@/features/dashboard/private/services/Dashboar
 import { TeamService } from "@/features/team/services/TeamService";
 import { UserProfileService } from "@/features/user/services/UserProfileService";
 import { UserResultSkills } from "@/features/dashboard/private/components/UserResultSkills";
+import { Suspense } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { UserResultSkillsSkeleton } from "@/features/dashboard/private/components/UserResultSkillsSkeleton";
 
 export async function loader({ request, params, context }: Route.LoaderArgs) {
   const user = context.get(userContext);
 
   // source data
-  const userResultSkills = await DashboardService.getUserResultSkills(user.idUser)
+  const userResultSkills = DashboardService.getUserResultSkills(user.idUser)
 
 
   // accesories
@@ -40,7 +43,13 @@ export default function DashboardRoute({ loaderData }: Route.ComponentProps) {
       <div className="mb-2">
         <h2 className="text-xl font-semibold text-black/60">{currentTeam?.namaTeam} Skill Progress</h2>
       </div>
-      <UserResultSkills data={userResultSkills} />
+      <Suspense fallback={<UserResultSkillsSkeleton />}>
+        <Await resolve={userResultSkills}>
+          {(resolvedUserResultSkills) => (
+            <UserResultSkills data={resolvedUserResultSkills} />
+          )}
+        </Await>
+      </Suspense>
     </div>
   );
 }
