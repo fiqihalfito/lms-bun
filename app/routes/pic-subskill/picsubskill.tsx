@@ -64,7 +64,7 @@ export default function PicSubSkillRoute({
       />
       <SummaryPicSubSkill
         skillProgressDetail={skillProgressDetail[0]}
-        namaTeam={namaTeam!}
+        namaTeam={namaTeam}
       />
       <div className="flex flex-col gap-8">
         {mappedsubSkills.map(({ level, subskills }, i) => (

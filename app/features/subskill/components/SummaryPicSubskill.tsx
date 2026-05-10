@@ -7,7 +7,7 @@ type SummaryPicSubSkillProps = {
   skillProgressDetail: Awaited<
     ReturnType<typeof SubskillService.getSkillProgressDetailByIdSkill>
   >[number];
-  namaTeam: string;
+  namaTeam?: string | null;
 };
 
 export function SummaryPicSubSkill({
@@ -16,7 +16,7 @@ export function SummaryPicSubSkill({
 }: SummaryPicSubSkillProps) {
   const percentage = Math.round(
     (skillProgressDetail.jumlahUpload / skillProgressDetail.jumlahSubkill) *
-      100,
+    100,
   );
 
   return (
@@ -29,7 +29,7 @@ export function SummaryPicSubSkill({
         <CardContent className="p-8 relative z-10">
           <div className="space-y-4">
             <Badge className="bg-primary/20 text-primary-foreground border-none hover:bg-primary/30">
-              {namaTeam}
+              {namaTeam ?? "-"}
             </Badge>
             <div className="space-y-1">
               <h1 className="text-3xl font-bold tracking-tight">

@@ -3,7 +3,7 @@ import type { UserProfileFilter } from "../../lib/types";
 
 export abstract class UserProfileQuery {
   static async findUserProfileWithTeam(idUser: string) {
-    const res = await db.query.mUserProfiles.findMany({
+    const res = await db.query.mUserProfiles.findFirst({
       with: {
         team: true,
       },

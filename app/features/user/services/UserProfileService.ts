@@ -6,25 +6,18 @@ import { UserProfileMutation } from "../repo/UserProfile/UserProfileMutation";
 import { userSchema } from "../schema/user-schema";
 import { parseWithZod } from "@conform-to/zod/v4";
 import { UserAccountMutation } from "../repo/UserAccount/UserAccountMutation";
-import { dataWithError, redirectWithSuccess } from "remix-toast";
 import { getDbErrorMessage } from "database/utils/dbErrorUtils";
 import { TeamMutation } from "@/features/team/repo/TeamMutation";
 
 export abstract class UserProfileService {
   static async getUserProfileWithTeam(idUser: string) {
     const data = await UserProfileQuery.findUserProfileWithTeam(idUser);
-    invariant(data.length > 0, `Tidak ada user dengan id ${idUser}`);
     return data;
   }
 
   static async getNamaTeamByIdUser(idUser: string) {
     const data = await UserProfileQuery.findUserProfileWithTeam(idUser);
-    invariant(data.length > 0, `Tidak ada user dengan id ${idUser}`);
-    invariant(
-      data[0].team.length > 0,
-      `Tidak ada team untuk user dengan id ${idUser}`,
-    );
-    return data[0].team[0].namaTeam;
+    return data?.team?.namaTeam;
   }
 
   static async getAllUserWithFilter(
