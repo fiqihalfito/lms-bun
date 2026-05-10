@@ -3,6 +3,13 @@ import { createLoader, parseAsString } from "nuqs/server";
 import { NavLink } from "react-router";
 import type { Route } from "./+types/public";
 
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "Learning Management System" },
+    { name: "description", content: "Welcome to Learning Management System!" },
+  ];
+}
+
 export const searchParams = {
   qSubBidang: parseAsString.withDefault(""),
 };

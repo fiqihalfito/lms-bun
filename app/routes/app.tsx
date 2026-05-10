@@ -7,6 +7,13 @@ export const middleware: Route.MiddlewareFunction[] = [
     authMiddleware
 ]
 
+export function meta({ }: Route.MetaArgs) {
+    return [
+        { title: "Learning Management System" },
+        { name: "description", content: "Welcome to Learning Management System!" },
+    ];
+}
+
 export async function loader({ request, params, context }: Route.LoaderArgs) {
 
     const userData = context.get(userContext)

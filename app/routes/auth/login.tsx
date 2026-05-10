@@ -10,6 +10,13 @@ export const middleware: Route.MiddlewareFunction[] = [
     loginMiddleware,
 ];
 
+export function meta({ }: Route.MetaArgs) {
+    return [
+        { title: "Learning Management System" },
+        { name: "description", content: "Welcome to Learning Management System!" },
+    ];
+}
+
 export async function loader({ request, params }: Route.LoaderArgs) {
 
     const { toast, headers } = await getToast(request);
