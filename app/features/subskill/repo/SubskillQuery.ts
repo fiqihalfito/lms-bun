@@ -315,4 +315,13 @@ export abstract class SubskillQuery {
       .where(eq(mSubSkill.idSkill, idSkill));
     return res;
   }
+
+  static async findIdPICExist(idPic: string) {
+    const res = await db.query.mSubSkill.findFirst({
+      where: {
+        idPic: idPic,
+      },
+    });
+    return !!res;
+  }
 }

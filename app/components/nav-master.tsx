@@ -1,5 +1,5 @@
 // import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react"
-import { BuildingIcon, DatabaseZapIcon, LayoutDashboardIcon, PyramidIcon, ShieldIcon, ShieldUserIcon, UserIcon, UsersIcon, type LucideIcon } from "lucide-react"
+import { LayoutDashboardIcon, PyramidIcon, ShieldIcon, ShieldUserIcon, SquareUserIcon, UserIcon, type LucideIcon } from "lucide-react"
 
 import {
   SidebarGroup,
@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { NavLink, useLocation, useMatch } from "react-router"
+import { NavLink, useMatch } from "react-router"
 
 type RouteType = {
   title: string
@@ -27,6 +27,11 @@ const route: RouteType = [
     title: "User",
     url: "/app/master/user",
     icon: UserIcon,
+  },
+  {
+    title: "PIC Subskill",
+    url: "/app/master/pic",
+    icon: SquareUserIcon,
   },
   {
     title: "Layanan",

@@ -60,7 +60,7 @@ export function mapToExcelRow(item: Awaited<ReturnType<typeof getSubskillBelumUp
         namaSubSkill: item.namaSubSkill,
         level: item.level,
         picNama: item.pic?.namaUser ?? null,
-        picTeam: item.pic?.team?.map((t: any) => t.namaTeam).join(", ") ?? null,
+        picTeam: item.pic?.team?.namaTeam ?? null,
         sudahDokumen: item.idDokumen !== null,
         idDokumen: item.idDokumen ?? null,
         sudahBuatKuis: item.idKuis !== null
