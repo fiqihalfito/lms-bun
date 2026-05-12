@@ -118,6 +118,23 @@ export abstract class UserProfileQuery {
     return res
   }
 
+  static async findAllPicDropdown(idSubBidang: string) {
+    const res = await db.query.mUserProfiles.findMany({
+      columns: {
+        idUser: true,
+        namaUser: true,
+      },
+      where: {
+        picSubskill: true,
+        idSubBidang: idSubBidang
+      },
+      orderBy: {
+        namaUser: "asc"
+      }
+    })
+    return res
+  }
+
   static async deletePICSubskill(idUser: string) {
     await db.delete(mUserPICSubskill).where(eq(mUserPICSubskill.idPic, idUser));
 

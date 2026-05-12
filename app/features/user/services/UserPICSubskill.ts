@@ -32,4 +32,9 @@ export abstract class UserPICSubskillService {
         }
         await UserProfileQuery.insertPICSubskill(idUser);
     }
+
+    static async getPICSubskillDropdown(idSubBidang: string) {
+        const data = await UserProfileQuery.findAllPicDropdown(idSubBidang);
+        return data;
+    }
 }

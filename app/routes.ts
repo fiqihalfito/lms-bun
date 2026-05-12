@@ -204,7 +204,12 @@ export default [
           route("team/:idTeam", "routes/master/skill/skill-list-page.tsx", [
             route(
               "skill/:idSkill",
-              "routes/master/skill/skill-subskill-list-page.tsx",
+              "routes/master/skill/skill-subskill-list-page.tsx", [
+              // ...prefix("action", [
+              //   // route("submit-team", "features/team/action/submit-team.tsx"),
+              //   route("update-pic-subskill/:idSubSkill", "features/subskill/action/update-pic-subskill.tsx"),
+              // ])
+            ]
             ),
           ]),
           // route("add", "routes/master/skill/skill-add.tsx"),
@@ -213,9 +218,10 @@ export default [
           // ]),
 
           // action team
-          // ...prefix("action", [
-          //     route("submit-team", "features/team/action/submit-team.tsx"),
-          // ])
+          ...prefix("action", [
+            // route("submit-team", "features/team/action/submit-team.tsx"),
+            route("subskill/:idSubSkill/update-pic-subskill", "features/subskill/action/update-pic-subskill.tsx"),
+          ])
         ]),
       ]),
     ]),
