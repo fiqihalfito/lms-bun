@@ -131,7 +131,6 @@ export default [
           // route("skill/:idSkill/subskill/:idSubSkill/make-kuis/submit", "features/kuis/action/submit-form-make-kuis.tsx"),
         ]),
       ]),
-      // route("knowledge", "routes/dokumen-list/knowledge.tsx"),
 
       // ===== Route Master =====
       ...prefix("master", [
@@ -146,6 +145,19 @@ export default [
           // action user
           ...prefix("action", [
             route("submit-user", "features/user/action/submit-user.tsx"),
+          ]),
+        ]),
+        ...prefix("pic", [
+          index("routes/master/pic/pic-home.tsx"),
+          route("add", "routes/master/pic/pic-add.tsx"),
+          // ...prefix(":idRole", [
+          //   route("edit", "routes/master/role/role-edit.tsx"),
+          // ]),
+
+          // action pic
+          ...prefix("action", [
+            route("submit-pic", "features/user/action/submit-pic.tsx"),
+            route("hapus-pic", "features/user/action/hapus-pic.tsx"),
           ]),
         ]),
         ...prefix("layanan", [
@@ -192,7 +204,12 @@ export default [
           route("team/:idTeam", "routes/master/skill/skill-list-page.tsx", [
             route(
               "skill/:idSkill",
-              "routes/master/skill/skill-subskill-list-page.tsx",
+              "routes/master/skill/skill-subskill-list-page.tsx", [
+              // ...prefix("action", [
+              //   // route("submit-team", "features/team/action/submit-team.tsx"),
+              //   route("update-pic-subskill/:idSubSkill", "features/subskill/action/update-pic-subskill.tsx"),
+              // ])
+            ]
             ),
           ]),
           // route("add", "routes/master/skill/skill-add.tsx"),
@@ -201,9 +218,10 @@ export default [
           // ]),
 
           // action team
-          // ...prefix("action", [
-          //     route("submit-team", "features/team/action/submit-team.tsx"),
-          // ])
+          ...prefix("action", [
+            // route("submit-team", "features/team/action/submit-team.tsx"),
+            route("subskill/:idSubSkill/update-pic-subskill", "features/subskill/action/update-pic-subskill.tsx"),
+          ])
         ]),
       ]),
     ]),

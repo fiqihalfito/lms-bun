@@ -23,12 +23,12 @@ export function LoginPage({ children }: LoginPageProps) {
                     </div>
                 </div>
             </div>
-            <div className="bg-muted relative hidden lg:block">
-                {/* <img
-                    src="/placeholder.svg"
+            <div className="bg-muted relative hidden lg:flex items-center justify-center">
+                <img
+                    src="/plniconpluslogo.webp"
                     alt="Image"
-                    className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
-                /> */}
+                    className="max-w-[80%] h-auto dark:brightness-[0.2] dark:grayscale"
+                />
             </div>
         </div>
     )

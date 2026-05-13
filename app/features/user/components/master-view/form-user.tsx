@@ -47,7 +47,7 @@ export function FormUser({ dv, className, ...props }: FormUserprop) {
     defaultValue: {
       email: dv?.userAccount?.email,
       idRole: dv?.userAccount?.idRole,
-      idTeam: dv?.team[0].idTeam,
+      idTeam: dv?.team?.idTeam,
       namaUser: dv?.namaUser,
     },
     onSubmit(event, { formData, submission, action, method }) {

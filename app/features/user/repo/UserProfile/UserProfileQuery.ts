@@ -1,5 +1,7 @@
 import { db } from "database/connect.server";
 import type { UserProfileFilter } from "../../lib/types";
+import { mSubSkill, mUserPICSubskill } from "database/schema";
+import { eq } from "drizzle-orm";
 
 export abstract class UserProfileQuery {
   static async findUserProfileWithTeam(idUser: string) {
@@ -85,5 +87,62 @@ export abstract class UserProfileQuery {
       },
     });
     return res;
+  }
+
+  static async findAllPic(idSubBidang: string) {
+    const res = await db.query.mUserProfiles.findMany({
+      where: {
+        picSubskill: true,
+        idSubBidang: idSubBidang
+      },
+      orderBy: {
+        namaUser: "asc"
+      }
+    })
+    return res
+  }
+
+  static async findAllPicWithCountSubskill(idSubBidang: string) {
+    const res = await db.query.mUserProfiles.findMany({
+      where: {
+        picSubskill: true,
+        idSubBidang: idSubBidang
+      },
+      orderBy: {
+        namaUser: "asc"
+      },
+      extras: {
+        jumlahSubskill: (table) => db.$count(mSubSkill, eq(mSubSkill.idPic, table.idUser))
+      }
+    })
+    return res
+  }
+
+  static async findAllPicDropdown(idSubBidang: string) {
+    const res = await db.query.mUserProfiles.findMany({
+      columns: {
+        idUser: true,
+        namaUser: true,
+      },
+      where: {
+        picSubskill: true,
+        idSubBidang: idSubBidang
+      },
+      orderBy: {
+        namaUser: "asc"
+      }
+    })
+    return res
+  }
+
+  static async deletePICSubskill(idUser: string) {
+    await db.delete(mUserPICSubskill).where(eq(mUserPICSubskill.idPic, idUser));
+
+  }
+
+  static async insertPICSubskill(idUser: string) {
+    await db.insert(mUserPICSubskill).values({
+      idPic: idUser,
+    });
   }
 }

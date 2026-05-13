@@ -309,10 +309,31 @@ export abstract class SubskillQuery {
   }
 
   static async findSubskillByIdSkill(idSkill: string) {
-    const res = await db
-      .select()
-      .from(mSubSkill)
-      .where(eq(mSubSkill.idSkill, idSkill));
+    // const res = await db
+    //   .select()
+    //   .from(mSubSkill)
+    //   .where(eq(mSubSkill.idSkill, idSkill));
+    const res = await db.query.mSubSkill.findMany({
+      where: {
+        idSkill: idSkill
+      },
+      with: {
+        pic: {
+          columns: {
+            namaUser: true,
+          }
+        }
+      }
+    })
     return res;
+  }
+
+  static async findIdPICExist(idPic: string) {
+    const res = await db.query.mSubSkill.findFirst({
+      where: {
+        idPic: idPic,
+      },
+    });
+    return !!res;
   }
 }

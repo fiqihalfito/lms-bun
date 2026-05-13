@@ -20,6 +20,17 @@ export abstract class UserProfileService {
     return data?.team?.namaTeam;
   }
 
+  static async getAllUserDropdown(idSubBidang: string) {
+    const data = await UserProfileQuery.findUserProfile(idSubBidang, { team: [] });
+    const res = data.map((item) => {
+      return {
+        idUser: item.idUser,
+        namaUser: item.namaUser,
+      };
+    });
+    return res;
+  }
+
   static async getAllUserWithFilter(
     idSubBidang: string,
     filter: UserProfileFilter,
