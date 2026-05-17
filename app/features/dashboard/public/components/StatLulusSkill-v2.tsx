@@ -1,5 +1,3 @@
-import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@/components/ui/item"
-import { Progress } from "@/components/ui/progress"
 import type { DashboardService } from "../services/DashboardService"
 import { TableWrapper } from "@/components/table-wrapper"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -55,7 +53,7 @@ export function StatLulusSkillV2({ teamStat }: StatLulusSkillProp) {
                                                 <TableCell>{team.jumlahAnggota}</TableCell>
                                                 <TableCell className="text-right">
                                                     <Button size={"sm"} asChild>
-                                                        <NavLink to={`.`} >
+                                                        <NavLink to={`${skill.idSkill}`} >
                                                             Selengkapnya
                                                             <ArrowUpRightIcon />
                                                         </NavLink>

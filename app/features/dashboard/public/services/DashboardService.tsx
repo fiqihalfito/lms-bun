@@ -42,6 +42,9 @@ export abstract class DashboardService {
             idTeam: true,
             namaSkill: true,
           },
+          orderBy: {
+            namaSkill: "asc"
+          },
           with: {
             userProfiles: {
               columns: {
@@ -95,7 +98,8 @@ export abstract class DashboardService {
       }
     })
 
-    // return raw
+
+
     const res = raw.map((team) => {
 
       const skillMap = team.skill.map((skill) => {
@@ -121,6 +125,7 @@ export abstract class DashboardService {
         }
         return {
           namaSkill: skill.namaSkill,
+          idSkill: skill.idSkill,
           jumlahLevel: levelEnum.length,
           levelEnumMap
         }
@@ -139,6 +144,81 @@ export abstract class DashboardService {
     })
 
     return res
+  }
+
+  static async getNamaUserLulusBySkill(idSkill: string) {
+    const raw = await db.query.mSkill.findFirst({
+      where: { idSkill: idSkill },
+      with: {
+        kuisProgress: {
+          where: { RAW: (table) => sql`(${table.totalScore} * 100 / ${table.jumlahSoal}) >= 80` },
+          columns: {
+            idUser: true,
+            idKuisProgress: true,
+            jumlahSoal: true,
+            totalScore: true,
+            idKuis: true
+          },
+          with: {
+            user: {
+              columns: {
+                namaUser: true,
+                idUser: true
+              }
+            },
+            subskill: {
+              columns: {
+                level: true,
+                idSubSkill: true
+              }
+            }
+          },
+        },
+      },
+    })
+
+
+
+
+    if (!raw) {
+      return { namaSkill: "", levelGroup: [] }
+    }
+
+    const jumlahSubskillPerLevel = await db.select({
+      level: mSubSkill.level,
+      jumlah: sql<number>`cast(count(${mSubSkill.idSubSkill}) as int)`
+    }).from(mSubSkill)
+      .where(eq(mSubSkill.idSkill, idSkill))
+      .groupBy(mSubSkill.level)
+      .orderBy(mSubSkill.level)
+
+    const levelGroup = jumlahSubskillPerLevel.map((item) => {
+
+      const userGroup = R.groupBy(raw.kuisProgress, (item) => item.user?.namaUser)
+      const userLulusSkill = Object.entries(userGroup).map(([namaUser, kuisProgress], i) => {
+
+        const jumlahKuisLulusPerLevel = kuisProgress.filter((kuisProgress) => kuisProgress.subskill?.level === item.level)
+        const isLulusLevelIni = jumlahKuisLulusPerLevel.length === item.jumlah
+        return {
+          namaUser,
+          idUser: kuisProgress[0].idUser,
+          lulusDiLevelIni: isLulusLevelIni,
+          jumlahLulusKuis: jumlahKuisLulusPerLevel.length,
+          jumlahLevelTarget: item.jumlah
+        }
+      }).filter((item) => item.lulusDiLevelIni)
+
+      return {
+        level: item.level,
+        userLulusSkill
+      }
+    })
+
+
+    return {
+      namaSkill: raw.namaSkill,
+      levelGroup
+    }
   }
 
   static async getListIndividuSkill(idSubBidang?: string) {

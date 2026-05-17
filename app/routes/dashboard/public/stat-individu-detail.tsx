@@ -28,17 +28,18 @@ export default function StatIndividuDetailPage({
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col mb-8">
+        <div className="mb-4">
+          <Button variant={"link"} asChild className="px-0">
+            <NavLink to={`..`}>
+              <ArrowLeftIcon />
+              Kembali
+            </NavLink>
+          </Button>
+        </div>
         <div>
           <h1 className="text-3xl font-bold">Statistik Individu</h1>
-
         </div>
-        <Button className="cursor-pointer" asChild>
-          <NavLink to="/dashboard/stat-individu">
-            <ArrowLeftIcon className="size-4" />
-            Kembali
-          </NavLink>
-        </Button>
       </div>
       <IndikatorDetail userIndicatorSkill={userSkillIndikator} achivedSkills={achivedSkills} />
     </div>

@@ -80,6 +80,10 @@ export const relations = defineRelations(schema, (r) => ({
         userProfiles: r.many.mUserProfiles({
             from: r.mSkill.idTeam.through(r.mTeamMember.idTeam),
             to: r.mUserProfiles.idUser.through(r.mTeamMember.idUser)
+        }),
+        kuisProgress: r.many.tKuisProgress({
+            from: r.mSkill.idSkill.through(r.mSubSkill.idSkill),
+            to: r.tKuisProgress.idKuis.through(r.mSubSkill.idKuis)
         })
     },
     mSubSkill: {
