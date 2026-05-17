@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import { CircleCheckIcon, UserCheckIcon } from "lucide-react";
+import { CircleCheckIcon, TablePropertiesIcon, UserCheckIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const routes = [
@@ -7,7 +7,7 @@ const routes = [
     title: "Statistik Lulus Skill",
     desc: "Melihat jumlah orang yang lulus berdasarkan kategori skill",
     href: "/dashboard/stat-lulus-skill",
-    icon: CircleCheckIcon,
+    icon: TablePropertiesIcon,
     tag: "List",
     tagClass: "bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300",
     accentClass: "bg-teal-500",
