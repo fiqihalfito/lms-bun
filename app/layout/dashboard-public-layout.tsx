@@ -10,17 +10,16 @@ export default function DashboardPublicLayout() {
     const isNavigating = Boolean(navigation.location);
 
     return (
-        <div className="flex-1 ">
+        <div className="flex flex-col h-screen overflow-hidden">
             <HeaderDashboardPublic />
             {/* container */}
-            <div id="container" className="mx-4 xl:mx-40 flex gap-x-8 xl:gap-x-16 ">
-                {/* h-fit penting untuk sticky kalau parent flex */}
-                <div className="sticky top-16 w-52 h-fit ">
+            <div id="container" className="flex-1 flex flex-row overflow-hidden ">
+                <nav className="w-80 border-r pt-12 overflow-y-auto">
                     <NavDashboard />
-                </div>
-                <div className="flex-1">
+                </nav>
+                <main className="flex-1 p-16 overflow-y-auto">
                     <Outlet />
-                </div>
+                </main>
             </div>
         </div>
     )

@@ -1,3 +1,4 @@
+import { db } from "database/connect.server";
 import { SkillQuery } from "../repo/SkillQuery";
 
 export abstract class SkillService {
@@ -20,5 +21,26 @@ export abstract class SkillService {
   static async getSkillsByIdTeam(idTeam: string) {
     const skills = await SkillQuery.findSkillsByIdTeam(idTeam);
     return skills;
+  }
+
+  static async getSkillDropdown() {
+    const skillDropdown = await db.query.mTeam.findMany({
+      columns: {
+        idTeam: true,
+        namaTeam: true,
+      },
+      with: {
+        skill: {
+          columns: {
+            idSkill: true,
+            namaSkill: true,
+          }
+        }
+      },
+      orderBy: {
+        namaTeam: "asc"
+      }
+    });
+    return skillDropdown;
   }
 }

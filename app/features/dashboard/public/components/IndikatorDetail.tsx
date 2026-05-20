@@ -2,29 +2,46 @@ import { LazyTooltip } from "@/components/lazy-tooltip";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { CheckIcon, XIcon } from "lucide-react";
-import type { UserDataForIndicatorDetail } from "../lib/types";
+import type { UserDataForIndicatorDetail, UserSkillAchived } from "../lib/types";
+import { Badge } from "@/components/ui/badge";
 
 export function IndikatorDetail({
-  user,
+  userIndicatorSkill,
+  achivedSkills
 }: {
-  user: UserDataForIndicatorDetail;
+  userIndicatorSkill: UserDataForIndicatorDetail;
+  achivedSkills: UserSkillAchived;
 }) {
-  if (!user) {
+  if (!userIndicatorSkill) {
     return <div>Data tidak ditemukan</div>;
   }
 
   return (
-    <div key={user.namaUser} className="border rounded px-4 pb-4 shadow mb-20">
-      <div className="mt-6">
-        <h3 className="text-base font-semibold tracking-tight whitespace-nowrap px-4">
-          {user.namaUser}
+    <div key={userIndicatorSkill.namaUser} className="border rounded px-4 pb-4 shadow mb-20">
+      <div className="mt-6 flex flex-col gap-y-8">
+        <h3 className="text-xl font-semibold tracking-tight whitespace-nowrap px-4">
+          {userIndicatorSkill.namaUser}
         </h3>
+        <div className="px-4">
+          {achivedSkills.skills.length > 0 ? (
+            <div className="flex flex-col gap-y-2">
+              <h6 className="text-sm text-muted-foreground italic">skill yang sudah dicapai : {achivedSkills.skills.length} skill</h6>
+              <div className="flex gap-x-3">
+                {achivedSkills.skills.map((skill, i) => (
+                  <Badge variant={"default"} className="py-2 px-3 text-sm" key={i}>{skill.namaSkill} • level {skill.highest}</Badge>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm text-muted-foreground italic">Belum ada skill yang dicapai</p>
+          )}
+        </div>
       </div>
       <Separator className="mt-4 mb-6" />
       <div className="flex flex-col gap-y-2">
-        {user.skills.map((skill, i) => (
+        {userIndicatorSkill.skills.map((skill, i) => (
           <div
-            key={`${user.namaUser}-${skill.namaSkill}`}
+            key={`${userIndicatorSkill.namaUser}-${skill.namaSkill}`}
             className="flex items-center border rounded px-4 py-2 shadow"
           >
             <div className="w-60">
@@ -36,14 +53,14 @@ export function IndikatorDetail({
             <div className="flex gap-x-8">
               {skill.levels.map((levelItem, i) => (
                 <div
-                  key={`${user.namaUser}-${skill.namaSkill}-${levelItem.level}`}
+                  key={`${userIndicatorSkill.namaUser}-${skill.namaSkill}-${levelItem.level}`}
                   className="flex flex-col gap-y-1"
                 >
                   <p className="text-xs">Level {levelItem.level}</p>
                   <div className="flex gap-x-1.5">
                     {levelItem.subskills.map((subskill, i) => (
                       <LazyTooltip
-                        key={`${user.namaUser}-${skill.namaSkill}-${levelItem.level}-${subskill.namaSubskill}`}
+                        key={`${userIndicatorSkill.namaUser}-${skill.namaSkill}-${levelItem.level}-${subskill.namaSubskill}`}
                         content={
                           <div>
                             <p className="font-semibold mb-1">
@@ -78,11 +95,11 @@ export function IndikatorDetail({
                           className={cn(
                             "size-4 rounded-xs bg-gray-300",
                             subskill.isBaca &&
-                              subskill.isLulus &&
-                              "bg-green-500",
+                            subskill.isLulus &&
+                            "bg-green-500",
                             subskill.isBaca &&
-                              !subskill.isLulus &&
-                              "bg-blue-500",
+                            !subskill.isLulus &&
+                            "bg-blue-500",
                           )}
                         />
                       </LazyTooltip>

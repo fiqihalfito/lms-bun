@@ -10,34 +10,38 @@ export async function loader({ request, params, context }: Route.LoaderArgs) {
     params.idUser,
   );
 
+  const achivedSkills = await DashboardService.getListIndividuSkillSingle(params.idUser)
+
+
   return {
     userSkillIndikator,
+    achivedSkills
   };
 }
 
 export default function StatIndividuDetailPage({
   loaderData,
   params,
+  matches
 }: Route.ComponentProps) {
-  const { userSkillIndikator } = loaderData;
+  const { userSkillIndikator, achivedSkills } = loaderData;
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col mb-8">
+        <div className="mb-4">
+          <Button variant={"link"} asChild className="px-0">
+            <NavLink to={`..`}>
+              <ArrowLeftIcon />
+              Kembali
+            </NavLink>
+          </Button>
+        </div>
         <div>
           <h1 className="text-3xl font-bold">Statistik Individu</h1>
-          <p className="text-lg text-muted-foreground">
-            {userSkillIndikator?.namaUser}
-          </p>
         </div>
-        <Button className="cursor-pointer" asChild>
-          <NavLink to="/dashboard/stat-individu">
-            <ArrowLeftIcon className="size-4" />
-            Kembali
-          </NavLink>
-        </Button>
       </div>
-      <IndikatorDetail user={userSkillIndikator} />
+      <IndikatorDetail userIndicatorSkill={userSkillIndikator} achivedSkills={achivedSkills} />
     </div>
   );
 }
